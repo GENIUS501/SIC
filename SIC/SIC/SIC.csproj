@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lista_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_Usuario.Designer.cs">
+      <DependentUpon>Lista_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lista_Usuario.resx">
+      <DependentUpon>Lista_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +103,7 @@
     <Content Include="Imagenes\IMG_Icon_Check.ico" />
     <Content Include="Imagenes\IMG_Icon_Home.ico" />
     <Content Include="Imagenes\IMG_Icon_Key.ico" />
+    <Content Include="Imagenes\IMG_Icon_User.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

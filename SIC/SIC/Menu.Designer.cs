@@ -43,6 +43,9 @@
             this.bitacoraDeIngresoYSalidaDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bitacoraDeMovimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportePorExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeEstadoDelExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteAsociadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +74,10 @@
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportePorExpedienteToolStripMenuItem,
+            this.reporteDeEstadoDelExpedienteToolStripMenuItem,
+            this.reporteAsociadoToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -149,6 +156,24 @@
             this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar contraseña";
             // 
+            // reportePorExpedienteToolStripMenuItem
+            // 
+            this.reportePorExpedienteToolStripMenuItem.Name = "reportePorExpedienteToolStripMenuItem";
+            this.reportePorExpedienteToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.reportePorExpedienteToolStripMenuItem.Text = "Reporte por expediente";
+            // 
+            // reporteDeEstadoDelExpedienteToolStripMenuItem
+            // 
+            this.reporteDeEstadoDelExpedienteToolStripMenuItem.Name = "reporteDeEstadoDelExpedienteToolStripMenuItem";
+            this.reporteDeEstadoDelExpedienteToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.reporteDeEstadoDelExpedienteToolStripMenuItem.Text = "Reporte de estado del expediente";
+            // 
+            // reporteAsociadoToolStripMenuItem
+            // 
+            this.reporteAsociadoToolStripMenuItem.Name = "reporteAsociadoToolStripMenuItem";
+            this.reporteAsociadoToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.reporteAsociadoToolStripMenuItem.Text = "Reporte asociado al funcionario";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,5 +209,8 @@
         private System.Windows.Forms.ToolStripMenuItem bitacoraDeIngresoYSalidaDelSistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bitacoraDeMovimientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportePorExpedienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeEstadoDelExpedienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteAsociadoToolStripMenuItem;
     }
 }

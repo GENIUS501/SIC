@@ -60,7 +60,7 @@
             // btn_consultar
             // 
             this.btn_consultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_consultar.Image = global::SIC.Properties.Resources.IMG_Icon_Consult_User;
+            this.btn_consultar.Image = global::SIC.Properties.Resources.IMG_Icon_Consult;
             this.btn_consultar.Location = new System.Drawing.Point(180, 67);
             this.btn_consultar.Name = "btn_consultar";
             this.btn_consultar.Size = new System.Drawing.Size(50, 41);

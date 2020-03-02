@@ -113,6 +113,16 @@ namespace SIC.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMG_Icon_Consult {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Icon_Consult", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_Icon_Consult_User {
             get {
                 object obj = ResourceManager.GetObject("IMG_Icon_Consult_User", resourceCulture);
@@ -126,6 +136,16 @@ namespace SIC.Properties {
         internal static System.Drawing.Bitmap IMG_Icon_Delete {
             get {
                 object obj = ResourceManager.GetObject("IMG_Icon_Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_Icon_Funcionario {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Icon_Funcionario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -52,6 +52,12 @@
     <Compile Include="Lista de Roles.Designer.cs">
       <DependentUpon>Lista de Roles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lista_Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_Funcionarios.Designer.cs">
+      <DependentUpon>Lista_Funcionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lista_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Lista de Roles.resx">
       <DependentUpon>Lista de Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_Funcionarios.resx">
+      <DependentUpon>Lista_Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lista_Usuario.resx">
       <DependentUpon>Lista_Usuario.cs</DependentUpon>
@@ -113,6 +122,9 @@
     <Content Include="Imagenes\IMG_Icon_Add.png" />
     <Content Include="Imagenes\IMG_Icon_Cancel.png" />
     <Content Include="Imagenes\IMG_Icon_Check.png" />
+    <Content Include="Imagenes\IMG_Icon_Funcionario.ico" />
+    <None Include="Imagenes\IMG_Icon_Funcionario.png" />
+    <None Include="Imagenes\IMG_Icon_Consult.png" />
     <Content Include="Imagenes\IMG_Icon_Consult_User.png" />
     <Content Include="Imagenes\IMG_Icon_Delete.png" />
     <Content Include="Imagenes\Img_Icon_Modify.png" />

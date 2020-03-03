@@ -76,6 +76,18 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimiento_Casos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento_Casos.Designer.cs">
+      <DependentUpon>Mantenimiento_Casos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento_Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento_Roles.Designer.cs">
+      <DependentUpon>Mantenimiento_Roles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento_Casos.resx">
+      <DependentUpon>Mantenimiento_Casos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento_Roles.resx">
+      <DependentUpon>Mantenimiento_Roles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

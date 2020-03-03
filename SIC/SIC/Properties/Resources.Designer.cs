@@ -103,9 +103,29 @@ namespace SIC.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMG_Icon_Cancel1 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Icon_Cancel1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_Icon_Check {
             get {
                 object obj = ResourceManager.GetObject("IMG_Icon_Check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_Icon_Check1 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Icon_Check1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

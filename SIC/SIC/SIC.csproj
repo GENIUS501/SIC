@@ -64,17 +64,17 @@
     <Compile Include="Lista_Funcionarios.Designer.cs">
       <DependentUpon>Lista_Funcionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lista_Procedimiento.cs">
+    <Compile Include="Lista_Procedimientos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lista_Procedimiento.Designer.cs">
-      <DependentUpon>Lista_Procedimiento.cs</DependentUpon>
+    <Compile Include="Lista_Procedimientos.Designer.cs">
+      <DependentUpon>Lista_Procedimientos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lista_Usuario.cs">
+    <Compile Include="Lista_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lista_Usuario.Designer.cs">
-      <DependentUpon>Lista_Usuario.cs</DependentUpon>
+    <Compile Include="Lista_Usuarios.Designer.cs">
+      <DependentUpon>Lista_Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -106,6 +106,12 @@
     <Compile Include="Mantenimiento_Roles.Designer.cs">
       <DependentUpon>Mantenimiento_Roles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimiento_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento_Usuarios.Designer.cs">
+      <DependentUpon>Mantenimiento_Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,11 +129,11 @@
     <EmbeddedResource Include="Lista_Funcionarios.resx">
       <DependentUpon>Lista_Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lista_Procedimiento.resx">
-      <DependentUpon>Lista_Procedimiento.cs</DependentUpon>
+    <EmbeddedResource Include="Lista_Procedimientos.resx">
+      <DependentUpon>Lista_Procedimientos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lista_Usuario.resx">
-      <DependentUpon>Lista_Usuario.cs</DependentUpon>
+    <EmbeddedResource Include="Lista_Usuarios.resx">
+      <DependentUpon>Lista_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento_Roles.resx">
       <DependentUpon>Mantenimiento_Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento_Usuarios.resx">
+      <DependentUpon>Mantenimiento_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

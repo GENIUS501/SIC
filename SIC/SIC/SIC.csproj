@@ -64,6 +64,12 @@
     <Compile Include="Lista_Funcionarios.Designer.cs">
       <DependentUpon>Lista_Funcionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lista_Procedimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_Procedimiento.Designer.cs">
+      <DependentUpon>Lista_Procedimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lista_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lista_Funcionarios.resx">
       <DependentUpon>Lista_Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_Procedimiento.resx">
+      <DependentUpon>Lista_Procedimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lista_Usuario.resx">
       <DependentUpon>Lista_Usuario.cs</DependentUpon>

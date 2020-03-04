@@ -118,43 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="IMG_Icon_Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\IMG_Icon_Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Cliente_Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\IMG_Cliente_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Icon_Consult_User" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\IMG_Icon_Consult_User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Icon_Add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\IMG_Icon_Add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Icon_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\IMG_Icon_Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IMG_Icon_Cancel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Icon_Cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IMG_Icon_Funcionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\IMG_Icon_Funcionario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IMG_Cliente_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\IMG_Cliente_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Img_Icon_Modify" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\Img_Icon_Modify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Icon_Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\IMG_Icon_Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Icon_Cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\IMG_Icon_Cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IMG_Icon_Add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Icon_Add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IMG_Icon_Consult" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\IMG_Icon_Consult.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IMG_Icon_Cancel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\IMG_Icon_Cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IMG_Icon_Check1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\IMG_Icon_Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Icon_Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Icon_Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Icon_Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Icon_Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Icon_Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Icon_Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Icon_Generate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Icon_Generate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Img_Icon_Modify" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Img_Icon_Modify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Cliente_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Cliente_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Cliente_Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Cliente_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Icon_Cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Icon_Cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Icon_Consult_User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Icon_Consult_User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Icon_Print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\IMG_Icon_Print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

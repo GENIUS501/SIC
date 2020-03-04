@@ -211,6 +211,7 @@
     <Content Include="Imagenes\IMG_Icon_Delete.png" />
     <Content Include="Imagenes\IMG_Icon_Generate.png" />
     <Content Include="Imagenes\Img_Icon_Modify.png" />
+    <Content Include="Imagenes\IMG_Icon_Print.png" />
     <Content Include="Imagenes\IMG_Icon_Procedure.ico" />
     <Content Include="Imagenes\IMG_Icon_Report.ico" />
     <Content Include="Imagenes\IMG_Icon_Search.png" />

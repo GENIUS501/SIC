@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cambiar_Contrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambiar_Contrasena.Designer.cs">
+      <DependentUpon>Cambiar_Contrasena.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lista de Roles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cambiar_Contrasena.resx">
+      <DependentUpon>Cambiar_Contrasena.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lista de Roles.resx">
       <DependentUpon>Lista de Roles.cs</DependentUpon>
     </EmbeddedResource>

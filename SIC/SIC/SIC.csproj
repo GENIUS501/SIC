@@ -82,6 +82,12 @@
     <Compile Include="Mantenimiento_Casos.Designer.cs">
       <DependentUpon>Mantenimiento_Casos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimiento_Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento_Funcionarios.Designer.cs">
+      <DependentUpon>Mantenimiento_Funcionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimiento_Roles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento_Casos.resx">
       <DependentUpon>Mantenimiento_Casos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento_Funcionarios.resx">
+      <DependentUpon>Mantenimiento_Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento_Roles.resx">
       <DependentUpon>Mantenimiento_Roles.cs</DependentUpon>

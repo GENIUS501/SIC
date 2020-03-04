@@ -61,13 +61,18 @@ CREATE TABLE Tab_Procedimiento
 	Descripcion_Procedimiento	VARCHAR(MAX)
 );
 
-CREATE TABLE Tab_Casos
+CREATE TABLE Tab_Funcionarios
 (	
-	Cedula	INT,
+	Cedula	INT PRIMARY KEY,
 	Nombre	VARCHAR(30),
 	Apellido1	VARCHAR(30),
 	Apellido2	VARCHAR(30),
-	Genero	VARCHAR(30),
+	Genero	VARCHAR(30)
+);
+
+CREATE TABLE Tab_Expedientes
+(	
+	Cedula INT,
 	Num_Expediente	VARCHAR(50) PRIMARY KEY,
 	Parte_Procesal	VARCHAR(30),
 	Usuario_Generador	VARCHAR(25),
@@ -76,6 +81,7 @@ CREATE TABLE Tab_Casos
 	Id_Tipo_Procedimiento	INT,
 	Medida_Cautelar	VARCHAR(MAX),
 	Organo_Director	VARCHAR(25),
-	CONSTRAINT Fk_Cas_Usu FOREIGN KEY(Usuario_Generador) REFERENCES Tab_Usuarios(Nombre_Usuario),
-	CONSTRAINT Fk_Cas_Pro FOREIGN KEY(Id_Tipo_Procedimiento) REFERENCES Tab_Procedimiento(Id_Procedimiento)
+	CONSTRAINT Fk_Exp_Usu FOREIGN KEY(Usuario_Generador) REFERENCES Tab_Usuarios(Nombre_Usuario),
+	CONSTRAINT Fk_Exp_Pro FOREIGN KEY(Id_Tipo_Procedimiento) REFERENCES Tab_Procedimiento(Id_Procedimiento),
+	CONSTRAINT Fk_Exp_Fun FOREIGN KEY(Cedula) REFERENCES Tab_Funcionarios(Cedula)
 );

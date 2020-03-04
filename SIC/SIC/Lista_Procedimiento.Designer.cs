@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lista_Procedimiento));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_consultar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
@@ -107,6 +108,7 @@
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.dat_usuarios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Lista_Procedimiento";
             this.Text = "Lista de procedimientos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

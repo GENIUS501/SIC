@@ -82,6 +82,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantemiento_Procedimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantemiento_Procedimientos.Designer.cs">
+      <DependentUpon>Mantemiento_Procedimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimiento_Casos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantemiento_Procedimientos.resx">
+      <DependentUpon>Mantemiento_Procedimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento_Casos.resx">
       <DependentUpon>Mantenimiento_Casos.cs</DependentUpon>
@@ -174,6 +183,7 @@
     <Content Include="Imagenes\IMG_Icon_Consult_User.png" />
     <Content Include="Imagenes\IMG_Icon_Delete.png" />
     <Content Include="Imagenes\Img_Icon_Modify.png" />
+    <Content Include="Imagenes\IMG_Icon_Procedure.ico" />
     <Content Include="Imagenes\IMG_Icon_Search.png" />
     <Content Include="Imagenes\IMG_Icon_Security.ico" />
     <None Include="Imagenes\IMG_Cliente_Logo.png" />

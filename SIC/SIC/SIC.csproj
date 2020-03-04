@@ -126,6 +126,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte_numero_expediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_numero_expediente.Designer.cs">
+      <DependentUpon>Reporte_numero_expediente.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cambiar_Contrasena.resx">
       <DependentUpon>Cambiar_Contrasena.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +181,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reporte_numero_expediente.resx">
+      <DependentUpon>Reporte_numero_expediente.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -200,8 +209,10 @@
     <None Include="Imagenes\IMG_Icon_Consult.png" />
     <Content Include="Imagenes\IMG_Icon_Consult_User.png" />
     <Content Include="Imagenes\IMG_Icon_Delete.png" />
+    <Content Include="Imagenes\IMG_Icon_Generate.png" />
     <Content Include="Imagenes\Img_Icon_Modify.png" />
     <Content Include="Imagenes\IMG_Icon_Procedure.ico" />
+    <Content Include="Imagenes\IMG_Icon_Report.ico" />
     <Content Include="Imagenes\IMG_Icon_Search.png" />
     <Content Include="Imagenes\IMG_Icon_Security.ico" />
     <None Include="Imagenes\IMG_Cliente_Logo.png" />

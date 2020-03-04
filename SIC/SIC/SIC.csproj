@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bitacora_Movimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bitacora_Movimientos.Designer.cs">
+      <DependentUpon>Bitacora_Movimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bitacora_Sesiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bitacora_Sesiones.Designer.cs">
+      <DependentUpon>Bitacora_Sesiones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cambiar_Contrasena.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +138,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte_Estado_Expediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Estado_Expediente.Designer.cs">
+      <DependentUpon>Reporte_Estado_Expediente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reporte_numero_expediente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reporte_numero_expediente.Designer.cs">
       <DependentUpon>Reporte_numero_expediente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reporte_por_Cedula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_por_Cedula.Designer.cs">
+      <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bitacora_Movimientos.resx">
+      <DependentUpon>Bitacora_Movimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bitacora_Sesiones.resx">
+      <DependentUpon>Bitacora_Sesiones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cambiar_Contrasena.resx">
       <DependentUpon>Cambiar_Contrasena.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,8 +211,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reporte_Estado_Expediente.resx">
+      <DependentUpon>Reporte_Estado_Expediente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reporte_numero_expediente.resx">
       <DependentUpon>Reporte_numero_expediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_por_Cedula.resx">
+      <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

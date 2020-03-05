@@ -47,6 +47,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,12 +80,14 @@
             this.mantenimientoDeFuncionariosToolStripMenuItem.Name = "mantenimientoDeFuncionariosToolStripMenuItem";
             this.mantenimientoDeFuncionariosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.mantenimientoDeFuncionariosToolStripMenuItem.Text = "Mantenimiento de Funcionarios";
+            this.mantenimientoDeFuncionariosToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoDeFuncionariosToolStripMenuItem_Click);
             // 
             // mantenimientoDeCasosToolStripMenuItem
             // 
             this.mantenimientoDeCasosToolStripMenuItem.Name = "mantenimientoDeCasosToolStripMenuItem";
             this.mantenimientoDeCasosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.mantenimientoDeCasosToolStripMenuItem.Text = "Mantenimiento de casos";
+            this.mantenimientoDeCasosToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoDeCasosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -101,18 +104,21 @@
             this.reportePorExpedienteToolStripMenuItem.Name = "reportePorExpedienteToolStripMenuItem";
             this.reportePorExpedienteToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.reportePorExpedienteToolStripMenuItem.Text = "Reporte por expediente";
+            this.reportePorExpedienteToolStripMenuItem.Click += new System.EventHandler(this.reportePorExpedienteToolStripMenuItem_Click);
             // 
             // reporteDeEstadoDelExpedienteToolStripMenuItem
             // 
             this.reporteDeEstadoDelExpedienteToolStripMenuItem.Name = "reporteDeEstadoDelExpedienteToolStripMenuItem";
             this.reporteDeEstadoDelExpedienteToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.reporteDeEstadoDelExpedienteToolStripMenuItem.Text = "Reporte de estado del expediente";
+            this.reporteDeEstadoDelExpedienteToolStripMenuItem.Click += new System.EventHandler(this.reporteDeEstadoDelExpedienteToolStripMenuItem_Click);
             // 
             // reporteAsociadoToolStripMenuItem
             // 
             this.reporteAsociadoToolStripMenuItem.Name = "reporteAsociadoToolStripMenuItem";
             this.reporteAsociadoToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.reporteAsociadoToolStripMenuItem.Text = "Reporte asociado al funcionario";
+            this.reporteAsociadoToolStripMenuItem.Click += new System.EventHandler(this.reporteAsociadoToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 
@@ -131,30 +137,35 @@
             this.mantenimientoDeRolesYPermisosToolStripMenuItem.Name = "mantenimientoDeRolesYPermisosToolStripMenuItem";
             this.mantenimientoDeRolesYPermisosToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.mantenimientoDeRolesYPermisosToolStripMenuItem.Text = "Mantenimiento de roles y permisos";
+            this.mantenimientoDeRolesYPermisosToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoDeRolesYPermisosToolStripMenuItem_Click);
             // 
             // mantenimientoDeUsuariosToolStripMenuItem
             // 
             this.mantenimientoDeUsuariosToolStripMenuItem.Name = "mantenimientoDeUsuariosToolStripMenuItem";
             this.mantenimientoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.mantenimientoDeUsuariosToolStripMenuItem.Text = "Mantenimiento de usuarios";
+            this.mantenimientoDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoDeUsuariosToolStripMenuItem_Click);
             // 
             // bitacoraDeIngresoYSalidaDelSistemaToolStripMenuItem
             // 
             this.bitacoraDeIngresoYSalidaDelSistemaToolStripMenuItem.Name = "bitacoraDeIngresoYSalidaDelSistemaToolStripMenuItem";
             this.bitacoraDeIngresoYSalidaDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.bitacoraDeIngresoYSalidaDelSistemaToolStripMenuItem.Text = "Bitacora de ingreso y salida";
+            this.bitacoraDeIngresoYSalidaDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.bitacoraDeIngresoYSalidaDelSistemaToolStripMenuItem_Click);
             // 
             // bitacoraDeMovimientosToolStripMenuItem
             // 
             this.bitacoraDeMovimientosToolStripMenuItem.Name = "bitacoraDeMovimientosToolStripMenuItem";
             this.bitacoraDeMovimientosToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.bitacoraDeMovimientosToolStripMenuItem.Text = "Bitacora de Movimientos";
+            this.bitacoraDeMovimientosToolStripMenuItem.Click += new System.EventHandler(this.bitacoraDeMovimientosToolStripMenuItem_Click);
             // 
             // cambiarContraseñaToolStripMenuItem
             // 
             this.cambiarContraseñaToolStripMenuItem.Name = "cambiarContraseñaToolStripMenuItem";
             this.cambiarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
             this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar contraseña";
+            this.cambiarContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambiarContraseñaToolStripMenuItem_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -172,7 +183,8 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.toolStripStatusLabel1,
+            this.lbl_Usuario});
             this.statusStrip1.Location = new System.Drawing.Point(0, 315);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(686, 22);
@@ -184,6 +196,11 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(50, 17);
             this.toolStripStatusLabel1.Text = "Usuario:";
+            // 
+            // lbl_Usuario
+            // 
+            this.lbl_Usuario.Name = "lbl_Usuario";
+            this.lbl_Usuario.Size = new System.Drawing.Size(0, 17);
             // 
             // Menu
             // 
@@ -200,6 +217,7 @@
             this.Name = "Menu";
             this.Text = "Menú";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -229,5 +247,6 @@
         private System.Windows.Forms.ToolStripMenuItem reporteDeEstadoDelExpedienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteAsociadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_Usuario;
     }
 }

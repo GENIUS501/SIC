@@ -49,7 +49,7 @@ namespace SIC
                     {*/
                         this.Hide();
                         Menu form = new Menu();
-                     /*   form.Id_Perfil = usu.ID_ROL;
+                        form.Id_Perfil = usu.Id_Perfil;/*
                         form.Id_Session = Id_Session;
                         form.usuario = usu.USUARIO;*/
                         MessageBox.Show("Bienvenido: " + usu.Nombre_Usuario, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);

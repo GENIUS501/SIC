@@ -8,7 +8,7 @@ using System.Data;
 using System.IO;
 using System.Configuration;
 
-namespace Datos
+namespace AccesoDatos
 {
    public class Database
 

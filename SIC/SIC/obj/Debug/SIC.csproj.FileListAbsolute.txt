@@ -18,3 +18,9 @@ C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Properties.Resources.resou
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.csproj.GenerateResource.Cache
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.exe
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.pdb
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Bitacora_Movimientos.resources
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Bitacora_Sesiones.resources
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Cambiar_Contrasena.resources
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Reporte_Estado_Expediente.resources
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Reporte_numero_expediente.resources
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Reporte_por_Cedula.resources

@@ -25,6 +25,20 @@ namespace Negocios
         }
         #endregion
 
+        #region Permisos
+        public Permisos Mostrar_Paquete_Unico(Int32 id_perfil,Int32 modulo)
+        {
+            try
+            {
+                GestorBase BD = new GestorBase();
+                return BD.Mostrar_Permisos_Unico(id_perfil,modulo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+        #endregion
         #endregion
     }
 }

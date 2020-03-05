@@ -56,14 +56,14 @@ namespace Negocios
         #endregion
 
         #region Permisos
-        public Permisos Mostrar_Permisos_Unico(Int32 pCodigo)
+        public Permisos Mostrar_Permisos_Unico(Int32 id_perfil,Int32 modulo)
         {
             try
             {
                 DataTable dtConsulta = new DataTable();
-                Productos vRegistro = new Productos();
+                Permisos vRegistro = new Permisos();
 
-                string commandText = "SELECT * FROM [dbo].[Tab_Productos] WHERE [CODIGO] =  " + pCodigo;
+                string commandText = "SELECT * FROM [dbo].[Tab_Permisos] WHERE [Id_Perfil] =  " + id_perfil+" and [Modulo] = "+modulo;
                 //string commandText = commandTexta;
 
                 using (SqlConnection connection = new SqlConnection(vCadenaConexion))
@@ -76,11 +76,12 @@ namespace Negocios
 
                 if (dtConsulta.Rows.Count != 0)
                 {
-                    vRegistro.CODIGO = int.Parse(dtConsulta.Rows[0]["CODIGO"].ToString());
-                    vRegistro.EXITENCIAS = int.Parse(dtConsulta.Rows[0]["EXITENCIAS"].ToString());
-                    vRegistro.MARCA = dtConsulta.Rows[0]["MARCA"].ToString();
-                    vRegistro.NOMBRE_PRODUCTO = dtConsulta.Rows[0]["NOMBRE_PRODUCTO"].ToString();
-                    vRegistro.PRECIO = Convert.ToDecimal(dtConsulta.Rows[0]["PRECIO"].ToString());
+                    vRegistro.Id_Perfil = int.Parse(dtConsulta.Rows[0]["Id_Perfil"].ToString());
+                    vRegistro.Modulo = int.Parse(dtConsulta.Rows[0]["Modulo"].ToString());
+                    vRegistro.Agregar = dtConsulta.Rows[0]["Agregar"].ToString();
+                    vRegistro.Modificar = dtConsulta.Rows[0]["Modificar"].ToString();
+                    vRegistro.Consultar = dtConsulta.Rows[0]["Consultar"].ToString();
+                    vRegistro.Eliminar = dtConsulta.Rows[0]["Eliminar"].ToString();
                 }
 
 

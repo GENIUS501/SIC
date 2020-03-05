@@ -81,6 +81,7 @@
             this.Btn_Aceptar.Size = new System.Drawing.Size(66, 61);
             this.Btn_Aceptar.TabIndex = 4;
             this.Btn_Aceptar.UseVisualStyleBackColor = true;
+            this.Btn_Aceptar.Click += new System.EventHandler(this.Btn_Aceptar_Click);
             // 
             // Btn_Cancelar
             // 

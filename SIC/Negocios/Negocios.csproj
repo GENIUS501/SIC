@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Gestor.cs" />
     <Compile Include="GestorBase.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="Perfiles.cs" />
     <Compile Include="Permisos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

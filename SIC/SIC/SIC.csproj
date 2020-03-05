@@ -233,7 +233,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{1A21D126-957D-464F-B976-0DB94E97A891}</Project>
+      <Name>Negocios</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\IMG_Icon_Add.ico" />
     <Content Include="Imagenes\IMG_Icon_Add.png" />

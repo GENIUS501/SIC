@@ -24,3 +24,7 @@ C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Cambiar_Contrasena.resourc
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Reporte_Estado_Expediente.resources
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Reporte_numero_expediente.resources
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\obj\Debug\SIC.Reporte_por_Cedula.resources
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\bin\Debug\Negocios.dll
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\bin\Debug\AccesoDatos.dll
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\bin\Debug\Negocios.pdb
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\SIC\bin\Debug\AccesoDatos.pdb

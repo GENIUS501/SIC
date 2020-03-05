@@ -61,6 +61,7 @@
             // 
             this.Txt_Contrasena.Location = new System.Drawing.Point(91, 258);
             this.Txt_Contrasena.Name = "Txt_Contrasena";
+            this.Txt_Contrasena.PasswordChar = '*';
             this.Txt_Contrasena.Size = new System.Drawing.Size(100, 20);
             this.Txt_Contrasena.TabIndex = 2;
             // 
@@ -92,6 +93,7 @@
             this.Btn_Cancelar.Size = new System.Drawing.Size(66, 61);
             this.Btn_Cancelar.TabIndex = 5;
             this.Btn_Cancelar.UseVisualStyleBackColor = true;
+            this.Btn_Cancelar.Click += new System.EventHandler(this.Btn_Cancelar_Click);
             // 
             // pictureBox1
             // 

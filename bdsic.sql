@@ -85,3 +85,11 @@ CREATE TABLE Tab_Expedientes
 	CONSTRAINT Fk_Exp_Pro FOREIGN KEY(Id_Tipo_Procedimiento) REFERENCES Tab_Procedimiento(Id_Procedimiento),
 	CONSTRAINT Fk_Exp_Fun FOREIGN KEY(Cedula) REFERENCES Tab_Funcionarios(Cedula)
 );
+INSERT INTO Tab_Perfiles(Id_Perfil,Nombre_Perfil) values(1,'Administrador')
+INSERT INTO Tab_Permisos(Id_Perfil,Modulo,Agregar,Modificar,Consultar,Eliminar) values(1,1,'S','S','S','S')
+INSERT INTO Tab_Permisos(Id_Perfil,Modulo,Agregar,Modificar,Consultar,Eliminar) values(1,2,'S','S','S','S')
+INSERT INTO Tab_Permisos(Id_Perfil,Modulo,Agregar,Modificar,Consultar,Eliminar) values(1,3,'S','S','S','S')
+INSERT INTO Tab_Permisos(Id_Perfil,Modulo,Agregar,Modificar,Consultar,Eliminar) values(1,4,'S','S','S','S')
+INSERT INTO Tab_Permisos(Id_Perfil,Modulo,Agregar,Modificar,Consultar,Eliminar) values(1,5,'S','S','S','S')
+INSERT INTO Tab_Permisos(Id_Perfil,Modulo,Agregar,Modificar,Consultar,Eliminar) values(1,6,'S','S','S','S')
+INSERT INTO Tab_Usuarios (Nombre,Cedula,Nombre_Usuario,Apellido1,Apellido2,Contrasena,Id_Perfil) values('Administrador',123456789,'Admin','Admin','Admin','rIQeOq7XMQ4ZE1g/tfO3/Da5jKI=',1);

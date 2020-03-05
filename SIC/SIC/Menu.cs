@@ -39,14 +39,14 @@ namespace SIC
             try
             {
                 this.lbl_Usuario.Text = usuario;
-                if (Id_Perfil > 1)
-                {
-                    reporteDePagosToolStripMenuItem.Visible = false;
-                    seguridadToolStripMenuItem.Visible = false;
-                    mantenimientoDePaquetesToolStripMenuItem.Visible = false;
-                    pagoDeProductosToolStripMenuItem.Visible = false;
-                    bitacorasToolStripMenuItem.Visible = false;
-                }
+                //if (Id_Perfil > 1)
+                //{
+                //    reporteDePagosToolStripMenuItem.Visible = false;
+                //    seguridadToolStripMenuItem.Visible = false;
+                //    mantenimientoDePaquetesToolStripMenuItem.Visible = false;
+                //    pagoDeProductosToolStripMenuItem.Visible = false;
+                //    bitacorasToolStripMenuItem.Visible = false;
+                //}
             }
             catch (Exception ex)
             {

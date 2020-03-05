@@ -55,6 +55,45 @@ namespace Negocios
         }
         #endregion
 
+        #region Permisos
+        public Permisos Mostrar_Permisos_Unico(Int32 pCodigo)
+        {
+            try
+            {
+                DataTable dtConsulta = new DataTable();
+                Productos vRegistro = new Productos();
+
+                string commandText = "SELECT * FROM [dbo].[Tab_Productos] WHERE [CODIGO] =  " + pCodigo;
+                //string commandText = commandTexta;
+
+                using (SqlConnection connection = new SqlConnection(vCadenaConexion))
+                {
+                    SqlCommand command = new SqlCommand(commandText, connection);
+
+                    SqlDataAdapter DataAdapter = new SqlDataAdapter(command);
+                    DataAdapter.Fill(dtConsulta);
+                }
+
+                if (dtConsulta.Rows.Count != 0)
+                {
+                    vRegistro.CODIGO = int.Parse(dtConsulta.Rows[0]["CODIGO"].ToString());
+                    vRegistro.EXITENCIAS = int.Parse(dtConsulta.Rows[0]["EXITENCIAS"].ToString());
+                    vRegistro.MARCA = dtConsulta.Rows[0]["MARCA"].ToString();
+                    vRegistro.NOMBRE_PRODUCTO = dtConsulta.Rows[0]["NOMBRE_PRODUCTO"].ToString();
+                    vRegistro.PRECIO = Convert.ToDecimal(dtConsulta.Rows[0]["PRECIO"].ToString());
+                }
+
+
+                return vRegistro;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #endregion
     }
 }

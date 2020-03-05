@@ -34,12 +34,13 @@ namespace Negocios
         #region Constructos con parametros
         public Usuarios(int cedula, string nombre_usuario, string nombre, string apellido1, string apellido2, string contrasena,int id_perfil)
         {
+            Cedula = cedula;
+            Nombre_Usuario = nombre_usuario;
+            Nombre = nombre;
+            Apellido1 = apellido1;
+            Apellido2 = apellido2;
+            Contrasena = contrasena;
             Id_Perfil = id_perfil;
-            Modulo = modulo;
-            Agregar = agregar;
-            Consultar = consultar;
-            Modificar = modificar;
-            Eliminar = eliminar;
         }
         #endregion
     }

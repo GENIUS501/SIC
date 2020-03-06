@@ -50,5 +50,22 @@ namespace SIC
                 this.btn_consultar.Enabled = true;
             }
         }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Mantenimiento_Roles frm = new Mantenimiento_Roles();
+                frm.Accion = "A";
+                frm.Usuario = usuario;
+                frm.Text = "Mantenimiento de roles: Agregar rol.";
+                frm.ShowDialog();
+                Lista_de_Roles_Load(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

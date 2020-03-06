@@ -119,21 +119,67 @@ namespace SIC
 
         private void reportePorExpedienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Reporte_numero_expediente frm = new Reporte_numero_expediente();
+               // frm.Id_Perfil = Id_Perfil;
+               // frm.usuario = usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void reporteDeEstadoDelExpedienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Reporte_Estado_Expediente frm = new Reporte_Estado_Expediente();
+                // frm.Id_Perfil = Id_Perfil;
+                // frm.usuario = usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void reporteAsociadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Reporte_por_Cedula frm = new Reporte_por_Cedula();
+                // frm.Id_Perfil = Id_Perfil;
+                // frm.usuario = usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
         private void mantenimientoDeRolesYPermisosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Lista_de_Roles frm = new Lista_de_Roles();
+                frm.Id_Perfil = Id_Perfil;
+                frm.usuario = usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -155,17 +201,50 @@ namespace SIC
 
         private void bitacoraDeIngresoYSalidaDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Bitacora_Sesiones frm = new Bitacora_Sesiones();
+                //frm.Id_Perfil = Id_Perfil;
+                //frm.usuario = usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void bitacoraDeMovimientosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Bitacora_Movimientos frm = new Bitacora_Movimientos();
+                //frm.Id_Perfil = Id_Perfil;
+                //frm.usuario = usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Cambiar_Contrasena frm = new Cambiar_Contrasena();
+                //frm.Id_Perfil = Id_Perfil;
+                //frm.usuario = usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

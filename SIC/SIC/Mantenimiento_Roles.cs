@@ -12,6 +12,9 @@ namespace SIC
 {
     public partial class Mantenimiento_Roles : Form
     {
+        public string Usuario { get; set; }
+        public string Accion { get; set; }
+
         public Mantenimiento_Roles()
         {
             InitializeComponent();

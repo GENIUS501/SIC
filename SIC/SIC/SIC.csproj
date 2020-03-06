@@ -64,11 +64,11 @@
     <Compile Include="Cambiar_Contrasena.Designer.cs">
       <DependentUpon>Cambiar_Contrasena.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lista de Roles.cs">
+    <Compile Include="Lista_de_Roles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lista de Roles.Designer.cs">
-      <DependentUpon>Lista de Roles.cs</DependentUpon>
+    <Compile Include="Lista_de_Roles.Designer.cs">
+      <DependentUpon>Lista_de_Roles.cs</DependentUpon>
     </Compile>
     <Compile Include="Lista_Casos.cs">
       <SubType>Form</SubType>
@@ -165,8 +165,8 @@
     <EmbeddedResource Include="Cambiar_Contrasena.resx">
       <DependentUpon>Cambiar_Contrasena.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lista de Roles.resx">
-      <DependentUpon>Lista de Roles.cs</DependentUpon>
+    <EmbeddedResource Include="Lista_de_Roles.resx">
+      <DependentUpon>Lista_de_Roles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lista_Casos.resx">
       <DependentUpon>Lista_Casos.cs</DependentUpon>

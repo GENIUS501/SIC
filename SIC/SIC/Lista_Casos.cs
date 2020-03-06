@@ -16,5 +16,10 @@ namespace SIC
         {
             InitializeComponent();
         }
+
+        private void Lista_Casos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

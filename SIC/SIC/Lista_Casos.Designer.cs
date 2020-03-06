@@ -176,6 +176,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Lista_Casos";
             this.Text = "Lista de Casos";
+            this.Load += new System.EventHandler(this.Lista_Casos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dat_usuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

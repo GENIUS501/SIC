@@ -111,6 +111,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Lista_de_Roles";
             this.Text = "Lista de roles y permisos";
+            this.Load += new System.EventHandler(this.Lista_de_Roles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dat_usuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

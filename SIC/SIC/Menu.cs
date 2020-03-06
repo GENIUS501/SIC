@@ -87,12 +87,34 @@ namespace SIC
 
         private void mantenimientoDeFuncionariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Lista_Funcionarios frm = new Lista_Funcionarios();
+                frm.Id_Perfil = Id_Perfil;
+                frm.usuario = usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void mantenimientoDeCasosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Lista_Casos frm = new Lista_Casos();
+                frm.Id_Perfil = Id_Perfil;
+                frm.usuario = usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void reportePorExpedienteToolStripMenuItem_Click(object sender, EventArgs e)

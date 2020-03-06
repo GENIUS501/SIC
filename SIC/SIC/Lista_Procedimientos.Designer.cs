@@ -111,6 +111,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Lista_Procedimiento";
             this.Text = "Lista de procedimientos";
+            this.Load += new System.EventHandler(this.Lista_Procedimiento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dat_usuarios)).EndInit();
             this.ResumeLayout(false);

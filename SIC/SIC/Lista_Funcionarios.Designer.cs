@@ -196,6 +196,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Lista_Funcionarios";
             this.Text = "Lista de funcionarios";
+            this.Load += new System.EventHandler(this.Lista_Funcionarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dat_usuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

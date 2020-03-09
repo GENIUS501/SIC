@@ -33,8 +33,8 @@
             this.btn_acpetar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.txt_id_rol = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -47,7 +47,7 @@
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.clb_Roles = new System.Windows.Forms.CheckedListBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chb_Roles = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -72,6 +72,7 @@
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
             this.btn_acpetar.TabIndex = 0;
             this.btn_acpetar.UseVisualStyleBackColor = true;
+            this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
             // button1
             // 
@@ -85,8 +86,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_nombre);
+            this.groupBox1.Controls.Add(this.txt_id_rol);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(14, 12);
@@ -96,19 +97,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del perfil";
             // 
-            // textBox2
+            // txt_nombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 17;
+            this.txt_nombre.Location = new System.Drawing.Point(6, 82);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(100, 20);
+            this.txt_nombre.TabIndex = 17;
             // 
-            // textBox1
+            // txt_id_rol
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 16;
+            this.txt_id_rol.Location = new System.Drawing.Point(6, 33);
+            this.txt_id_rol.Name = "txt_id_rol";
+            this.txt_id_rol.Size = new System.Drawing.Size(100, 20);
+            this.txt_id_rol.TabIndex = 16;
             // 
             // label2
             // 
@@ -139,7 +140,7 @@
             this.groupBox2.Controls.Add(this.checkedListBox2);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.clb_Roles);
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.chb_Roles);
             this.groupBox2.Location = new System.Drawing.Point(12, 134);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(671, 164);
@@ -238,6 +239,7 @@
             // 
             // clb_Roles
             // 
+            this.clb_Roles.Enabled = false;
             this.clb_Roles.FormattingEnabled = true;
             this.clb_Roles.Items.AddRange(new object[] {
             "Agrergar",
@@ -249,15 +251,16 @@
             this.clb_Roles.Size = new System.Drawing.Size(86, 64);
             this.clb_Roles.TabIndex = 49;
             // 
-            // checkBox1
+            // chb_Roles
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 33);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(135, 17);
-            this.checkBox1.TabIndex = 48;
-            this.checkBox1.Text = "Mantenimiento de roles";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chb_Roles.AutoSize = true;
+            this.chb_Roles.Location = new System.Drawing.Point(6, 33);
+            this.chb_Roles.Name = "chb_Roles";
+            this.chb_Roles.Size = new System.Drawing.Size(135, 17);
+            this.chb_Roles.TabIndex = 48;
+            this.chb_Roles.Text = "Mantenimiento de roles";
+            this.chb_Roles.UseVisualStyleBackColor = true;
+            this.chb_Roles.CheckedChanged += new System.EventHandler(this.chb_Roles_CheckedChanged);
             // 
             // Mantenimiento_Roles
             // 
@@ -288,8 +291,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.TextBox txt_id_rol;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -302,6 +305,6 @@
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckedListBox clb_Roles;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chb_Roles;
     }
 }

@@ -58,7 +58,7 @@ namespace SIC
                 Mantenimiento_Roles frm = new Mantenimiento_Roles();
                 frm.Accion = "A";
                 frm.Usuario = usuario;
-                frm.Text = "Mantenimiento de roles: Agregar rol.";
+                frm.Text = "Mantenimiento de roles y permisos: Agregar rol.";
                 frm.ShowDialog();
                 Lista_de_Roles_Load(null, null);
             }

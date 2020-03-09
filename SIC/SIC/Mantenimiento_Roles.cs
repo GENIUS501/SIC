@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocios;
 
 namespace SIC
 {
@@ -14,7 +15,9 @@ namespace SIC
     {
         public string Usuario { get; set; }
         public string Accion { get; set; }
-
+        Gestor Negocios;
+        Perfiles Perf;
+        Permisos Permi;
         public Mantenimiento_Roles()
         {
             InitializeComponent();
@@ -35,17 +38,49 @@ namespace SIC
 
         private void btn_acpetar_Click(object sender, EventArgs e)
         {
-            if (Accion == "A")
+            try
             {
-                Permisos();
+                if (Accion == "A")
+                {
+                    Permisos(Convert.ToInt32(this.txt_id_rol.Text));
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void Permisos()
+        private void Permisos(int id_perfil)
         {
+            Permi = new Permisos();
+            Permi.Id_Perfil = id_perfil;
             if (this.chb_Roles.Checked==true)
             {
-                MessageBox.Show("Puto");
+                Permi.Modulo = 1;
+                foreach (string value in clb_Roles.CheckedItems)
+                {
+                    /* if(value=="Agregar")
+                     {
+                         Permi.Agregar = "S";
+                     }*/
+                    switch (value)
+                    {
+                        case "Agrergar":
+                            Permi.Agregar = "S";
+                            break;
+                        case "Actualizar":
+                            Permi.Modificar = "S";
+                            break;
+                        case "Borrar":
+                            Permi.Eliminar = "S";
+                            break;
+                        case "Consultar":
+                            Permi.Consultar = "S";
+                            break;
+                    }
+                }
             }
+           // MessageBox.Show("Id Perfil: "+Permi.Id_Perfil+" Modulo: "+Permi.Modulo+ " Agregar: " + Permi.Agregar+ " Actualizar: " + Permi.Modificar+ " Consultar: " + Permi.Consultar+ " Eliminar: " + Permi.Eliminar);
         }
 
         private void chb_Roles_CheckedChanged(object sender, EventArgs e)
@@ -57,6 +92,16 @@ namespace SIC
             else if(this.chb_Roles.Checked == false)
             {
                 this.clb_Roles.Enabled = false;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try {
+                this.Close();
+            }
+            catch (Exception ex){
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

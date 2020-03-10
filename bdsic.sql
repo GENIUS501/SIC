@@ -18,6 +18,7 @@ CREATE TABLE Tab_Usuarios
 	Apellido1	Varchar(30),
 	Apellido2	Varchar(30),
 	Contrasena	Varchar(max),
+	Genero Varchar(2),
 	Id_Perfil	INT,
 	CONSTRAINT Fk_Usu_Per FOREIGN KEY(Id_Perfil) REFERENCES Tab_Perfiles(Id_Perfil)
 );

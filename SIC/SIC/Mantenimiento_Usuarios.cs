@@ -16,5 +16,30 @@ namespace SIC
         {
             InitializeComponent();
         }
+     /*   private void LlenarCombo()
+        {
+            try
+            {
+                this.Cbo_Rol.DisplayMember = "Text";
+                this.Cbo_Rol.ValueMember = "Value";
+
+                var items = new[] {
+                                    new { Text = "Administrador", Value = "1" },
+                                    new { Text = "Consultor", Value = "2" },
+                                    new { Text = "Auditor", Value = "3" },
+                                    };
+                this.Cbo_Rol.DataSource = items;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+
+
+        }*/
+        private void Mantenimiento_Usuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,7 +28,9 @@ namespace SIC
             try
             {
                 this.clb_Roles.Enabled = false;
-
+                this.clb_Casos.Enabled = false;
+                this.clb_funcionarios.Enabled = false;
+                this.clb_usuarios.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -108,6 +110,7 @@ namespace SIC
                 }
                 /////////Usuarios//////2///////////////////////////////////////////////////////////////////////
                 Permi = new Permisos();
+                Permi.Id_Perfil = id_perfil;
                 if (this.chb_usuarios.Checked == true)
                 {
                     FilasAfectadas = 0;
@@ -147,6 +150,7 @@ namespace SIC
                 {
                     FilasAfectadas = 0;
                     Permi.Modulo = 3;
+                    Permi.Id_Perfil = id_perfil;
                     foreach (string value in clb_funcionarios.CheckedItems)
                     {
                         switch (value)
@@ -181,6 +185,7 @@ namespace SIC
                 if (this.chb_Casos.Checked == true)
                 {
                     FilasAfectadas = 0;
+                    Permi.Id_Perfil = id_perfil;
                     Permi.Modulo = 4;
                     foreach (string value in clb_Casos.CheckedItems)
                     {
@@ -217,6 +222,7 @@ namespace SIC
                 {
                     FilasAfectadas = 0;
                     Permi.Modulo = 5;
+                    Permi.Id_Perfil = id_perfil;
                     Permi.Agregar = "N";
                     Permi.Consultar = "N";
                     Permi.Eliminar = "N";
@@ -237,6 +243,7 @@ namespace SIC
                 {
                     FilasAfectadas = 0;
                     Permi.Modulo = 6;
+                    Permi.Id_Perfil = id_perfil;
                     Permi.Agregar = "N";
                     Permi.Consultar = "N";
                     Permi.Eliminar = "N";
@@ -259,13 +266,20 @@ namespace SIC
 
         private void chb_Roles_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.chb_Roles.Checked == true)
+            try
             {
-                this.clb_Roles.Enabled = true;
+                if (this.chb_Roles.Checked == true)
+                {
+                    this.clb_Roles.Enabled = true;
+                }
+                else if (this.chb_Roles.Checked == false)
+                {
+                    this.clb_Roles.Enabled = false;
+                }
             }
-            else if(this.chb_Roles.Checked == false)
+            catch (Exception ex)
             {
-                this.clb_Roles.Enabled = false;
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -275,6 +289,62 @@ namespace SIC
                 this.Close();
             }
             catch (Exception ex){
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void chb_usuarios_CheckedChanged(object sender, EventArgs e)
+        {
+            try {
+                    if (this.chb_usuarios.Checked == true)
+                    {
+                        this.clb_usuarios.Enabled = true;
+                    }
+                    else if (this.chb_Roles.Checked == false)
+                    {
+                        this.clb_usuarios.Enabled = false;
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void chb_funcionarios_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.chb_funcionarios.Checked == true)
+                {
+                    this.clb_funcionarios.Enabled = true;
+                }
+                else if (this.chb_funcionarios.Checked == false)
+                {
+                    this.clb_funcionarios.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void chb_Casos_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.chb_Casos.Checked == true)
+                {
+                    this.clb_Casos.Enabled = true;
+                }
+                else if (this.chb_Casos.Checked == false)
+                {
+                    this.clb_Casos.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

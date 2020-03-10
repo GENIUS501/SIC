@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento_Roles));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_acpetar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.txt_id_rol = new System.Windows.Forms.TextBox();
@@ -74,16 +74,16 @@
             this.btn_acpetar.UseVisualStyleBackColor = true;
             this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
-            // button1
+            // btn_cancelar
             // 
-            this.button1.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(445, 318);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 43);
-            this.button1.TabIndex = 45;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_cancelar.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
+            this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cancelar.Location = new System.Drawing.Point(445, 318);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
+            this.btn_cancelar.TabIndex = 45;
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -191,6 +191,7 @@
             this.chb_Casos.TabIndex = 54;
             this.chb_Casos.Text = "Mantenimiento de Casos";
             this.chb_Casos.UseVisualStyleBackColor = true;
+            this.chb_Casos.CheckedChanged += new System.EventHandler(this.chb_Casos_CheckedChanged);
             // 
             // clb_funcionarios
             // 
@@ -214,6 +215,7 @@
             this.chb_funcionarios.TabIndex = 52;
             this.chb_funcionarios.Text = "Mantenimiento de Funcionarios";
             this.chb_funcionarios.UseVisualStyleBackColor = true;
+            this.chb_funcionarios.CheckedChanged += new System.EventHandler(this.chb_funcionarios_CheckedChanged);
             // 
             // clb_usuarios
             // 
@@ -237,6 +239,7 @@
             this.chb_usuarios.TabIndex = 50;
             this.chb_usuarios.Text = "Mantenimiento de Usuarios";
             this.chb_usuarios.UseVisualStyleBackColor = true;
+            this.chb_usuarios.CheckedChanged += new System.EventHandler(this.chb_usuarios_CheckedChanged);
             // 
             // clb_Roles
             // 
@@ -270,7 +273,7 @@
             this.ClientSize = new System.Drawing.Size(695, 373);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_acpetar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -290,7 +293,7 @@
 
         private System.Windows.Forms.Button btn_acpetar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.TextBox txt_id_rol;

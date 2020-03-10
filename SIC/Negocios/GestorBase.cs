@@ -25,7 +25,7 @@ namespace Negocios
                 sentencia = "insert into Tab_Perfiles (Id_Perfil,Nombre_Perfil) values(@Id_Perfil,@Nombre_Perfil)";
                 Parameter[] parametros = {
                                                      new Parameter("@Id_Perfil",obj.Id_Perfil),
-                                                     new Parameter("@@Nombre_Perfil",obj.Nombre_Perfil),
+                                                     new Parameter("@Nombre_Perfil",obj.Nombre_Perfil),
                                               };
                 FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
                 return Registrar(FilasAfectadas, usuario, "Rol", "Agrego");

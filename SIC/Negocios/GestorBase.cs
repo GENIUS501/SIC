@@ -39,7 +39,7 @@ namespace Negocios
         #endregion
 
         #region permisos
-        public Int32 Agregar_Permisos(Permisos obj, string usuario)
+        public Int32 Agregar_Permisos(Permisos obj/*, string usuario*/)
         {
             try
             {

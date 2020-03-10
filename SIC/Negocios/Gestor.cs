@@ -8,6 +8,46 @@ namespace Negocios
 {
     public class Gestor
     {
+        #region Agregar
+       
+        #region rol
+        public Int32 AgregarRol(Perfiles rol, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Agregar_Rol(rol, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
+        #region permisos
+        public Int32 AgregarPermisos(Permisos permi/*, string usuario*/)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Agregar_Permisos(permi/*, usuario*/);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
+        #endregion
+
         #region Mostrar especifico
 
         #region Login

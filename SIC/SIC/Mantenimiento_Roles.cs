@@ -201,6 +201,15 @@ namespace SIC
                         }
                     }
                     MessageBox.Show("Id Perfil: " + Permi.Id_Perfil + " Modulo: " + Permi.Modulo + " Agregar: " + Permi.Agregar + " Actualizar: " + Permi.Modificar + " Consultar: " + Permi.Consultar + " Eliminar: " + Permi.Eliminar);
+                    FilasAfectadas = Negocios.AgregarPermisos(Permi);
+                    if (FilasAfectadas > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo agregar el permiso sobre el modulo casos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 /////////Sesiones/////5////////////////////////////////////////////////////////////////////////////////////////
                 Permi = new Permisos();
@@ -212,10 +221,19 @@ namespace SIC
                     Permi.Consultar = "N";
                     Permi.Eliminar = "N";
                     Permi.Modificar = "N";
+                    FilasAfectadas = Negocios.AgregarPermisos(Permi);
+                    if (FilasAfectadas > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo agregar el permiso sobre el modulo bitacora sesiones ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 ////////Movimientos////6//////////////////////////////////////////////////////////////////////////////////////
                 Permi = new Permisos();
-                if (this.chb_sesiones.Checked == true)
+                if (this.chb_movimientos.Checked == true)
                 {
                     FilasAfectadas = 0;
                     Permi.Modulo = 6;
@@ -223,6 +241,15 @@ namespace SIC
                     Permi.Consultar = "N";
                     Permi.Eliminar = "N";
                     Permi.Modificar = "N";
+                    FilasAfectadas = Negocios.AgregarPermisos(Permi);
+                    if (FilasAfectadas > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo agregar el permiso sobre el modulo bitacora movimientos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }catch(Exception ex)
             {

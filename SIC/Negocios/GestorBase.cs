@@ -12,6 +12,62 @@ namespace Negocios
     public class GestorBase
     {
         string vCadenaConexion = Database.connectionString;
+
+        #region Agregar
+
+        #region rol
+        public Int32 Agregar_Rol(Perfiles obj, string usuario)
+        {
+            try
+            {
+                Int32 FilasAfectadas = 0;
+                string sentencia;
+                sentencia = "insert into Tab_Perfiles (Id_Perfil,Nombre_Perfil) values(@Id_Perfil,@Nombre_Perfil)";
+                Parameter[] parametros = {
+                                                     new Parameter("@Id_Perfil",obj.Id_Perfil),
+                                                     new Parameter("@@Nombre_Perfil",obj.Nombre_Perfil),
+                                              };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Rol", "Agrego");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        #endregion
+
+        #region permisos
+        public Int32 Agregar_Permisos(Permisos obj, string usuario)
+        {
+            try
+            {
+                Int32 FilasAfectadas = 0;
+                string sentencia;
+                sentencia = "insert into Tab_Permisos (Id_Perfil,Modulo,Agregar,Modificar,Consultar,Eliminar) values(@Id_Perfil,@Modulo,@Agregar,@Modificar,@Consultar,@Eliminar)";
+                Parameter[] parametros = {
+                                                     new Parameter("@Id_Perfil",obj.Id_Perfil),
+                                                     new Parameter("@Modulo",obj.Modulo),
+                                                     new Parameter("@Agregar",obj.Agregar),
+                                                     new Parameter("@Modificar",obj.Modificar),
+                                                     new Parameter("@Consultar",obj.Consultar),
+                                                     new Parameter("@Eliminar",obj.Eliminar),
+                                              };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return FilasAfectadas;
+                //return Registrar(FilasAfectadas, usuario, "Rol", "Agrego");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        #endregion
+
+        #endregion
+
         #region Mostrar especifico
 
         #region Login
@@ -95,6 +151,37 @@ namespace Negocios
         }
         #endregion
 
+        #endregion
+
+        #region Registrar
+        public Int32 Registrar(Int32 FilasAfectadas, string usuario, string Tabla, string Accion)
+        {
+            if (FilasAfectadas > 0)
+            {
+                Int32 f2 = 0;
+                string sentencia;
+                sentencia = "INSERT INTO Tab_Bitacora_Movimientos (Accion,Fecha_Hora,Modulo,Usuario) VALUES(@Accion,getdate(),@modulo,@Usuario);";
+                Parameter[] parametrosa = {
+                                                     new Parameter("@Usuario",usuario),
+                                                     new Parameter("@Accion",Accion),
+                                                     new Parameter("@modulo",Tabla),
+                                              };
+                f2 = Database.exectuteNonQuery(sentencia, parametrosa);
+                if (f2 > 0)
+                {
+
+                }
+                else
+                {
+                    FilasAfectadas = 3;
+                }
+            }
+            else
+            {
+                FilasAfectadas = 0;
+            }
+            return FilasAfectadas;
+        }
         #endregion
     }
 }

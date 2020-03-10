@@ -38,14 +38,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chb_movimientos = new System.Windows.Forms.CheckBox();
+            this.chb_sesiones = new System.Windows.Forms.CheckBox();
+            this.clb_Casos = new System.Windows.Forms.CheckedListBox();
+            this.chb_Casos = new System.Windows.Forms.CheckBox();
+            this.clb_funcionarios = new System.Windows.Forms.CheckedListBox();
+            this.chb_funcionarios = new System.Windows.Forms.CheckBox();
+            this.clb_usuarios = new System.Windows.Forms.CheckedListBox();
+            this.chb_usuarios = new System.Windows.Forms.CheckBox();
             this.clb_Roles = new System.Windows.Forms.CheckedListBox();
             this.chb_Roles = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -132,14 +132,14 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBox6);
-            this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Controls.Add(this.checkedListBox4);
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.checkedListBox3);
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkedListBox2);
-            this.groupBox2.Controls.Add(this.checkBox2);
+            this.groupBox2.Controls.Add(this.chb_movimientos);
+            this.groupBox2.Controls.Add(this.chb_sesiones);
+            this.groupBox2.Controls.Add(this.clb_Casos);
+            this.groupBox2.Controls.Add(this.chb_Casos);
+            this.groupBox2.Controls.Add(this.clb_funcionarios);
+            this.groupBox2.Controls.Add(this.chb_funcionarios);
+            this.groupBox2.Controls.Add(this.clb_usuarios);
+            this.groupBox2.Controls.Add(this.chb_usuarios);
             this.groupBox2.Controls.Add(this.clb_Roles);
             this.groupBox2.Controls.Add(this.chb_Roles);
             this.groupBox2.Location = new System.Drawing.Point(12, 134);
@@ -149,94 +149,94 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Permisos";
             // 
-            // checkBox6
+            // chb_movimientos
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(165, 127);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(141, 17);
-            this.checkBox6.TabIndex = 57;
-            this.checkBox6.Text = "Bitacora de movimientos";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chb_movimientos.AutoSize = true;
+            this.chb_movimientos.Location = new System.Drawing.Point(165, 127);
+            this.chb_movimientos.Name = "chb_movimientos";
+            this.chb_movimientos.Size = new System.Drawing.Size(141, 17);
+            this.chb_movimientos.TabIndex = 57;
+            this.chb_movimientos.Text = "Bitacora de movimientos";
+            this.chb_movimientos.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chb_sesiones
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(6, 126);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(124, 17);
-            this.checkBox5.TabIndex = 56;
-            this.checkBox5.Text = "Bitacora de sesiones";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chb_sesiones.AutoSize = true;
+            this.chb_sesiones.Location = new System.Drawing.Point(6, 126);
+            this.chb_sesiones.Name = "chb_sesiones";
+            this.chb_sesiones.Size = new System.Drawing.Size(124, 17);
+            this.chb_sesiones.TabIndex = 56;
+            this.chb_sesiones.Text = "Bitacora de sesiones";
+            this.chb_sesiones.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox4
+            // clb_Casos
             // 
-            this.checkedListBox4.FormattingEnabled = true;
-            this.checkedListBox4.Items.AddRange(new object[] {
+            this.clb_Casos.FormattingEnabled = true;
+            this.clb_Casos.Items.AddRange(new object[] {
             "Agrergar",
             "Actualizar",
             "Borrar",
             "Consultar"});
-            this.checkedListBox4.Location = new System.Drawing.Point(521, 56);
-            this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(86, 64);
-            this.checkedListBox4.TabIndex = 55;
+            this.clb_Casos.Location = new System.Drawing.Point(521, 56);
+            this.clb_Casos.Name = "clb_Casos";
+            this.clb_Casos.Size = new System.Drawing.Size(86, 64);
+            this.clb_Casos.TabIndex = 55;
             // 
-            // checkBox4
+            // chb_Casos
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(521, 33);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(142, 17);
-            this.checkBox4.TabIndex = 54;
-            this.checkBox4.Text = "Mantenimiento de Casos";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chb_Casos.AutoSize = true;
+            this.chb_Casos.Location = new System.Drawing.Point(521, 33);
+            this.chb_Casos.Name = "chb_Casos";
+            this.chb_Casos.Size = new System.Drawing.Size(142, 17);
+            this.chb_Casos.TabIndex = 54;
+            this.chb_Casos.Text = "Mantenimiento de Casos";
+            this.chb_Casos.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox3
+            // clb_funcionarios
             // 
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Items.AddRange(new object[] {
+            this.clb_funcionarios.FormattingEnabled = true;
+            this.clb_funcionarios.Items.AddRange(new object[] {
             "Agrergar",
             "Actualizar",
             "Borrar",
             "Consultar"});
-            this.checkedListBox3.Location = new System.Drawing.Point(334, 56);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(86, 64);
-            this.checkedListBox3.TabIndex = 53;
+            this.clb_funcionarios.Location = new System.Drawing.Point(334, 56);
+            this.clb_funcionarios.Name = "clb_funcionarios";
+            this.clb_funcionarios.Size = new System.Drawing.Size(86, 64);
+            this.clb_funcionarios.TabIndex = 53;
             // 
-            // checkBox3
+            // chb_funcionarios
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(334, 33);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(173, 17);
-            this.checkBox3.TabIndex = 52;
-            this.checkBox3.Text = "Mantenimiento de Funcionarios";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chb_funcionarios.AutoSize = true;
+            this.chb_funcionarios.Location = new System.Drawing.Point(334, 33);
+            this.chb_funcionarios.Name = "chb_funcionarios";
+            this.chb_funcionarios.Size = new System.Drawing.Size(173, 17);
+            this.chb_funcionarios.TabIndex = 52;
+            this.chb_funcionarios.Text = "Mantenimiento de Funcionarios";
+            this.chb_funcionarios.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox2
+            // clb_usuarios
             // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
+            this.clb_usuarios.FormattingEnabled = true;
+            this.clb_usuarios.Items.AddRange(new object[] {
             "Agrergar",
             "Actualizar",
             "Borrar",
             "Consultar"});
-            this.checkedListBox2.Location = new System.Drawing.Point(165, 56);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(86, 64);
-            this.checkedListBox2.TabIndex = 51;
+            this.clb_usuarios.Location = new System.Drawing.Point(165, 56);
+            this.clb_usuarios.Name = "clb_usuarios";
+            this.clb_usuarios.Size = new System.Drawing.Size(86, 64);
+            this.clb_usuarios.TabIndex = 51;
             // 
-            // checkBox2
+            // chb_usuarios
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(165, 33);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(154, 17);
-            this.checkBox2.TabIndex = 50;
-            this.checkBox2.Text = "Mantenimiento de Usuarios";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chb_usuarios.AutoSize = true;
+            this.chb_usuarios.Location = new System.Drawing.Point(165, 33);
+            this.chb_usuarios.Name = "chb_usuarios";
+            this.chb_usuarios.Size = new System.Drawing.Size(154, 17);
+            this.chb_usuarios.TabIndex = 50;
+            this.chb_usuarios.Text = "Mantenimiento de Usuarios";
+            this.chb_usuarios.UseVisualStyleBackColor = true;
             // 
             // clb_Roles
             // 
@@ -297,14 +297,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckedListBox checkedListBox4;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckedListBox checkedListBox3;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chb_movimientos;
+        private System.Windows.Forms.CheckBox chb_sesiones;
+        private System.Windows.Forms.CheckedListBox clb_Casos;
+        private System.Windows.Forms.CheckBox chb_Casos;
+        private System.Windows.Forms.CheckedListBox clb_funcionarios;
+        private System.Windows.Forms.CheckBox chb_funcionarios;
+        private System.Windows.Forms.CheckedListBox clb_usuarios;
+        private System.Windows.Forms.CheckBox chb_usuarios;
         private System.Windows.Forms.CheckedListBox clb_Roles;
         private System.Windows.Forms.CheckBox chb_Roles;
     }

@@ -54,15 +54,12 @@ namespace SIC
         {
             Permi = new Permisos();
             Permi.Id_Perfil = id_perfil;
+            ///////////////////Roles////////1/////////////////////////////////////////////////////////////////////
             if (this.chb_Roles.Checked==true)
             {
                 Permi.Modulo = 1;
                 foreach (string value in clb_Roles.CheckedItems)
                 {
-                    /* if(value=="Agregar")
-                     {
-                         Permi.Agregar = "S";
-                     }*/
                     switch (value)
                     {
                         case "Agrergar":
@@ -79,8 +76,104 @@ namespace SIC
                             break;
                     }
                 }
+                MessageBox.Show("Id Perfil: " + Permi.Id_Perfil + " Modulo: " + Permi.Modulo + " Agregar: " + Permi.Agregar + " Actualizar: " + Permi.Modificar + " Consultar: " + Permi.Consultar + " Eliminar: " + Permi.Eliminar);
             }
-           // MessageBox.Show("Id Perfil: "+Permi.Id_Perfil+" Modulo: "+Permi.Modulo+ " Agregar: " + Permi.Agregar+ " Actualizar: " + Permi.Modificar+ " Consultar: " + Permi.Consultar+ " Eliminar: " + Permi.Eliminar);
+            /////////Usuarios//////2///////////////////////////////////////////////////////////////////////
+            Permi = new Permisos();
+            if (this.chb_usuarios.Checked == true)
+            {
+                Permi.Modulo = 2;
+                foreach (string value in clb_usuarios.CheckedItems)
+                {
+                    switch (value)
+                    {
+                        case "Agrergar":
+                            Permi.Agregar = "S";
+                            break;
+                        case "Actualizar":
+                            Permi.Modificar = "S";
+                            break;
+                        case "Borrar":
+                            Permi.Eliminar = "S";
+                            break;
+                        case "Consultar":
+                            Permi.Consultar = "S";
+                            break;
+                    }
+                }
+                MessageBox.Show("Id Perfil: " + Permi.Id_Perfil + " Modulo: " + Permi.Modulo + " Agregar: " + Permi.Agregar + " Actualizar: " + Permi.Modificar + " Consultar: " + Permi.Consultar + " Eliminar: " + Permi.Eliminar);
+            }
+            /////////Funcionarios//////3///////////////////////////////////////////////////////////////////////
+            Permi = new Permisos();
+            if (this.chb_funcionarios.Checked == true)
+            {
+                Permi.Modulo = 3;
+                foreach (string value in clb_funcionarios.CheckedItems)
+                {
+                    switch (value)
+                    {
+                        case "Agrergar":
+                            Permi.Agregar = "S";
+                            break;
+                        case "Actualizar":
+                            Permi.Modificar = "S";
+                            break;
+                        case "Borrar":
+                            Permi.Eliminar = "S";
+                            break;
+                        case "Consultar":
+                            Permi.Consultar = "S";
+                            break;
+                    }
+                }
+                MessageBox.Show("Id Perfil: " + Permi.Id_Perfil + " Modulo: " + Permi.Modulo + " Agregar: " + Permi.Agregar + " Actualizar: " + Permi.Modificar + " Consultar: " + Permi.Consultar + " Eliminar: " + Permi.Eliminar);
+            }
+            /////////Casos//////4///////////////////////////////////////////////////////////////////////
+            Permi = new Permisos();
+            if (this.chb_Casos.Checked == true)
+            {
+                Permi.Modulo = 4;
+                foreach (string value in clb_Casos.CheckedItems)
+                {
+                    switch (value)
+                    {
+                        case "Agrergar":
+                            Permi.Agregar = "S";
+                            break;
+                        case "Actualizar":
+                            Permi.Modificar = "S";
+                            break;
+                        case "Borrar":
+                            Permi.Eliminar = "S";
+                            break;
+                        case "Consultar":
+                            Permi.Consultar = "S";
+                            break;
+                    }
+                }
+                MessageBox.Show("Id Perfil: " + Permi.Id_Perfil + " Modulo: " + Permi.Modulo + " Agregar: " + Permi.Agregar + " Actualizar: " + Permi.Modificar + " Consultar: " + Permi.Consultar + " Eliminar: " + Permi.Eliminar);
+            }
+            /////////Sesiones/////5////////////////////////////////////////////////////////////////////////////////////////
+            Permi = new Permisos();
+            if (this.chb_sesiones.Checked == true)
+            {
+                Permi.Modulo = 5;
+                Permi.Agregar = "N";
+                Permi.Consultar = "N";
+                Permi.Eliminar = "N";
+                Permi.Modificar = "N";
+            }
+            ////////Movimientos////6//////////////////////////////////////////////////////////////////////////////////////
+            Permi = new Permisos();
+            if (this.chb_sesiones.Checked == true)
+            {
+                Permi.Modulo = 6;
+                Permi.Agregar = "N";
+                Permi.Consultar = "N";
+                Permi.Eliminar = "N";
+                Permi.Modificar = "N";
+            }
+
         }
 
         private void chb_Roles_CheckedChanged(object sender, EventArgs e)

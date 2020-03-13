@@ -51,7 +51,7 @@ namespace SIC
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -61,12 +61,14 @@ namespace SIC
             {
                 if (Accion == "A" || Accion == "M")
                 {
-
+                    Negocios = new Gestor();
+                    Usua = new Usuarios();
+                    Usua.
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -78,7 +80,7 @@ namespace SIC
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

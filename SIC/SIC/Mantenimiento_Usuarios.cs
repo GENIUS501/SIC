@@ -7,28 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocios;
 
 namespace SIC
 {
     public partial class Mantenimiento_Usuarios : Form
     {
+        public string Accion { get; set; }
+        public string Usuario { get; set; }
+        Gestor Negocios;
+        Usuarios Usua;
         public Mantenimiento_Usuarios()
         {
             InitializeComponent();
         }
-     /*   private void LlenarCombo()
+        private void Llenar_cbo_genero()
         {
             try
             {
-                this.Cbo_Rol.DisplayMember = "Text";
-                this.Cbo_Rol.ValueMember = "Value";
+                this.cbo_genero.DisplayMember = "Text";
+                this.cbo_genero.ValueMember = "Value";
 
                 var items = new[] {
-                                    new { Text = "Administrador", Value = "1" },
-                                    new { Text = "Consultor", Value = "2" },
-                                    new { Text = "Auditor", Value = "3" },
+                                    new { Text = "Masculino", Value = "M" },
+                                    new { Text = "Femenino", Value = "F" },
                                     };
-                this.Cbo_Rol.DataSource = items;
+                this.cbo_genero.DataSource = items;
             }
             catch (Exception ex)
             {
@@ -36,10 +40,46 @@ namespace SIC
             }
 
 
-        }*/
+        }
         private void Mantenimiento_Usuarios_Load(object sender, EventArgs e)
         {
+            try
+            {
+                // TODO: esta línea de código carga datos en la tabla 'sICDataSet.Tab_Perfiles' Puede moverla o quitarla según sea necesario.
+                this.tab_PerfilesTableAdapter.Fill(this.sICDataSet.Tab_Perfiles);
+                Llenar_cbo_genero();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
 
+        private void btn_acpetar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Accion == "A" || Accion == "M")
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace AccesoDatos
    public class Database
 
     {
-        public static String connectionString = ConfigurationManager.ConnectionStrings["SCC.Properties.Settings.SCCConnectionString"].ConnectionString;
+        public static String connectionString = ConfigurationManager.ConnectionStrings["SIC.Properties.Settings.SICConnectionString"].ConnectionString;
         /*
           Para conectarnos con el servidor y seleccionar una base de datos debemos utilizar la clase SqlConnection:
             SqlConnection conexion=new SqlConnection("server=DIEGO-PC\\SQLEXPRESS ; database=base1 ; integrated security = true");

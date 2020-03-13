@@ -28,48 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento_Usuarios));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cbo_confirmar_contrasena = new System.Windows.Forms.TextBox();
+            this.txt_contrasena = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbo_rol = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbo_genero = new System.Windows.Forms.ComboBox();
+            this.txt_apellido2 = new System.Windows.Forms.TextBox();
+            this.txt_apellido1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_acpetar = new System.Windows.Forms.Button();
+            this.sICDataSet = new SIC.SICDataSet();
+            this.tabPerfilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tab_PerfilesTableAdapter = new SIC.SICDataSetTableAdapters.Tab_PerfilesTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabPerfilesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.cbo_confirmar_contrasena);
+            this.groupBox1.Controls.Add(this.txt_contrasena);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbo_rol);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.cbo_genero);
+            this.groupBox1.Controls.Add(this.txt_apellido2);
+            this.groupBox1.Controls.Add(this.txt_apellido1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_cedula);
+            this.groupBox1.Controls.Add(this.txt_nombre);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -78,21 +84,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del funcionario";
             // 
-            // textBox4
+            // cbo_confirmar_contrasena
             // 
-            this.textBox4.Location = new System.Drawing.Point(130, 185);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 74;
+            this.cbo_confirmar_contrasena.Location = new System.Drawing.Point(130, 185);
+            this.cbo_confirmar_contrasena.Name = "cbo_confirmar_contrasena";
+            this.cbo_confirmar_contrasena.PasswordChar = '*';
+            this.cbo_confirmar_contrasena.Size = new System.Drawing.Size(100, 20);
+            this.cbo_confirmar_contrasena.TabIndex = 74;
             // 
-            // textBox5
+            // txt_contrasena
             // 
-            this.textBox5.Location = new System.Drawing.Point(9, 185);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PasswordChar = '*';
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 73;
+            this.txt_contrasena.Location = new System.Drawing.Point(9, 185);
+            this.txt_contrasena.Name = "txt_contrasena";
+            this.txt_contrasena.PasswordChar = '*';
+            this.txt_contrasena.Size = new System.Drawing.Size(100, 20);
+            this.txt_contrasena.TabIndex = 73;
             // 
             // label7
             // 
@@ -112,13 +118,16 @@
             this.label8.TabIndex = 71;
             this.label8.Text = "Contraseña";
             // 
-            // comboBox2
+            // cbo_rol
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(126, 133);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 21);
-            this.comboBox2.TabIndex = 70;
+            this.cbo_rol.DataSource = this.tabPerfilesBindingSource;
+            this.cbo_rol.DisplayMember = "Nombre_Perfil";
+            this.cbo_rol.FormattingEnabled = true;
+            this.cbo_rol.Location = new System.Drawing.Point(126, 133);
+            this.cbo_rol.Name = "cbo_rol";
+            this.cbo_rol.Size = new System.Drawing.Size(100, 21);
+            this.cbo_rol.TabIndex = 70;
+            this.cbo_rol.ValueMember = "Id_Perfil";
             // 
             // label6
             // 
@@ -129,27 +138,27 @@
             this.label6.TabIndex = 69;
             this.label6.Text = "Rol";
             // 
-            // comboBox1
+            // cbo_genero
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(9, 133);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 68;
+            this.cbo_genero.FormattingEnabled = true;
+            this.cbo_genero.Location = new System.Drawing.Point(9, 133);
+            this.cbo_genero.Name = "cbo_genero";
+            this.cbo_genero.Size = new System.Drawing.Size(100, 21);
+            this.cbo_genero.TabIndex = 68;
             // 
-            // textBox3
+            // txt_apellido2
             // 
-            this.textBox3.Location = new System.Drawing.Point(126, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 67;
+            this.txt_apellido2.Location = new System.Drawing.Point(126, 84);
+            this.txt_apellido2.Name = "txt_apellido2";
+            this.txt_apellido2.Size = new System.Drawing.Size(100, 20);
+            this.txt_apellido2.TabIndex = 67;
             // 
-            // textBox2
+            // txt_apellido1
             // 
-            this.textBox2.Location = new System.Drawing.Point(9, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 66;
+            this.txt_apellido1.Location = new System.Drawing.Point(9, 84);
+            this.txt_apellido1.Name = "txt_apellido1";
+            this.txt_apellido1.Size = new System.Drawing.Size(100, 20);
+            this.txt_apellido1.TabIndex = 66;
             // 
             // label5
             // 
@@ -187,20 +196,20 @@
             this.label2.TabIndex = 62;
             this.label2.Text = "Primer apelllido";
             // 
-            // maskedTextBox1
+            // txt_cedula
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(9, 32);
-            this.maskedTextBox1.Mask = "0000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 61;
+            this.txt_cedula.Location = new System.Drawing.Point(9, 32);
+            this.txt_cedula.Mask = "0000000000";
+            this.txt_cedula.Name = "txt_cedula";
+            this.txt_cedula.Size = new System.Drawing.Size(100, 20);
+            this.txt_cedula.TabIndex = 61;
             // 
-            // textBox1
+            // txt_nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(126, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 60;
+            this.txt_nombre.Location = new System.Drawing.Point(126, 32);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(100, 20);
+            this.txt_nombre.TabIndex = 60;
             // 
             // label1
             // 
@@ -221,15 +230,16 @@
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btn_cancelar
             // 
-            this.button1.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(355, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 43);
-            this.button1.TabIndex = 51;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_cancelar.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
+            this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cancelar.Location = new System.Drawing.Point(355, 243);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
+            this.btn_cancelar.TabIndex = 51;
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_acpetar
             // 
@@ -240,6 +250,21 @@
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
             this.btn_acpetar.TabIndex = 50;
             this.btn_acpetar.UseVisualStyleBackColor = true;
+            this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
+            // 
+            // sICDataSet
+            // 
+            this.sICDataSet.DataSetName = "SICDataSet";
+            this.sICDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPerfilesBindingSource
+            // 
+            this.tabPerfilesBindingSource.DataMember = "Tab_Perfiles";
+            this.tabPerfilesBindingSource.DataSource = this.sICDataSet;
+            // 
+            // tab_PerfilesTableAdapter
+            // 
+            this.tab_PerfilesTableAdapter.ClearBeforeFill = true;
             // 
             // Mantenimiento_Usuarios
             // 
@@ -248,7 +273,7 @@
             this.ClientSize = new System.Drawing.Size(511, 291);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_acpetar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Mantenimiento_Usuarios";
@@ -257,6 +282,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabPerfilesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,24 +291,27 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbo_rol;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cbo_genero;
+        private System.Windows.Forms.TextBox txt_apellido2;
+        private System.Windows.Forms.TextBox txt_apellido1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MaskedTextBox txt_cedula;
+        private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_acpetar;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox cbo_confirmar_contrasena;
+        private System.Windows.Forms.TextBox txt_contrasena;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private SICDataSet sICDataSet;
+        private System.Windows.Forms.BindingSource tabPerfilesBindingSource;
+        private SICDataSetTableAdapters.Tab_PerfilesTableAdapter tab_PerfilesTableAdapter;
     }
 }

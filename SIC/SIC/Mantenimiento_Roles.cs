@@ -15,6 +15,7 @@ namespace SIC
     {
         public string Usuario { get; set; }
         public string Accion { get; set; }
+        public int Id_Perfil { get; set; }
         Gestor Negocios;
         Perfiles Perf;
         Permisos Permi;
@@ -27,10 +28,17 @@ namespace SIC
         {
             try
             {
-                this.clb_Roles.Enabled = false;
-                this.clb_Casos.Enabled = false;
-                this.clb_funcionarios.Enabled = false;
-                this.clb_usuarios.Enabled = false;
+                if (Accion == "A")
+                {
+                    this.clb_Roles.Enabled = false;
+                    this.clb_Casos.Enabled = false;
+                    this.clb_funcionarios.Enabled = false;
+                    this.clb_usuarios.Enabled = false;
+                }
+                if (Accion == "M")
+                {
+
+                }
             }
             catch (Exception ex)
             {

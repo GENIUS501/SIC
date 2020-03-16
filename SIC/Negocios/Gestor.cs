@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,6 +62,30 @@ namespace Negocios
                 throw ex;
             }
             return FilasAfectadas;
+        }
+        #endregion
+
+        #endregion
+
+        #region Mostrar varios
+
+        #region Rol
+        public DataTable llenar_Roles()
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Roles();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
         }
         #endregion
 

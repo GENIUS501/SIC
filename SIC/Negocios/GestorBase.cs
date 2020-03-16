@@ -96,6 +96,33 @@ namespace Negocios
 
         #endregion
 
+        #region Mostrar varios
+
+        #region Mostrar_Roles
+        public DataTable llenar_Roles()
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Perfiles";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #endregion
+
         #region Mostrar especifico
 
         #region Login

@@ -69,7 +69,21 @@ namespace SIC
                         Usua.Apellido2 = this.txt_apellido2.Text;
                         Usua.Cedula = int.Parse(this.txt_cedula.Text);
                         Usua.Nombre = this.txt_nombre.Text;
-                        Usua.Nombre_Usuario = this.txt
+                        Usua.Nombre_Usuario = this.txt_usuario.Text;
+                        Usua.Id_Perfil = int.Parse(this.cbo_rol.SelectedValue.ToString());
+                        if(Accion=="A")
+                        {
+                            Int32 FilasAfectadas = 0;
+                            if(this.txt_contrasena.Text==this.txt_confirmar_contrasena.Text)
+                            {
+                                Usua.Contrasena = Helper.EncodePassword(this.txt_contrasena.Text);
+                                FilasAfectadas = Negocios.AgregarUsuarios(Usua,Usuario);
+
+                            }else
+                            {
+                                MessageBox.Show("Las contrasañas no coinciden!!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            }
+                        }
                     }
                 }
             }

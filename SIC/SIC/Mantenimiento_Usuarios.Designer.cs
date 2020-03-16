@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento_Usuarios));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbo_confirmar_contrasena = new System.Windows.Forms.TextBox();
+            this.txt_confirmar_contrasena = new System.Windows.Forms.TextBox();
             this.txt_contrasena = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.btn_acpetar = new System.Windows.Forms.Button();
             this.tab_PerfilesTableAdapter = new SIC.SICDataSetTableAdapters.Tab_PerfilesTableAdapter();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPerfilesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sICDataSet)).BeginInit();
@@ -64,8 +64,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.cbo_confirmar_contrasena);
+            this.groupBox1.Controls.Add(this.txt_usuario);
+            this.groupBox1.Controls.Add(this.txt_confirmar_contrasena);
             this.groupBox1.Controls.Add(this.txt_contrasena);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
@@ -88,13 +88,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del usuario";
             // 
-            // cbo_confirmar_contrasena
+            // txt_confirmar_contrasena
             // 
-            this.cbo_confirmar_contrasena.Location = new System.Drawing.Point(130, 237);
-            this.cbo_confirmar_contrasena.Name = "cbo_confirmar_contrasena";
-            this.cbo_confirmar_contrasena.PasswordChar = '*';
-            this.cbo_confirmar_contrasena.Size = new System.Drawing.Size(100, 20);
-            this.cbo_confirmar_contrasena.TabIndex = 74;
+            this.txt_confirmar_contrasena.Location = new System.Drawing.Point(130, 237);
+            this.txt_confirmar_contrasena.Name = "txt_confirmar_contrasena";
+            this.txt_confirmar_contrasena.PasswordChar = '*';
+            this.txt_confirmar_contrasena.Size = new System.Drawing.Size(100, 20);
+            this.txt_confirmar_contrasena.TabIndex = 74;
             // 
             // txt_contrasena
             // 
@@ -279,12 +279,12 @@
             this.label9.TabIndex = 76;
             this.label9.Text = "Nombre de usuario";
             // 
-            // textBox1
+            // txt_usuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(126, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 75;
+            this.txt_usuario.Location = new System.Drawing.Point(126, 85);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(100, 20);
+            this.txt_usuario.TabIndex = 75;
             // 
             // Mantenimiento_Usuarios
             // 
@@ -326,7 +326,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_acpetar;
-        private System.Windows.Forms.TextBox cbo_confirmar_contrasena;
+        private System.Windows.Forms.TextBox txt_confirmar_contrasena;
         private System.Windows.Forms.TextBox txt_contrasena;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -334,6 +334,6 @@
         private System.Windows.Forms.BindingSource tabPerfilesBindingSource;
         private SICDataSetTableAdapters.Tab_PerfilesTableAdapter tab_PerfilesTableAdapter;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_usuario;
     }
 }

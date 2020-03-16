@@ -15,6 +15,34 @@ namespace Negocios
 
         #region Agregar
 
+        #region Usuarios
+        public Int32 Agregar_Usuario(Usuarios obj, string usuario)
+        {
+            try
+            {
+                Int32 FilasAfectadas = 0;
+                string sentencia;
+                sentencia = "insert into Tab_Usuarios (Nombre,Cedula,Nombre_Usuario,Apellido1,Apellido2,Contrasena,Id_Perfil) values(@Nombre,@Cedula,@Nombre_Usuario,@Apellido1,@Apellido2,@Contrasena,@Id_Perfil)";
+                Parameter[] parametros = {
+                                                     new Parameter("@Id_Perfil",obj.Id_Perfil),
+                                                     new Parameter("@Nombre",obj.Nombre),
+                                                     new Parameter("@Cedula",obj.Cedula),
+                                                     new Parameter("@Apellido1",obj.Apellido1),
+                                                     new Parameter("@Apellido2",obj.Apellido2),
+                                                     new Parameter("@Contrasena",obj.Contrasena),
+                                                     new Parameter("@Nombre_Usuario",obj.Nombre_Usuario),
+                                              };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Usuarios", "Agrego");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        #endregion
+
         #region rol
         public Int32 Agregar_Rol(Perfiles obj, string usuario)
         {

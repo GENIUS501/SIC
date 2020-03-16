@@ -36,6 +36,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbo_rol = new System.Windows.Forms.ComboBox();
+            this.tabPerfilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sICDataSet = new SIC.SICDataSet();
             this.label6 = new System.Windows.Forms.Label();
             this.cbo_genero = new System.Windows.Forms.ComboBox();
             this.txt_apellido2 = new System.Windows.Forms.TextBox();
@@ -50,17 +52,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_acpetar = new System.Windows.Forms.Button();
-            this.sICDataSet = new SIC.SICDataSet();
-            this.tabPerfilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tab_PerfilesTableAdapter = new SIC.SICDataSetTableAdapters.Tab_PerfilesTableAdapter();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPerfilesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.cbo_confirmar_contrasena);
             this.groupBox1.Controls.Add(this.txt_contrasena);
             this.groupBox1.Controls.Add(this.label7);
@@ -79,14 +83,14 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(293, 225);
+            this.groupBox1.Size = new System.Drawing.Size(293, 287);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del funcionario";
+            this.groupBox1.Text = "Datos del usuario";
             // 
             // cbo_confirmar_contrasena
             // 
-            this.cbo_confirmar_contrasena.Location = new System.Drawing.Point(130, 185);
+            this.cbo_confirmar_contrasena.Location = new System.Drawing.Point(130, 237);
             this.cbo_confirmar_contrasena.Name = "cbo_confirmar_contrasena";
             this.cbo_confirmar_contrasena.PasswordChar = '*';
             this.cbo_confirmar_contrasena.Size = new System.Drawing.Size(100, 20);
@@ -94,7 +98,7 @@
             // 
             // txt_contrasena
             // 
-            this.txt_contrasena.Location = new System.Drawing.Point(9, 185);
+            this.txt_contrasena.Location = new System.Drawing.Point(9, 237);
             this.txt_contrasena.Name = "txt_contrasena";
             this.txt_contrasena.PasswordChar = '*';
             this.txt_contrasena.Size = new System.Drawing.Size(100, 20);
@@ -103,7 +107,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(127, 169);
+            this.label7.Location = new System.Drawing.Point(127, 221);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 13);
             this.label7.TabIndex = 72;
@@ -112,7 +116,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 169);
+            this.label8.Location = new System.Drawing.Point(6, 221);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 71;
@@ -123,16 +127,26 @@
             this.cbo_rol.DataSource = this.tabPerfilesBindingSource;
             this.cbo_rol.DisplayMember = "Nombre_Perfil";
             this.cbo_rol.FormattingEnabled = true;
-            this.cbo_rol.Location = new System.Drawing.Point(126, 133);
+            this.cbo_rol.Location = new System.Drawing.Point(126, 185);
             this.cbo_rol.Name = "cbo_rol";
             this.cbo_rol.Size = new System.Drawing.Size(100, 21);
             this.cbo_rol.TabIndex = 70;
             this.cbo_rol.ValueMember = "Id_Perfil";
             // 
+            // tabPerfilesBindingSource
+            // 
+            this.tabPerfilesBindingSource.DataMember = "Tab_Perfiles";
+            this.tabPerfilesBindingSource.DataSource = this.sICDataSet;
+            // 
+            // sICDataSet
+            // 
+            this.sICDataSet.DataSetName = "SICDataSet";
+            this.sICDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(123, 117);
+            this.label6.Location = new System.Drawing.Point(123, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(23, 13);
             this.label6.TabIndex = 69;
@@ -141,21 +155,21 @@
             // cbo_genero
             // 
             this.cbo_genero.FormattingEnabled = true;
-            this.cbo_genero.Location = new System.Drawing.Point(9, 133);
+            this.cbo_genero.Location = new System.Drawing.Point(9, 185);
             this.cbo_genero.Name = "cbo_genero";
             this.cbo_genero.Size = new System.Drawing.Size(100, 21);
             this.cbo_genero.TabIndex = 68;
             // 
             // txt_apellido2
             // 
-            this.txt_apellido2.Location = new System.Drawing.Point(126, 84);
+            this.txt_apellido2.Location = new System.Drawing.Point(126, 136);
             this.txt_apellido2.Name = "txt_apellido2";
             this.txt_apellido2.Size = new System.Drawing.Size(100, 20);
             this.txt_apellido2.TabIndex = 67;
             // 
             // txt_apellido1
             // 
-            this.txt_apellido1.Location = new System.Drawing.Point(9, 84);
+            this.txt_apellido1.Location = new System.Drawing.Point(9, 136);
             this.txt_apellido1.Name = "txt_apellido1";
             this.txt_apellido1.Size = new System.Drawing.Size(100, 20);
             this.txt_apellido1.TabIndex = 66;
@@ -163,7 +177,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 117);
+            this.label5.Location = new System.Drawing.Point(6, 169);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 65;
@@ -172,7 +186,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(123, 68);
+            this.label4.Location = new System.Drawing.Point(123, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 13);
             this.label4.TabIndex = 64;
@@ -181,7 +195,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(123, 16);
+            this.label3.Location = new System.Drawing.Point(6, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 63;
@@ -190,7 +204,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 68);
+            this.label2.Location = new System.Drawing.Point(6, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 62;
@@ -206,7 +220,7 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(126, 32);
+            this.txt_nombre.Location = new System.Drawing.Point(9, 85);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(100, 20);
             this.txt_nombre.TabIndex = 60;
@@ -234,7 +248,7 @@
             // 
             this.btn_cancelar.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
             this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_cancelar.Location = new System.Drawing.Point(355, 243);
+            this.btn_cancelar.Location = new System.Drawing.Point(366, 305);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
             this.btn_cancelar.TabIndex = 51;
@@ -245,32 +259,38 @@
             // 
             this.btn_acpetar.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Check;
             this.btn_acpetar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_acpetar.Location = new System.Drawing.Point(100, 243);
+            this.btn_acpetar.Location = new System.Drawing.Point(111, 305);
             this.btn_acpetar.Name = "btn_acpetar";
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
             this.btn_acpetar.TabIndex = 50;
             this.btn_acpetar.UseVisualStyleBackColor = true;
             this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
-            // sICDataSet
-            // 
-            this.sICDataSet.DataSetName = "SICDataSet";
-            this.sICDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tabPerfilesBindingSource
-            // 
-            this.tabPerfilesBindingSource.DataMember = "Tab_Perfiles";
-            this.tabPerfilesBindingSource.DataSource = this.sICDataSet;
-            // 
             // tab_PerfilesTableAdapter
             // 
             this.tab_PerfilesTableAdapter.ClearBeforeFill = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(123, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 13);
+            this.label9.TabIndex = 76;
+            this.label9.Text = "Nombre de usuario";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(126, 85);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 75;
             // 
             // Mantenimiento_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 291);
+            this.ClientSize = new System.Drawing.Size(511, 360);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_cancelar);
@@ -281,9 +301,9 @@
             this.Load += new System.EventHandler(this.Mantenimiento_Usuarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPerfilesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,5 +333,7 @@
         private SICDataSet sICDataSet;
         private System.Windows.Forms.BindingSource tabPerfilesBindingSource;
         private SICDataSetTableAdapters.Tab_PerfilesTableAdapter tab_PerfilesTableAdapter;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

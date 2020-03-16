@@ -63,7 +63,14 @@ namespace SIC
                 {
                     Negocios = new Gestor();
                     Usua = new Usuarios();
-                    Usua.
+                    if (this.txt_cedula.Text.Length > 8 && this.txt_cedula.Text.Length < 11)
+                    {
+                        Usua.Apellido1 = this.txt_apellido1.Text;
+                        Usua.Apellido2 = this.txt_apellido2.Text;
+                        Usua.Cedula = int.Parse(this.txt_cedula.Text);
+                        Usua.Nombre = this.txt_nombre.Text;
+                        Usua.Nombre_Usuario = this.txt
+                    }
                 }
             }
             catch (Exception ex)

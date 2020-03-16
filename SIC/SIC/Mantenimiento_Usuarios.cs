@@ -78,6 +78,13 @@ namespace SIC
                             {
                                 Usua.Contrasena = Helper.EncodePassword(this.txt_contrasena.Text);
                                 FilasAfectadas = Negocios.AgregarUsuarios(Usua,Usuario);
+                                if(FilasAfectadas>0)
+                                {
+                                    MessageBox.Show("Usuario Agregado exitosamente!!!","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                                }else
+                                {
+                                    MessageBox.Show("Error al agregar el usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
 
                             }else
                             {

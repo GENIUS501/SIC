@@ -76,11 +76,12 @@ namespace SIC
                             Int32 FilasAfectadas = 0;
                             if(this.txt_contrasena.Text==this.txt_confirmar_contrasena.Text)
                             {
-                                Usua.Contrasena = Helper.EncodePassword(this.txt_contrasena.Text);
+                                Usua.Contrasena = Helper.EncodePassword(string.Concat(this.txt_usuario.Text.ToString(), this.txt_contrasena.ToString()));
                                 FilasAfectadas = Negocios.AgregarUsuarios(Usua,Usuario);
                                 if(FilasAfectadas>0)
                                 {
                                     MessageBox.Show("Usuario Agregado exitosamente!!!","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                                    this.Close();
                                 }else
                                 {
                                     MessageBox.Show("Error al agregar el usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

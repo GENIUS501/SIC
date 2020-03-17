@@ -275,13 +275,14 @@ namespace SIC
         {
             try
             {
+                this.txt_id_rol.Enabled = false;
                 this.clb_Roles.Enabled = false;
                 this.clb_Casos.Enabled = false;
                 this.clb_funcionarios.Enabled = false;
                 this.clb_usuarios.Enabled = false;
                 if (Accion == "A")
                 {
-
+                    this.txt_id_rol.Enabled = true;
                 }
                 if (Accion == "M")
                 {
@@ -293,6 +294,7 @@ namespace SIC
                 }
                 if (Accion == "C"|| Accion == "E")
                 {
+                    this.txt_nombre.Enabled = false;
                     this.clb_Roles.Items.Clear();
                     this.clb_Casos.Items.Clear();
                     this.clb_funcionarios.Items.Clear();
@@ -342,9 +344,10 @@ namespace SIC
                     }
                     if(Accion=="M")
                     {
-                        FilasAfectadas = Negocios.(Perf, Usuario);
+                        FilasAfectadas = Negocios.ModificarRol(Perf, Usuario);
                         if (FilasAfectadas > 0)
                         {
+                            Negocios.EliminarPermisos(Id_Perfil);
                             Permisos(Convert.ToInt32(this.txt_id_rol.Text));
                         }
                         else

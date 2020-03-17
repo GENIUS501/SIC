@@ -106,7 +106,7 @@ namespace Negocios
             try
             {
                 string sentencia;
-                sentencia = "UPDATE Tab_Roles SET Nombre_Perfil = @Nombre_Perfil WHERE Id_Perfil = @Id_Perfil";
+                sentencia = "UPDATE Tab_Perfiles SET Nombre_Perfil = @Nombre_Perfil WHERE Id_Perfil = @Id_Perfil";
                 Parameter[] parametros = {
                                          new Parameter("@Nombre_Perfil",uRegistro.Nombre_Perfil),
                                          new Parameter("@Id_Perfil",uRegistro.Id_Perfil),

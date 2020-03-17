@@ -323,22 +323,38 @@ namespace SIC
                 Negocios = new Gestor();
                 Perf = new Perfiles();
                 
-                if (Accion == "A")
+                if (Accion == "A"|| Accion=="M")
                 {
                     Int32 FilasAfectadas = 0;
                     Perf.Id_Perfil = Convert.ToInt32(this.txt_id_rol.Text);
                     Perf.Nombre_Perfil = this.txt_nombre.Text;
-                    FilasAfectadas = Negocios.AgregarRol(Perf,Usuario);
-                    if(FilasAfectadas>0)
+                    if (Accion == "A")
                     {
-                        Permisos(Convert.ToInt32(this.txt_id_rol.Text));
+                        FilasAfectadas = Negocios.AgregarRol(Perf, Usuario);
+                        if (FilasAfectadas > 0)
+                        {
+                            Permisos(Convert.ToInt32(this.txt_id_rol.Text));
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al agregar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    else
+                    if(Accion=="M")
                     {
-                        MessageBox.Show("Error al agregar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        FilasAfectadas = Negocios.(Perf, Usuario);
+                        if (FilasAfectadas > 0)
+                        {
+                            Permisos(Convert.ToInt32(this.txt_id_rol.Text));
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al actualizar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     
                 }
+
             }
             catch(Exception ex)
             {

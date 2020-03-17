@@ -67,6 +67,50 @@ namespace Negocios
 
         #endregion
 
+        #region Actualizar
+
+        #region Rol
+        public Int32 ModificarRol(Perfiles rol, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Actualizar_Rol(rol, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
+        #endregion
+
+        #region Eliminar
+
+        #region Rol
+        public Int32 EliminarPermisos(Int32 id_perfil)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.EliminarPermisos(id_perfil);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
+        #endregion
+
         #region Mostrar varios
 
         #region Rol

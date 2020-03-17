@@ -56,7 +56,7 @@ namespace Negocios
                                                      new Parameter("@Nombre_Perfil",obj.Nombre_Perfil),
                                               };
                 FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
-                return Registrar(FilasAfectadas, usuario, "Rol", "Agrego");
+                return Registrar(FilasAfectadas, usuario, "Roles y permisos", "Agrego");
             }
             catch (Exception ex)
             {
@@ -90,6 +90,61 @@ namespace Negocios
             {
                 throw ex;
             }
+
+        }
+        #endregion
+
+        #endregion
+
+        #region Modificar
+
+        #region Rol
+        public Int32 Actualizar_Rol(Perfiles uRegistro, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "UPDATE Tab_Roles SET Nombre_Perfil = @Nombre_Perfil WHERE Id_Perfil = @Id_Perfil";
+                Parameter[] parametros = {
+                                         new Parameter("@Nombre_Perfil",uRegistro.Nombre_Perfil),
+                                         new Parameter("@Id_Perfil",uRegistro.Id_Perfil),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Roles y permisos", "Modifico");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #endregion
+
+        #region Eliminar
+
+        #region Rol
+        public Int32 EliminarPermisos(Int32 Id_Perfil)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "DELETE FROM Tab_Permisos WHERE Id_Perfil = @Id_Perfil";
+                Parameter[] parametros = {
+                                         new Parameter("@Id_Perfil",Id_Perfil),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return FilasAfectadas;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
 
         }
         #endregion

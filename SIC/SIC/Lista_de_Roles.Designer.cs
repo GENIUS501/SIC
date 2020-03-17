@@ -67,6 +67,7 @@
             this.btn_consultar.Size = new System.Drawing.Size(50, 41);
             this.btn_consultar.TabIndex = 40;
             this.btn_consultar.UseVisualStyleBackColor = true;
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // btn_eliminar
             // 

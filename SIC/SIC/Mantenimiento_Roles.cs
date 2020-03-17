@@ -25,244 +25,251 @@ namespace SIC
         }
         private void Llenar()
         {
-            Negocios = new Gestor();
-            Perf = new Perfiles();
-            Perf = Negocios.Mostrar_Rol(Id_Perfil);
-            this.txt_id_rol.Text = Perf.Id_Perfil.ToString();
-            this.txt_nombre.Text = Perf.Nombre_Perfil;
-            Permi = new Permisos();
-            #region Roles 1
-            ////////Roles//1////////////////////////////////////
-            Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil,1);
-            if (Permi.Modulo>0)
+            try
             {
-                this.clb_Roles.Enabled = true;
-                this.chb_Roles.Checked = true;
-                if(Permi.Agregar=="S")
+                Negocios = new Gestor();
+                Perf = new Perfiles();
+                Perf = Negocios.Mostrar_Rol(Id_Perfil);
+                this.txt_id_rol.Text = Perf.Id_Perfil.ToString();
+                this.txt_nombre.Text = Perf.Nombre_Perfil;
+                Permi = new Permisos();
+                #region Roles 1
+                ////////Roles//1////////////////////////////////////
+                Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 1);
+                if (Permi.Modulo > 0)
                 {
-                    this.clb_Roles.Items.Add("Agrergar",true);
+                    this.clb_Roles.Enabled = true;
+                    this.chb_Roles.Checked = true;
+                    if (Permi.Agregar == "S")
+                    {
+                        this.clb_Roles.Items.Add("Agrergar", true);
+                    }
+                    else
+                    {
+                        this.clb_Roles.Items.Add("Agrergar");
+                    }
+                    ///
+                    if (Permi.Consultar == "S")
+                    {
+                        this.clb_Roles.Items.Add("Consultar", true);
+                    }
+                    else
+                    {
+                        this.clb_Roles.Items.Add("Consultar");
+                    }
+                    /////
+                    if (Permi.Eliminar == "S")
+                    {
+                        this.clb_Roles.Items.Add("Borrar", true);
+                    }
+                    else
+                    {
+                        this.clb_Roles.Items.Add("Borrar");
+                    }
+                    /////
+                    if (Permi.Modificar == "S")
+                    {
+                        this.clb_Roles.Items.Add("Actualizar", true);
+                    }
+                    else
+                    {
+                        this.clb_Roles.Items.Add("Actualizar");
+                    }
                 }
                 else
                 {
                     this.clb_Roles.Items.Add("Agrergar");
-                }
-                ///
-                if (Permi.Consultar == "S")
-                {
-                    this.clb_Roles.Items.Add("Consultar", true);
-                }
-                else
-                {
+                    this.clb_Roles.Items.Add("Actualizar");
+                    this.clb_Roles.Items.Add("Borrar");
                     this.clb_Roles.Items.Add("Consultar");
                 }
-                /////
-                if (Permi.Eliminar == "S")
+                #endregion
+                Permi = new Permisos();
+                #region Usuarios 2
+                ////////Usuarios//2////////////////////////////////////
+                Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 2);
+                if (Permi.Modulo > 0)
                 {
-                    this.clb_Roles.Items.Add("Borrar", true);
-                }
-                else
-                {
-                    this.clb_Roles.Items.Add("Borrar");
-                }
-                /////
-                if (Permi.Modificar == "S")
-                {
-                    this.clb_Roles.Items.Add("Actualizar", true);
-                }
-                else
-                {
-                    this.clb_Roles.Items.Add("Actualizar");
-                }
-            }
-            else
-            {
-                this.clb_Roles.Items.Add("Agrergar");
-                this.clb_Roles.Items.Add("Actualizar");
-                this.clb_Roles.Items.Add("Borrar");
-                this.clb_Roles.Items.Add("Consultar");
-            }
-            #endregion
-            Permi = new Permisos();
-            #region Usuarios 2
-            ////////Usuarios//2////////////////////////////////////
-            Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 2);
-            if (Permi.Modulo > 0)
-            {
-                this.clb_usuarios.Enabled = true;
-                this.chb_usuarios.Checked = true;
-                if (Permi.Agregar == "S")
-                {
-                    this.clb_usuarios.Items.Add("Agrergar", true);
+                    this.clb_usuarios.Enabled = true;
+                    this.chb_usuarios.Checked = true;
+                    if (Permi.Agregar == "S")
+                    {
+                        this.clb_usuarios.Items.Add("Agrergar", true);
+                    }
+                    else
+                    {
+                        this.clb_usuarios.Items.Add("Agrergar");
+                    }
+                    ///
+                    if (Permi.Consultar == "S")
+                    {
+                        this.clb_usuarios.Items.Add("Consultar", true);
+                    }
+                    else
+                    {
+                        this.clb_usuarios.Items.Add("Consultar");
+                    }
+                    /////
+                    if (Permi.Eliminar == "S")
+                    {
+                        this.clb_usuarios.Items.Add("Borrar", true);
+                    }
+                    else
+                    {
+                        this.clb_usuarios.Items.Add("Borrar");
+                    }
+                    /////
+                    if (Permi.Modificar == "S")
+                    {
+                        this.clb_usuarios.Items.Add("Actualizar", true);
+                    }
+                    else
+                    {
+                        this.clb_usuarios.Items.Add("Actualizar");
+                    }
                 }
                 else
                 {
                     this.clb_usuarios.Items.Add("Agrergar");
-                }
-                ///
-                if (Permi.Consultar == "S")
-                {
-                    this.clb_usuarios.Items.Add("Consultar", true);
-                }
-                else
-                {
+                    this.clb_usuarios.Items.Add("Actualizar");
+                    this.clb_usuarios.Items.Add("Borrar");
                     this.clb_usuarios.Items.Add("Consultar");
                 }
-                /////
-                if (Permi.Eliminar == "S")
+                #endregion
+                Permi = new Permisos();
+                #region Funcionarios 3
+                ////////Funcionarios//3////////////////////////////////////
+                Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 3);
+                if (Permi.Modulo > 0)
                 {
-                    this.clb_usuarios.Items.Add("Borrar", true);
-                }
-                else
-                {
-                    this.clb_usuarios.Items.Add("Borrar");
-                }
-                /////
-                if (Permi.Modificar == "S")
-                {
-                    this.clb_usuarios.Items.Add("Actualizar", true);
-                }
-                else
-                {
-                    this.clb_usuarios.Items.Add("Actualizar");
-                }
-            }
-            else
-            {
-                this.clb_usuarios.Items.Add("Agrergar");
-                this.clb_usuarios.Items.Add("Actualizar");
-                this.clb_usuarios.Items.Add("Borrar");
-                this.clb_usuarios.Items.Add("Consultar");
-            }
-            #endregion
-            Permi = new Permisos();
-            #region Funcionarios 3
-            ////////Funcionarios//3////////////////////////////////////
-            Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 3);
-            if (Permi.Modulo > 0)
-            {
-                this.clb_funcionarios.Enabled = true;
-                this.chb_funcionarios.Checked = true;
-                if (Permi.Agregar == "S")
-                {
-                    this.clb_funcionarios.Items.Add("Agrergar", true);
+                    this.clb_funcionarios.Enabled = true;
+                    this.chb_funcionarios.Checked = true;
+                    if (Permi.Agregar == "S")
+                    {
+                        this.clb_funcionarios.Items.Add("Agrergar", true);
+                    }
+                    else
+                    {
+                        this.clb_funcionarios.Items.Add("Agrergar");
+                    }
+                    ///
+                    if (Permi.Consultar == "S")
+                    {
+                        this.clb_funcionarios.Items.Add("Consultar", true);
+                    }
+                    else
+                    {
+                        this.clb_funcionarios.Items.Add("Consultar");
+                    }
+                    /////
+                    if (Permi.Eliminar == "S")
+                    {
+                        this.clb_funcionarios.Items.Add("Borrar", true);
+                    }
+                    else
+                    {
+                        this.clb_funcionarios.Items.Add("Borrar");
+                    }
+                    /////
+                    if (Permi.Modificar == "S")
+                    {
+                        this.clb_funcionarios.Items.Add("Actualizar", true);
+                    }
+                    else
+                    {
+                        this.clb_funcionarios.Items.Add("Actualizar");
+                    }
                 }
                 else
                 {
                     this.clb_funcionarios.Items.Add("Agrergar");
-                }
-                ///
-                if (Permi.Consultar == "S")
-                {
-                    this.clb_funcionarios.Items.Add("Consultar", true);
-                }
-                else
-                {
+                    this.clb_funcionarios.Items.Add("Actualizar");
+                    this.clb_funcionarios.Items.Add("Borrar");
                     this.clb_funcionarios.Items.Add("Consultar");
                 }
-                /////
-                if (Permi.Eliminar == "S")
+                #endregion
+                Permi = new Permisos();
+                #region Casos 4
+                ////////Casos//4////////////////////////////////////
+                Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 4);
+                if (Permi.Modulo > 0)
                 {
-                    this.clb_funcionarios.Items.Add("Borrar", true);
-                }
-                else
-                {
-                    this.clb_funcionarios.Items.Add("Borrar");
-                }
-                /////
-                if (Permi.Modificar == "S")
-                {
-                    this.clb_funcionarios.Items.Add("Actualizar", true);
-                }
-                else
-                {
-                    this.clb_funcionarios.Items.Add("Actualizar");
-                }
-            }
-            else
-            {
-                this.clb_funcionarios.Items.Add("Agrergar");
-                this.clb_funcionarios.Items.Add("Actualizar");
-                this.clb_funcionarios.Items.Add("Borrar");
-                this.clb_funcionarios.Items.Add("Consultar");
-            }
-            #endregion
-            Permi = new Permisos();
-            #region Casos 4
-            ////////Casos//4////////////////////////////////////
-            Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 4);
-            if (Permi.Modulo > 0)
-            {
-                this.clb_Casos.Enabled = true;
-                this.chb_Casos.Checked = true;
-                if (Permi.Agregar == "S")
-                {
-                    this.clb_Casos.Items.Add("Agrergar", true);
+                    this.clb_Casos.Enabled = true;
+                    this.chb_Casos.Checked = true;
+                    if (Permi.Agregar == "S")
+                    {
+                        this.clb_Casos.Items.Add("Agrergar", true);
+                    }
+                    else
+                    {
+                        this.clb_Casos.Items.Add("Agrergar");
+                    }
+                    ///
+                    if (Permi.Consultar == "S")
+                    {
+                        this.clb_Casos.Items.Add("Consultar", true);
+                    }
+                    else
+                    {
+                        this.clb_Casos.Items.Add("Consultar");
+                    }
+                    /////
+                    if (Permi.Eliminar == "S")
+                    {
+                        this.clb_Casos.Items.Add("Borrar", true);
+                    }
+                    else
+                    {
+                        this.clb_Casos.Items.Add("Borrar");
+                    }
+                    /////
+                    if (Permi.Modificar == "S")
+                    {
+                        this.clb_Casos.Items.Add("Actualizar", true);
+                    }
+                    else
+                    {
+                        this.clb_Casos.Items.Add("Actualizar");
+                    }
                 }
                 else
                 {
                     this.clb_Casos.Items.Add("Agrergar");
-                }
-                ///
-                if (Permi.Consultar == "S")
-                {
-                    this.clb_Casos.Items.Add("Consultar", true);
-                }
-                else
-                {
+                    this.clb_Casos.Items.Add("Actualizar");
+                    this.clb_Casos.Items.Add("Borrar");
                     this.clb_Casos.Items.Add("Consultar");
                 }
-                /////
-                if (Permi.Eliminar == "S")
+                #endregion
+                Permi = new Permisos();
+                #region Sesiones 5 
+                ////////Sesiones//5////////////////////////////////////
+                Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 5);
+                if (Permi.Modulo > 0)
                 {
-                    this.clb_Casos.Items.Add("Borrar", true);
+                    this.chb_sesiones.Checked = true;
                 }
                 else
                 {
-                    this.clb_Casos.Items.Add("Borrar");
+
                 }
-                /////
-                if (Permi.Modificar == "S")
+                #endregion
+                Permi = new Permisos();
+                #region Movimientos 6 
+                ////////Movimientos//6////////////////////////////////////
+                Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 6);
+                if (Permi.Modulo > 0)
                 {
-                    this.clb_Casos.Items.Add("Actualizar", true);
+                    this.chb_movimientos.Checked = true;
                 }
                 else
                 {
-                    this.clb_Casos.Items.Add("Actualizar");
+
                 }
-            }
-            else
+                #endregion
+            }catch(Exception ex)
             {
-                this.clb_Casos.Items.Add("Agrergar");
-                this.clb_Casos.Items.Add("Actualizar");
-                this.clb_Casos.Items.Add("Borrar");
-                this.clb_Casos.Items.Add("Consultar");
+                throw new Exception(ex.ToString());
             }
-            #endregion
-            Permi = new Permisos();
-            #region Sesiones 5 
-            ////////Sesiones//5////////////////////////////////////
-            Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 5);
-            if(Permi.Modulo>0)
-            {
-                this.chb_sesiones.Checked = true;
-            }else
-            {
-
-            }
-            #endregion
-            Permi = new Permisos();
-            #region Movimientos 6 
-            ////////Movimientos//6////////////////////////////////////
-            Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 6);
-            if (Permi.Modulo > 0)
-            {
-                this.chb_movimientos.Checked = true;
-            }
-            else
-            {
-
-            }
-            #endregion
         }
         private void Mantenimiento_Roles_Load(object sender, EventArgs e)
         {
@@ -283,6 +290,24 @@ namespace SIC
                     this.clb_funcionarios.Items.Clear();
                     this.clb_usuarios.Items.Clear();
                     Llenar();
+                }
+                if (Accion == "C"|| Accion == "E")
+                {
+                    this.clb_Roles.Items.Clear();
+                    this.clb_Casos.Items.Clear();
+                    this.clb_funcionarios.Items.Clear();
+                    this.clb_usuarios.Items.Clear();
+                    Llenar();
+                    this.chb_Casos.Enabled = false;
+                    this.chb_funcionarios.Enabled = false;
+                    this.chb_movimientos.Enabled = false;
+                    this.chb_Roles.Enabled = false;
+                    this.chb_sesiones.Enabled = false;
+                    this.chb_usuarios.Enabled = false;
+                    this.clb_Casos.Enabled = false;
+                    this.clb_funcionarios.Enabled = false;
+                    this.clb_Roles.Enabled = false;
+                    this.clb_usuarios.Enabled = false;
                 }
             }
             catch (Exception ex)

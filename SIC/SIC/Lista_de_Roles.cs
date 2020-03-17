@@ -138,5 +138,30 @@ namespace SIC
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (valor_celda != -1)
+                {
+                    Mantenimiento_Roles frm = new Mantenimiento_Roles();
+                    frm.Accion = "E";
+                    frm.Usuario = usuario;
+                    frm.Id_Perfil = valor_celda;
+                    frm.Text = "Mantenimiento de roles y permisos: Modificar rol.";
+                    frm.ShowDialog();
+                    Lista_de_Roles_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Error debe elegir un rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

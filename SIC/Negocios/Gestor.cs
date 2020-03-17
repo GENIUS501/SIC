@@ -109,7 +109,7 @@ namespace Negocios
         #endregion
 
         #region Permisos
-        public Permisos Mostrar_Paquete_Unico(Int32 id_perfil,Int32 modulo)
+        public Permisos Mostrar_Permisos_Unico(Int32 id_perfil,Int32 modulo)
         {
             try
             {

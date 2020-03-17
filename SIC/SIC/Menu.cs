@@ -51,7 +51,7 @@ namespace SIC
                 int i = 1;
                 while(i<7)
                 {
-                    perm = Negocios.Mostrar_Paquete_Unico(Id_Perfil, i);
+                    perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, i);
                     if (perm.Modulo == i)
                     {
                         switch (i)

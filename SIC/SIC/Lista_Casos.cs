@@ -28,7 +28,7 @@ namespace SIC
         {
             perm = new Permisos();
             Negocios = new Gestor();
-            perm = Negocios.Mostrar_Paquete_Unico(Id_Perfil, 4);
+            perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 4);
             this.btn_agregar.Enabled = false;
             this.btn_consultar.Enabled = false;
             this.btn_editar.Enabled = false;

@@ -23,21 +23,197 @@ namespace SIC
         {
             InitializeComponent();
         }
-
+        private void Llenar()
+        {
+            Negocios = new Gestor();
+            Perf = new Perfiles();
+            Permi = new Permisos();
+            #region Roles 1
+            ////////Roles//1////////////////////////////////////
+            Perf = Negocios.Mostrar_Rol(Id_Perfil);
+            Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil,1);
+            this.txt_id_rol.Text = Perf.Id_Perfil.ToString();
+            this.txt_nombre.Text = Perf.Nombre_Perfil;
+            if (Permi.Modulo>0)
+            {
+                this.clb_Roles.Enabled = true;
+                this.chb_Roles.Checked = true;
+                if(Permi.Agregar=="S")
+                {
+                    this.clb_Roles.Items.Add("Agrergar",true);
+                }
+                else
+                {
+                    this.clb_Roles.Items.Add("Agrergar");
+                }
+                ///
+                if (Permi.Consultar == "S")
+                {
+                    this.clb_Roles.Items.Add("Consultar", true);
+                }
+                else
+                {
+                    this.clb_Roles.Items.Add("Consultar");
+                }
+                /////
+                if (Permi.Eliminar == "S")
+                {
+                    this.clb_Roles.Items.Add("Borrar", true);
+                }
+                else
+                {
+                    this.clb_Roles.Items.Add("Borrar");
+                }
+                /////
+                if (Permi.Modificar == "S")
+                {
+                    this.clb_Roles.Items.Add("Actualizar", true);
+                }
+                else
+                {
+                    this.clb_Roles.Items.Add("Actualizar");
+                }
+            }
+            else
+            {
+                this.clb_Roles.Items.Add("Agrergar");
+                this.clb_Roles.Items.Add("Actualizar");
+                this.clb_Roles.Items.Add("Borrar");
+                this.clb_Roles.Items.Add("Consultar");
+            }
+            #endregion
+            Perf = new Perfiles();
+            Permi = new Permisos();
+            #region Usuarios 2
+            ////////Usuarios//2////////////////////////////////////
+            Perf = Negocios.Mostrar_Rol(Id_Perfil);
+            Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 2);
+            this.txt_id_rol.Text = Perf.Id_Perfil.ToString();
+            this.txt_nombre.Text = Perf.Nombre_Perfil;
+            if (Permi.Modulo > 0)
+            {
+                this.clb_usuarios.Enabled = true;
+                this.chb_usuarios.Checked = true;
+                if (Permi.Agregar == "S")
+                {
+                    this.clb_usuarios.Items.Add("Agrergar", true);
+                }
+                else
+                {
+                    this.clb_usuarios.Items.Add("Agrergar");
+                }
+                ///
+                if (Permi.Consultar == "S")
+                {
+                    this.clb_usuarios.Items.Add("Consultar", true);
+                }
+                else
+                {
+                    this.clb_usuarios.Items.Add("Consultar");
+                }
+                /////
+                if (Permi.Eliminar == "S")
+                {
+                    this.clb_usuarios.Items.Add("Borrar", true);
+                }
+                else
+                {
+                    this.clb_usuarios.Items.Add("Borrar");
+                }
+                /////
+                if (Permi.Modificar == "S")
+                {
+                    this.clb_usuarios.Items.Add("Actualizar", true);
+                }
+                else
+                {
+                    this.clb_usuarios.Items.Add("Actualizar");
+                }
+            }
+            else
+            {
+                this.clb_usuarios.Items.Add("Agrergar");
+                this.clb_usuarios.Items.Add("Actualizar");
+                this.clb_usuarios.Items.Add("Borrar");
+                this.clb_usuarios.Items.Add("Consultar");
+            }
+            #endregion
+            Perf = new Perfiles();
+            Permi = new Permisos();
+            #region Funcionarios 3
+            ////////Funcionarios//3////////////////////////////////////
+            Perf = Negocios.Mostrar_Rol(Id_Perfil);
+            Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 3);
+            this.txt_id_rol.Text = Perf.Id_Perfil.ToString();
+            this.txt_nombre.Text = Perf.Nombre_Perfil;
+            if (Permi.Modulo > 0)
+            {
+                this.clb_funcionarios.Enabled = true;
+                this.chb_funcionarios.Checked = true;
+                if (Permi.Agregar == "S")
+                {
+                    this.clb_funcionarios.Items.Add("Agrergar", true);
+                }
+                else
+                {
+                    this.clb_funcionarios.Items.Add("Agrergar");
+                }
+                ///
+                if (Permi.Consultar == "S")
+                {
+                    this.clb_funcionarios.Items.Add("Consultar", true);
+                }
+                else
+                {
+                    this.clb_funcionarios.Items.Add("Consultar");
+                }
+                /////
+                if (Permi.Eliminar == "S")
+                {
+                    this.clb_funcionarios.Items.Add("Borrar", true);
+                }
+                else
+                {
+                    this.clb_funcionarios.Items.Add("Borrar");
+                }
+                /////
+                if (Permi.Modificar == "S")
+                {
+                    this.clb_funcionarios.Items.Add("Actualizar", true);
+                }
+                else
+                {
+                    this.clb_funcionarios.Items.Add("Actualizar");
+                }
+            }
+            else
+            {
+                this.clb_funcionarios.Items.Add("Agrergar");
+                this.clb_funcionarios.Items.Add("Actualizar");
+                this.clb_funcionarios.Items.Add("Borrar");
+                this.clb_funcionarios.Items.Add("Consultar");
+            }
+            #endregion
+        }
         private void Mantenimiento_Roles_Load(object sender, EventArgs e)
         {
             try
             {
+                this.clb_Roles.Enabled = false;
+                this.clb_Casos.Enabled = false;
+                this.clb_funcionarios.Enabled = false;
+                this.clb_usuarios.Enabled = false;
                 if (Accion == "A")
                 {
-                    this.clb_Roles.Enabled = false;
-                    this.clb_Casos.Enabled = false;
-                    this.clb_funcionarios.Enabled = false;
-                    this.clb_usuarios.Enabled = false;
+
                 }
                 if (Accion == "M")
                 {
-
+                    this.clb_Roles.Items.Clear();
+                    this.clb_Casos.Items.Clear();
+                    this.clb_funcionarios.Items.Clear();
+                    this.clb_usuarios.Items.Clear();
+                    Llenar();
                 }
             }
             catch (Exception ex)

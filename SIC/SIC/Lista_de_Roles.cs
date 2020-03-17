@@ -30,7 +30,7 @@ namespace SIC
             perm = new Permisos();
             Negocios = new Gestor();
             this.dat_usuarios.DataSource = Negocios.llenar_Roles();
-            perm = Negocios.Mostrar_Paquete_Unico(Id_Perfil, 1);
+            perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 1);
             this.btn_agregar.Enabled = false;
             this.btn_consultar.Enabled = false;
             this.btn_editar.Enabled = false;

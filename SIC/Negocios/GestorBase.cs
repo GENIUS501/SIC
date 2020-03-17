@@ -206,6 +206,43 @@ namespace Negocios
         }
         #endregion
 
+        #region Rol
+        public Perfiles Mostrar_rol(Int32 pCodigo)
+        {
+            try
+            {
+                DataTable dtConsulta = new DataTable();
+                Perfiles vRegistro = new Perfiles();
+
+                string commandText = "SELECT * FROM [dbo].[Tab_Perfiles] WHERE [Id_Perfil] =  " + pCodigo;
+                //string commandText = commandTexta;
+
+                using (SqlConnection connection = new SqlConnection(vCadenaConexion))
+                {
+                    SqlCommand command = new SqlCommand(commandText, connection);
+
+                    SqlDataAdapter DataAdapter = new SqlDataAdapter(command);
+                    DataAdapter.Fill(dtConsulta);
+                }
+
+                if (dtConsulta.Rows.Count != 0)
+                {
+                    vRegistro.Nombre_Perfil = dtConsulta.Rows[0]["Nombre_Perfil"].ToString();
+                    vRegistro.Id_Perfil = Convert.ToInt32(dtConsulta.Rows[0]["Id_Perfil"]);
+
+                }
+
+
+                return vRegistro;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #endregion
 
         #region Registrar

@@ -122,6 +122,22 @@ namespace Negocios
             }
         }
         #endregion
+
+        #region Rol
+        public Perfiles Mostrar_Rol(Int32 pCodigo)
+        {
+            try
+            {
+                GestorBase BD = new GestorBase();
+                return BD.Mostrar_rol(pCodigo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+        #endregion
+
         #endregion
     }
 }

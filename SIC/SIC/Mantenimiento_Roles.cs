@@ -336,6 +336,7 @@ namespace SIC
                         if (FilasAfectadas > 0)
                         {
                             Permisos(Convert.ToInt32(this.txt_id_rol.Text));
+                            MessageBox.Show("Perfil de seguridad 'Rol' agregado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -349,6 +350,7 @@ namespace SIC
                         {
                             Negocios.EliminarPermisos(Id_Perfil);
                             Permisos(Convert.ToInt32(this.txt_id_rol.Text));
+                            MessageBox.Show("Perfil de seguridad 'Rol' modificado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -395,7 +397,6 @@ namespace SIC
                                 break;
                         }
                     }
-                    MessageBox.Show("Id Perfil: " + Permi.Id_Perfil + " Modulo: " + Permi.Modulo + " Agregar: " + Permi.Agregar + " Actualizar: " + Permi.Modificar + " Consultar: " + Permi.Consultar + " Eliminar: " + Permi.Eliminar);
                     FilasAfectadas = Negocios.AgregarPermisos(Permi);
                     if(FilasAfectadas>0)
                     {
@@ -430,7 +431,6 @@ namespace SIC
                                 break;
                         }
                     }
-                    MessageBox.Show("Id Perfil: " + Permi.Id_Perfil + " Modulo: " + Permi.Modulo + " Agregar: " + Permi.Agregar + " Actualizar: " + Permi.Modificar + " Consultar: " + Permi.Consultar + " Eliminar: " + Permi.Eliminar);
                     FilasAfectadas = Negocios.AgregarPermisos(Permi);
                     if (FilasAfectadas > 0)
                     {
@@ -466,7 +466,6 @@ namespace SIC
                                 break;
                         }
                     }
-                    MessageBox.Show("Id Perfil: " + Permi.Id_Perfil + " Modulo: " + Permi.Modulo + " Agregar: " + Permi.Agregar + " Actualizar: " + Permi.Modificar + " Consultar: " + Permi.Consultar + " Eliminar: " + Permi.Eliminar);
                     FilasAfectadas = Negocios.AgregarPermisos(Permi);
                     if (FilasAfectadas > 0)
                     {
@@ -502,7 +501,6 @@ namespace SIC
                                 break;
                         }
                     }
-                    MessageBox.Show("Id Perfil: " + Permi.Id_Perfil + " Modulo: " + Permi.Modulo + " Agregar: " + Permi.Agregar + " Actualizar: " + Permi.Modificar + " Consultar: " + Permi.Consultar + " Eliminar: " + Permi.Eliminar);
                     FilasAfectadas = Negocios.AgregarPermisos(Permi);
                     if (FilasAfectadas > 0)
                     {

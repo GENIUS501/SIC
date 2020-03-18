@@ -151,6 +151,44 @@ namespace Negocios
         }
         #endregion
 
+        #region Usuario
+        public DataTable llenar_Usuarios()
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Usuarios();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+
+        public DataTable llenar_Usuarios(int cedula)
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Usuarios(cedula);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+        #endregion
+
         #endregion
 
         #region Mostrar especifico

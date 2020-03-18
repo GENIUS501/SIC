@@ -324,69 +324,75 @@ namespace SIC
             {
                 Negocios = new Gestor();
                 Perf = new Perfiles();
-                
-                if (Accion == "A"|| Accion=="M" ||Accion=="E")
+                if (this.txt_id_rol.Text != "" && this.txt_nombre.Text != "")
                 {
-                    Int32 FilasAfectadas = 0;
-                    Perf.Id_Perfil = Convert.ToInt32(this.txt_id_rol.Text);
-                    Perf.Nombre_Perfil = this.txt_nombre.Text;
-                    if (Accion == "A")
+                    if (Accion == "A" || Accion == "M" || Accion == "E")
                     {
-                        FilasAfectadas = Negocios.AgregarRol(Perf, Usuario);
-                        if (FilasAfectadas > 0)
+                        Int32 FilasAfectadas = 0;
+                        Perf.Id_Perfil = Convert.ToInt32(this.txt_id_rol.Text);
+                        Perf.Nombre_Perfil = this.txt_nombre.Text;
+                        if (Accion == "A")
                         {
-                            Permisos(Convert.ToInt32(this.txt_id_rol.Text));
-                            MessageBox.Show("Perfil de seguridad 'Rol' agregado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error al agregar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    if(Accion=="M")
-                    {
-                        FilasAfectadas = Negocios.ModificarRol(Perf, Usuario);
-                        if (FilasAfectadas > 0)
-                        {
-                            Negocios.EliminarPermisos(Id_Perfil);
-                            Permisos(Convert.ToInt32(this.txt_id_rol.Text));
-                            MessageBox.Show("Perfil de seguridad 'Rol' modificado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error al actualizar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    if(Accion=="E")
-                    {
-                        DialogResult dr = MessageBox.Show("Realmente desea eliminar el perfil de acceso rol?", "Eliminar el rol", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                        if (dr == DialogResult.Yes)
-                        {
-                            Negocios.EliminarPermisos(Id_Perfil);
-                            FilasAfectadas = Negocios.EliminarRol(Id_Perfil, Usuario);
-                            if(FilasAfectadas>0)
+                            FilasAfectadas = Negocios.AgregarRol(Perf, Usuario);
+                            if (FilasAfectadas > 0)
                             {
-                                MessageBox.Show("Rol eliminado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                                Permisos(Convert.ToInt32(this.txt_id_rol.Text));
+                                MessageBox.Show("Perfil de seguridad 'Rol' agregado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
                             }
                             else
                             {
-                                MessageBox.Show("Error al eliminar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                                MessageBox.Show("Error al agregar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-                        else
+                        if (Accion == "M")
                         {
-                            this.Close();
+                            FilasAfectadas = Negocios.ModificarRol(Perf, Usuario);
+                            if (FilasAfectadas > 0)
+                            {
+                                Negocios.EliminarPermisos(Id_Perfil);
+                                Permisos(Convert.ToInt32(this.txt_id_rol.Text));
+                                MessageBox.Show("Perfil de seguridad 'Rol' modificado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al actualizar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
+                        if (Accion == "E")
+                        {
+                            DialogResult dr = MessageBox.Show("Realmente desea eliminar el perfil de acceso rol?", "Eliminar el rol", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (dr == DialogResult.Yes)
+                            {
+                                Negocios.EliminarPermisos(Id_Perfil);
+                                FilasAfectadas = Negocios.EliminarRol(Id_Perfil, Usuario);
+                                if (FilasAfectadas > 0)
+                                {
+                                    MessageBox.Show("Rol eliminado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error al eliminar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                }
+                            }
+                            else
+                            {
+                                this.Close();
+                            }
+                        }
+
                     }
-                    
-                }
-                if (Accion == "C")
+                    if (Accion == "C")
+                    {
+                        this.Close();
+                    }
+                }else
                 {
-                    this.Close();
+                    MessageBox.Show("No se han llenado todos los campos!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch(Exception ex)
@@ -669,6 +675,18 @@ namespace SIC
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txt_id_rol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+
+            }
+            else
+            {
+                e.Handled = e.KeyChar != (char)Keys.Back;
             }
         }
     }

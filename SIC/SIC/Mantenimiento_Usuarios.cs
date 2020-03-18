@@ -47,6 +47,8 @@ namespace SIC
             {
                 // TODO: esta línea de código carga datos en la tabla 'sICDataSet.Tab_Perfiles' Puede moverla o quitarla según sea necesario.
                 this.tab_PerfilesTableAdapter.Fill(this.sICDataSet.Tab_Perfiles);
+                this.cbo_genero.DropDownStyle = ComboBoxStyle.DropDownList;
+                this.cbo_rol.DropDownStyle = ComboBoxStyle.DropDownList;
                 Llenar_cbo_genero();
             }
             catch (Exception ex)
@@ -71,6 +73,7 @@ namespace SIC
                         Usua.Nombre = this.txt_nombre.Text;
                         Usua.Nombre_Usuario = this.txt_usuario.Text;
                         Usua.Id_Perfil = int.Parse(this.cbo_rol.SelectedValue.ToString());
+                        Usua.Genero = this.cbo_genero.SelectedValue.ToString();
                         if(Accion=="A")
                         {
                             Int32 FilasAfectadas = 0;

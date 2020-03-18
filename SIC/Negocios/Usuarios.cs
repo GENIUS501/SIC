@@ -16,6 +16,7 @@ namespace Negocios
         public string Apellido2 { get; set; }
         public string Contrasena { get; set; }
         public int Id_Perfil { get; set; }
+        public string Genero { get; set; }
         #endregion
 
         #region Constructor sin parametros
@@ -28,11 +29,12 @@ namespace Negocios
             Apellido2 = "";
             Contrasena = "";
             Id_Perfil = 0;
+            Genero = "";
         }
         #endregion
 
         #region Constructos con parametros
-        public Usuarios(int cedula, string nombre_usuario, string nombre, string apellido1, string apellido2, string contrasena,int id_perfil)
+        public Usuarios(int cedula, string nombre_usuario, string nombre, string apellido1, string apellido2, string contrasena,int id_perfil,string genero)
         {
             Cedula = cedula;
             Nombre_Usuario = nombre_usuario;
@@ -41,6 +43,7 @@ namespace Negocios
             Apellido2 = apellido2;
             Contrasena = contrasena;
             Id_Perfil = id_perfil;
+            Genero = genero;
         }
         #endregion
     }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lista_Usuario));
-            this.txt_buscar = new System.Windows.Forms.MaskedTextBox();
+            this.txt_buscar_cedula = new System.Windows.Forms.MaskedTextBox();
             this.btn_consultar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_editar = new System.Windows.Forms.Button();
@@ -47,13 +47,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txt_buscar
+            // txt_buscar_cedula
             // 
-            this.txt_buscar.Location = new System.Drawing.Point(5, 26);
-            this.txt_buscar.Mask = "0000000000";
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(100, 20);
-            this.txt_buscar.TabIndex = 21;
+            this.txt_buscar_cedula.Location = new System.Drawing.Point(5, 26);
+            this.txt_buscar_cedula.Mask = "0000000000";
+            this.txt_buscar_cedula.Name = "txt_buscar_cedula";
+            this.txt_buscar_cedula.Size = new System.Drawing.Size(100, 20);
+            this.txt_buscar_cedula.TabIndex = 21;
             // 
             // btn_consultar
             // 
@@ -121,6 +121,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar.TabIndex = 22;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_agregar
             // 
@@ -186,7 +187,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txt_buscar);
+            this.Controls.Add(this.txt_buscar_cedula);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.btn_consultar);
@@ -209,7 +210,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox txt_buscar;
+        private System.Windows.Forms.MaskedTextBox txt_buscar_cedula;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_consultar;

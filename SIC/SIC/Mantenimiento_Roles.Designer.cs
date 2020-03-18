@@ -111,6 +111,7 @@
             this.txt_id_rol.Name = "txt_id_rol";
             this.txt_id_rol.Size = new System.Drawing.Size(100, 20);
             this.txt_id_rol.TabIndex = 16;
+            this.txt_id_rol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_rol_KeyPress);
             // 
             // label2
             // 

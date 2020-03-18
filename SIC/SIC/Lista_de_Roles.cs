@@ -26,30 +26,36 @@ namespace SIC
 
         private void Lista_de_Roles_Load(object sender, EventArgs e)
         {
-            valor_celda = -1;
-            perm = new Permisos();
-            Negocios = new Gestor();
-            this.dat_usuarios.DataSource = Negocios.llenar_Roles();
-            perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 1);
-            this.btn_agregar.Enabled = false;
-            this.btn_consultar.Enabled = false;
-            this.btn_editar.Enabled = false;
-            this.btn_eliminar.Enabled = false;
-            if (perm.Agregar == "S")
+            try
             {
-                this.btn_agregar.Enabled = true;
-            }
-            if (perm.Modificar == "S")
+                valor_celda = -1;
+                perm = new Permisos();
+                Negocios = new Gestor();
+                this.btn_agregar.Enabled = false;
+                this.btn_consultar.Enabled = false;
+                this.btn_editar.Enabled = false;
+                this.btn_eliminar.Enabled = false;
+                this.dat_usuarios.DataSource = Negocios.llenar_Roles();
+                perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 1);
+                if (perm.Agregar == "S")
+                {
+                    this.btn_agregar.Enabled = true;
+                }
+                if (perm.Modificar == "S")
+                {
+                    this.btn_editar.Enabled = true;
+                }
+                if (perm.Eliminar == "S")
+                {
+                    this.btn_eliminar.Enabled = true;
+                }
+                if (perm.Consultar == "S")
+                {
+                    this.btn_consultar.Enabled = true;
+                }
+            }catch(Exception ex)
             {
-                this.btn_editar.Enabled = true;
-            }
-            if (perm.Eliminar == "S")
-            {
-                this.btn_eliminar.Enabled = true;
-            }
-            if (perm.Consultar == "S")
-            {
-                this.btn_consultar.Enabled = true;
+                MessageBox.Show(ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -124,7 +130,7 @@ namespace SIC
                     frm.Accion = "C";
                     frm.Usuario = usuario;
                     frm.Id_Perfil = valor_celda;
-                    frm.Text = "Mantenimiento de roles y permisos: Modificar rol.";
+                    frm.Text = "Mantenimiento de roles y permisos: Consultar rol.";
                     frm.ShowDialog();
                     Lista_de_Roles_Load(null, null);
                 }
@@ -149,7 +155,7 @@ namespace SIC
                     frm.Accion = "E";
                     frm.Usuario = usuario;
                     frm.Id_Perfil = valor_celda;
-                    frm.Text = "Mantenimiento de roles y permisos: Modificar rol.";
+                    frm.Text = "Mantenimiento de roles y permisos: Eliminar rol.";
                     frm.ShowDialog();
                     Lista_de_Roles_Load(null, null);
                 }

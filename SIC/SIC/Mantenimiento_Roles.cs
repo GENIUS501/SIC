@@ -325,7 +325,7 @@ namespace SIC
                 Negocios = new Gestor();
                 Perf = new Perfiles();
                 
-                if (Accion == "A"|| Accion=="M")
+                if (Accion == "A"|| Accion=="M" ||Accion=="E")
                 {
                     Int32 FilasAfectadas = 0;
                     Perf.Id_Perfil = Convert.ToInt32(this.txt_id_rol.Text);
@@ -337,6 +337,7 @@ namespace SIC
                         {
                             Permisos(Convert.ToInt32(this.txt_id_rol.Text));
                             MessageBox.Show("Perfil de seguridad 'Rol' agregado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
                         }
                         else
                         {
@@ -351,15 +352,42 @@ namespace SIC
                             Negocios.EliminarPermisos(Id_Perfil);
                             Permisos(Convert.ToInt32(this.txt_id_rol.Text));
                             MessageBox.Show("Perfil de seguridad 'Rol' modificado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
                         }
                         else
                         {
                             MessageBox.Show("Error al actualizar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                    if(Accion=="E")
+                    {
+                        DialogResult dr = MessageBox.Show("Realmente desea eliminar el perfil de acceso rol?", "Eliminar el rol", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (dr == DialogResult.Yes)
+                        {
+                            Negocios.EliminarPermisos(Id_Perfil);
+                            FilasAfectadas = Negocios.EliminarRol(Id_Perfil, Usuario);
+                            if(FilasAfectadas>0)
+                            {
+                                MessageBox.Show("Rol eliminado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error al eliminar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            }
+                        }
+                        else
+                        {
+                            this.Close();
+                        }
+                    }
                     
                 }
-
+                if (Accion == "C")
+                {
+                    this.Close();
+                }
             }
             catch(Exception ex)
             {

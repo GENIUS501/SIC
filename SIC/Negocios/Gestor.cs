@@ -92,6 +92,24 @@ namespace Negocios
         #region Eliminar
 
         #region Rol
+        public Int32 EliminarRol(Int32 id_perfil, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.EliminarRol(id_perfil, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
+        #region Permisos
         public Int32 EliminarPermisos(Int32 id_perfil)
         {
             Int32 FilasAfectadas = 0;

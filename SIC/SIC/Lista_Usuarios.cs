@@ -27,11 +27,11 @@ namespace SIC
         {
             perm = new Permisos();
             Negocios = new Gestor();
-            perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 2);
             this.btn_agregar.Enabled = false;
             this.btn_consultar.Enabled = false;
             this.btn_editar.Enabled = false;
             this.btn_eliminar.Enabled = false;
+            perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 2);
             if(perm.Agregar=="S")
             {
                 this.btn_agregar.Enabled = true;

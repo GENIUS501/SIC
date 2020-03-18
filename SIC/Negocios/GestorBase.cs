@@ -126,6 +126,30 @@ namespace Negocios
         #region Eliminar
 
         #region Rol
+        public Int32 EliminarRol(Int32 Id_Perfil, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "DELETE FROM Tab_Perfiles WHERE Id_Perfil = @Id_Perfil";
+                Parameter[] parametros = {
+                                         new Parameter("@Id_Perfil",Id_Perfil),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Roles y permmisos", "Elimino");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+        }
+        #endregion
+
+        #region Permisos
         public Int32 EliminarPermisos(Int32 Id_Perfil)
         {
             Int32 FilasAfectadas = 0;

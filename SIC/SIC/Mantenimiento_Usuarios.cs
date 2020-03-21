@@ -15,6 +15,7 @@ namespace SIC
     {
         public string Accion { get; set; }
         public string Usuario { get; set; }
+        public int Cedula { get; set; }
         Gestor Negocios;
         Usuarios Usua;
         public Mantenimiento_Usuarios()
@@ -50,6 +51,10 @@ namespace SIC
                 this.cbo_genero.DropDownStyle = ComboBoxStyle.DropDownList;
                 this.cbo_rol.DropDownStyle = ComboBoxStyle.DropDownList;
                 Llenar_cbo_genero();
+                if(Accion=="M")
+                {
+
+                }
             }
             catch (Exception ex)
             {

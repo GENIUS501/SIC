@@ -84,6 +84,7 @@
             this.btn_editar.Size = new System.Drawing.Size(50, 41);
             this.btn_editar.TabIndex = 24;
             this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // label1
             // 
@@ -101,6 +102,7 @@
             this.dat_usuarios.Name = "dat_usuarios";
             this.dat_usuarios.Size = new System.Drawing.Size(739, 185);
             this.dat_usuarios.TabIndex = 27;
+            this.dat_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_usuarios_CellClick);
             // 
             // pictureBox1
             // 

@@ -84,5 +84,49 @@ namespace SIC
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void dat_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (this.dat_usuarios.Rows[e.RowIndex].Cells[0].Value.ToString() == "")
+                {
+                    Lista_Usuario_Load(null, null);
+                }
+                else
+                {
+                    valor_celda = Convert.ToInt32(this.dat_usuarios.Rows[e.RowIndex].Cells[0].Value.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (valor_celda != -1)
+                {
+                    Mantenimiento_Usuarios frm = new Mantenimiento_Usuarios();
+                    frm.Accion = "M";
+                    frm.Usuario = usuario;
+                    frm.Cedula = valor_celda;
+                    frm.Text = "Mantenimiento de usuarios: Modificar usuarios.";
+                    frm.ShowDialog();
+                    Lista_Usuario_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Error debe elegir un usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -31,9 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento_Usuarios));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
             this.txt_confirmar_contrasena = new System.Windows.Forms.TextBox();
             this.txt_contrasena = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_contrasena = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbo_rol = new System.Windows.Forms.ComboBox();
             this.tabPerfilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -53,8 +55,6 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_acpetar = new System.Windows.Forms.Button();
             this.tab_PerfilesTableAdapter = new SIC.SICDataSetTableAdapters.Tab_PerfilesTableAdapter();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_usuario = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPerfilesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sICDataSet)).BeginInit();
@@ -67,7 +67,7 @@
             this.groupBox1.Controls.Add(this.txt_usuario);
             this.groupBox1.Controls.Add(this.txt_confirmar_contrasena);
             this.groupBox1.Controls.Add(this.txt_contrasena);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lbl_contrasena);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cbo_rol);
             this.groupBox1.Controls.Add(this.label6);
@@ -88,6 +88,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del usuario";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(123, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 13);
+            this.label9.TabIndex = 76;
+            this.label9.Text = "Nombre de usuario";
+            // 
+            // txt_usuario
+            // 
+            this.txt_usuario.Location = new System.Drawing.Point(126, 85);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(100, 20);
+            this.txt_usuario.TabIndex = 75;
+            // 
             // txt_confirmar_contrasena
             // 
             this.txt_confirmar_contrasena.Location = new System.Drawing.Point(130, 237);
@@ -104,14 +120,14 @@
             this.txt_contrasena.Size = new System.Drawing.Size(100, 20);
             this.txt_contrasena.TabIndex = 73;
             // 
-            // label7
+            // lbl_contrasena
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(127, 221);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 13);
-            this.label7.TabIndex = 72;
-            this.label7.Text = "Confirmacion de contraseña";
+            this.lbl_contrasena.AutoSize = true;
+            this.lbl_contrasena.Location = new System.Drawing.Point(127, 221);
+            this.lbl_contrasena.Name = "lbl_contrasena";
+            this.lbl_contrasena.Size = new System.Drawing.Size(139, 13);
+            this.lbl_contrasena.TabIndex = 72;
+            this.lbl_contrasena.Text = "Confirmacion de contraseña";
             // 
             // label8
             // 
@@ -270,22 +286,6 @@
             // 
             this.tab_PerfilesTableAdapter.ClearBeforeFill = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(123, 69);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 13);
-            this.label9.TabIndex = 76;
-            this.label9.Text = "Nombre de usuario";
-            // 
-            // txt_usuario
-            // 
-            this.txt_usuario.Location = new System.Drawing.Point(126, 85);
-            this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(100, 20);
-            this.txt_usuario.TabIndex = 75;
-            // 
             // Mantenimiento_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,7 +328,7 @@
         private System.Windows.Forms.Button btn_acpetar;
         private System.Windows.Forms.TextBox txt_confirmar_contrasena;
         private System.Windows.Forms.TextBox txt_contrasena;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_contrasena;
         private System.Windows.Forms.Label label8;
         private SICDataSet sICDataSet;
         private System.Windows.Forms.BindingSource tabPerfilesBindingSource;

@@ -193,6 +193,21 @@ namespace Negocios
 
         #region Mostrar especifico
 
+        #region Usuario
+        public Usuarios Mostrar_Usuario_Unico(Int32 pCodigo)
+        {
+            try
+            {
+                GestorBase BD = new GestorBase();
+                return BD.Mostrar_Usuario_Unico(pCodigo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+        #endregion
+
         #region Login
         public Usuarios Login(string User, string Pass)
         {

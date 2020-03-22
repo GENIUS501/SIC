@@ -128,5 +128,55 @@ namespace SIC
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (valor_celda != -1)
+                {
+                    Mantenimiento_Usuarios frm = new Mantenimiento_Usuarios();
+                    frm.Accion = "E";
+                    frm.Usuario = usuario;
+                    frm.Cedula = valor_celda;
+                    frm.Text = "Mantenimiento de usuarios: Eliminar usuarios.";
+                    frm.ShowDialog();
+                    Lista_Usuario_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Error debe elegir un usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_consultar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (valor_celda != -1)
+                {
+                    Mantenimiento_Usuarios frm = new Mantenimiento_Usuarios();
+                    frm.Accion = "C";
+                    frm.Usuario = usuario;
+                    frm.Cedula = valor_celda;
+                    frm.Text = "Mantenimiento de usuarios: Consultar usuarios.";
+                    frm.ShowDialog();
+                    Lista_Usuario_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Error debe elegir un usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -104,6 +104,7 @@
             this.btn_agregar.Size = new System.Drawing.Size(50, 41);
             this.btn_agregar.TabIndex = 44;
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // label3
             // 

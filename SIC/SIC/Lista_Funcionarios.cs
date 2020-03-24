@@ -49,5 +49,22 @@ namespace SIC
                 this.btn_consultar.Enabled = true;
             }
         }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Mantenimiento_Funcionarios frm = new Mantenimiento_Funcionarios();
+                frm.Accion = "A";
+                frm.Usuario = usuario;
+                frm.Text = "Mantenimiento de Funcionarios: Agregar Funcionario.";
+                frm.ShowDialog();
+                Lista_Funcionarios_Load(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

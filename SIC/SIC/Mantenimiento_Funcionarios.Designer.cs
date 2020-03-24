@@ -33,15 +33,15 @@
             this.btn_acpetar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbo_genero = new System.Windows.Forms.ComboBox();
+            this.txt_apellido2 = new System.Windows.Forms.TextBox();
+            this.txt_apellido1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -79,15 +79,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.cbo_genero);
+            this.groupBox1.Controls.Add(this.txt_apellido2);
+            this.groupBox1.Controls.Add(this.txt_apellido1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_cedula);
+            this.groupBox1.Controls.Add(this.txt_nombre);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -96,32 +96,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del funcionario";
             // 
-            // comboBox1
+            // cbo_genero
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(9, 144);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 68;
+            this.cbo_genero.FormattingEnabled = true;
+            this.cbo_genero.Location = new System.Drawing.Point(9, 132);
+            this.cbo_genero.Name = "cbo_genero";
+            this.cbo_genero.Size = new System.Drawing.Size(121, 21);
+            this.cbo_genero.TabIndex = 68;
             // 
-            // textBox3
+            // txt_apellido2
             // 
-            this.textBox3.Location = new System.Drawing.Point(126, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 67;
+            this.txt_apellido2.Location = new System.Drawing.Point(126, 84);
+            this.txt_apellido2.Name = "txt_apellido2";
+            this.txt_apellido2.Size = new System.Drawing.Size(100, 20);
+            this.txt_apellido2.TabIndex = 67;
             // 
-            // textBox2
+            // txt_apellido1
             // 
-            this.textBox2.Location = new System.Drawing.Point(9, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 66;
+            this.txt_apellido1.Location = new System.Drawing.Point(9, 84);
+            this.txt_apellido1.Name = "txt_apellido1";
+            this.txt_apellido1.Size = new System.Drawing.Size(100, 20);
+            this.txt_apellido1.TabIndex = 66;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 128);
+            this.label5.Location = new System.Drawing.Point(6, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 65;
@@ -154,20 +154,20 @@
             this.label2.TabIndex = 62;
             this.label2.Text = "Primer apelllido";
             // 
-            // maskedTextBox1
+            // txt_cedula
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(9, 32);
-            this.maskedTextBox1.Mask = "0000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 61;
+            this.txt_cedula.Location = new System.Drawing.Point(9, 32);
+            this.txt_cedula.Mask = "0000000000";
+            this.txt_cedula.Name = "txt_cedula";
+            this.txt_cedula.Size = new System.Drawing.Size(100, 20);
+            this.txt_cedula.TabIndex = 61;
             // 
-            // textBox1
+            // txt_nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(126, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 60;
+            this.txt_nombre.Location = new System.Drawing.Point(126, 32);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(100, 20);
+            this.txt_nombre.TabIndex = 60;
             // 
             // label1
             // 
@@ -190,6 +190,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Mantenimiento_Funcionarios";
             this.Text = "Mantenimiento de funcionarios";
+            this.Load += new System.EventHandler(this.Mantenimiento_Funcionarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -203,15 +204,15 @@
         private System.Windows.Forms.Button btn_acpetar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cbo_genero;
+        private System.Windows.Forms.TextBox txt_apellido2;
+        private System.Windows.Forms.TextBox txt_apellido1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MaskedTextBox txt_cedula;
+        private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label1;
     }
 }

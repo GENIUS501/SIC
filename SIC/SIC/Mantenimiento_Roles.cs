@@ -342,7 +342,14 @@ namespace SIC
                             }
                             else
                             {
-                                MessageBox.Show("Error al agregar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                if (FilasAfectadas == -1)
+                                {
+                                    MessageBox.Show("El rol se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error al agregar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
                             }
                         }
                         if (Accion == "M")
@@ -357,7 +364,14 @@ namespace SIC
                             }
                             else
                             {
-                                MessageBox.Show("Error al actualizar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                if (FilasAfectadas == -1)
+                                {
+                                    MessageBox.Show("El rol se ha actulizado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error al actualizar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
                             }
                         }
                         if (Accion == "E")
@@ -375,8 +389,14 @@ namespace SIC
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Error al eliminar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                                    if (FilasAfectadas == -1)
+                                    {
+                                        MessageBox.Show("El rol se ha eliminado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error al eliminar el rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
                                 }
                             }
                             else

@@ -11,6 +11,24 @@ namespace Negocios
     {
         #region Agregar
 
+        #region Procedimiento
+        public Int32 AgregarProcedimiento(Procedimiento obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Agregar_Procedimiento(obj, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
         #region Funcionarios
         public Int32 AgregarFuncionario(Funcionarios obj, string usuario)
         {
@@ -360,6 +378,26 @@ namespace Negocios
             {
                 GestorBase BD = new GestorBase();
                 dt = BD.llenar_Usuarios(nombre,apellido);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+        #endregion
+
+        #region Rol
+        public DataTable llenar_Procedimientos()
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Procedimientos();
             }
             catch (Exception ex)
             {

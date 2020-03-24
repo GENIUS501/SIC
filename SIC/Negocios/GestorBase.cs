@@ -15,6 +15,29 @@ namespace Negocios
 
         #region Agregar
 
+        #region Procedimientos
+        public Int32 Agregar_Procedimiento(Procedimiento obj, string usuario)
+        {
+            try
+            {
+                Int32 FilasAfectadas = 0;
+                string sentencia;
+                sentencia = "insert into Tab_Procedimiento (Nombre_Procedimiento,Descripcion_Procedimiento) values(@Nombre_Procedimiento,@Descripcion_Procedimiento)";
+                Parameter[] parametros = {
+                                                     new Parameter("@Nombre_Procedimiento",obj.Nombre_Procedimiento),
+                                                     new Parameter("@Descripcion_Procedimiento",obj.Descripcion_Procedimiento),
+                                              };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Procedimientos", "Agrego");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        #endregion
+
         #region Funcionarios
         public Int32 Agregar_Funcionario(Funcionarios obj, string usuario)
         {
@@ -520,6 +543,30 @@ namespace Negocios
                 {
 
                     string query = "SELECT * FROM Tab_Funcionarios WHERE Nombre LIKE '%" + nombre + "%' AND Apellido1 LIKE '%" + apellido + "%'";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region Mostrar_Procedimientos
+       
+        public DataTable llenar_Procedimientos()
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Procedimiento";
                     SqlCommand cmd = new SqlCommand(query, cnx);
                     SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();

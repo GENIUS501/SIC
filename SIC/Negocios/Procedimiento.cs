@@ -12,6 +12,7 @@ namespace Negocios
         public int Id_Procedimiento { get; set; }
         public string Nombre_Procedimiento { get; set; }
         public string Descripcion_Procedimiento { get; set; }
+        #endregion
 
         #region Constructor sin parametros
         public Procedimiento()
@@ -23,13 +24,11 @@ namespace Negocios
         #endregion
 
         #region Constructos con parametros
-        public Funcionarios(int cedula, string nombre, string apellido1, string apellido2, string genero)
+        public Procedimiento(int id_procedimiento, string nombre_procedimiento, string descripcion_procedimiento)
         {
-            Cedula = cedula;
-            Nombre = nombre;
-            Apellido1 = apellido1;
-            Apellido2 = apellido2;
-            Genero = genero;
+            Id_Procedimiento = id_procedimiento;
+            Nombre_Procedimiento = nombre_procedimiento;
+            Descripcion_Procedimiento = descripcion_procedimiento;
         }
         #endregion
     }

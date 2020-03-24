@@ -185,6 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(757, 351);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -201,6 +202,7 @@
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.dat_funcionarios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Lista_Funcionarios";
             this.Text = "Lista de funcionarios";
             this.Load += new System.EventHandler(this.Lista_Funcionarios_Load);

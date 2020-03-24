@@ -72,10 +72,14 @@ namespace SIC
                             {
 
                             }
-                        }
+                            else
+                            {
+                                MessageBox.Show("Error no ha llenado uno o varios campos!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                    }
                         else
                         {
-
+                            MessageBox.Show("Formato de cedula incorrecto!!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                         }
                   }
             }

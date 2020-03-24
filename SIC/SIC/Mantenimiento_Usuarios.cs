@@ -109,7 +109,7 @@ namespace SIC
                         Usua.Id_Perfil = int.Parse(this.cbo_rol.SelectedValue.ToString());
                         Usua.Genero = this.cbo_genero.SelectedValue.ToString();
                         Int32 FilasAfectadas = 0;
-                        if (this.txt_apellido1.Text != ""||this.txt_apellido2.Text!=""||this.txt_nombre.Text!="" ||this.txt_usuario.Text!="" ||this.txt_contrasena.Text!="")
+                        if (this.txt_apellido1.Text != "" || this.txt_apellido2.Text != "" || this.txt_nombre.Text != "" || this.txt_usuario.Text != "" || this.txt_contrasena.Text != "")
                         {
                             if (Accion == "A")
                             {
@@ -141,13 +141,13 @@ namespace SIC
                                     {
                                         MessageBox.Show("La contraseña es muy corta!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     }
-                                    if(this.txt_contrasena.Text==this.txt_confirmar_contrasena.Text)
+                                    if (this.txt_contrasena.Text == this.txt_confirmar_contrasena.Text)
                                     {
                                         MessageBox.Show("Las contraseñas no coinciden!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     }
                                 }
                             }
-                            if (Accion=="M")
+                            if (Accion == "M")
                             {
                                 if (this.txt_contrasena.Text.Length > 7)
                                 {
@@ -176,12 +176,13 @@ namespace SIC
                                             MessageBox.Show("Error al modificar el usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         }
                                     }
-                                }else
+                                }
+                                else
                                 {
                                     MessageBox.Show("La contraseña es muy corta!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
-                            if (Accion=="E")
+                            if (Accion == "E")
                             {
                                 DialogResult dr = MessageBox.Show("Realmente desea eliminar el Usuario?", "Eliminar el Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                                 if (dr == DialogResult.Yes)
@@ -203,7 +204,8 @@ namespace SIC
                                             MessageBox.Show("Error al eliminar el usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         }
                                     }
-                                }else
+                                }
+                                else
                                 {
                                     this.Close();
                                 }
@@ -211,10 +213,16 @@ namespace SIC
                         }
                         else
                         {
-                            MessageBox.Show("Error no ha llenado uno o varios campos!!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            MessageBox.Show("Error no ha llenado uno o varios campos!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                }else if (Accion=="C")
+                    else
+                    {
+                        MessageBox.Show("Formato de cedula incorrecto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                if (Accion=="C")
                 {
                     this.Close();
                 }

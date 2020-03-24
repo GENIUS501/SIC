@@ -22,7 +22,7 @@ namespace Negocios
             {
                 Int32 FilasAfectadas = 0;
                 string sentencia;
-                sentencia = "insert into Tab_Usuarios (Nombre,Cedula,Apellido1,Apellido2,Genero) values(@Nombre,@Cedula,@Apellido1,@Apellido2,@Genero)";
+                sentencia = "insert into Tab_Funcionarios (Nombre,Cedula,Apellido1,Apellido2,Genero) values(@Nombre,@Cedula,@Apellido1,@Apellido2,@Genero)";
                 Parameter[] parametros = {
                                                      new Parameter("@Nombre",obj.Nombre),
                                                      new Parameter("@Cedula",obj.Cedula),

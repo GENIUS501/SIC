@@ -95,7 +95,7 @@ namespace SIC
         {
             try
             {
-                if (Accion == "A" || Accion == "M")
+                if (Accion == "A" || Accion == "M" || Accion == "E")
                 {
                     Negocios = new Gestor();
                     Usua = new Usuarios();
@@ -113,7 +113,7 @@ namespace SIC
                         {
                             if (Accion == "A")
                             {
-                                if (this.txt_contrasena.Text == this.txt_confirmar_contrasena.Text)
+                                if (this.txt_contrasena.Text == this.txt_confirmar_contrasena.Text && this.txt_contrasena.Text.Length > 7)
                                 {
                                     Usua.Contrasena = Helper.EncodePassword(string.Concat(this.txt_usuario.Text.ToString(), this.txt_contrasena.ToString()));
                                     FilasAfectadas = Negocios.AgregarUsuarios(Usua, Usuario);
@@ -137,40 +137,53 @@ namespace SIC
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Las contrasañas no coinciden!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    if (this.txt_contrasena.Text.Length < 8)
+                                    {
+                                        MessageBox.Show("La contraseña es muy corta!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                    if(this.txt_contrasena.Text==this.txt_confirmar_contrasena.Text)
+                                    {
+                                        MessageBox.Show("Las contraseñas no coinciden!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
                                 }
                             }
                             if (Accion=="M")
                             {
-                                if(contrasena==this.txt_contrasena.Text)
+                                if (this.txt_contrasena.Text.Length > 7)
                                 {
-                                    FilasAfectadas = Negocios.Modificar_Usuario(Usua, Usuario);
-                                }
-                                else
-                                {
-                                    Usua.Contrasena = Helper.EncodePassword(string.Concat(this.txt_usuario.Text.ToString(), this.txt_contrasena.ToString()));
-                                    FilasAfectadas = Negocios.Modificar_Usuario_pass(Usua,Usuario);
-                                }
-                                if (FilasAfectadas > 0)
-                                {
-                                    MessageBox.Show("Usuario modificado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.Close();
-                                }
-                                else
-                                {
-                                    if (FilasAfectadas == -1)
+                                    if (contrasena == this.txt_contrasena.Text)
                                     {
-                                        MessageBox.Show("El usuario se ha modificado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        FilasAfectadas = Negocios.Modificar_Usuario(Usua, Usuario);
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Error al agregar el usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        Usua.Contrasena = Helper.EncodePassword(string.Concat(this.txt_usuario.Text.ToString(), this.txt_contrasena.ToString()));
+                                        FilasAfectadas = Negocios.Modificar_Usuario_pass(Usua, Usuario);
                                     }
+                                    if (FilasAfectadas > 0)
+                                    {
+                                        MessageBox.Show("Usuario modificado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        if (FilasAfectadas == -1)
+                                        {
+                                            MessageBox.Show("El usuario se ha modificado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Error al modificar el usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
+                                    }
+                                }else
+                                {
+                                    MessageBox.Show("La contraseña es muy corta!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
-                            if (Accion== "E")
+                            if (Accion=="E")
                             {
-                                DialogResult dr = MessageBox.Show("Realmente desea eliminar el Usuario?", "Eliminar el Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                                DialogResult dr = MessageBox.Show("Realmente desea eliminar el Usuario?", "Eliminar el Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                                 if (dr == DialogResult.Yes)
                                 {
                                     FilasAfectadas = Negocios.Eliminar_Usuario(Usua.Cedula, Usuario);
@@ -201,6 +214,9 @@ namespace SIC
                             MessageBox.Show("Error no ha llenado uno o varios campos!!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                         }
                     }
+                }else if (Accion=="C")
+                {
+                    this.Close();
                 }
             }
             catch (Exception ex)

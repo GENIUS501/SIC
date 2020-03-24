@@ -239,6 +239,24 @@ namespace Negocios
 
             return dt;
         }
+
+        public DataTable llenar_Usuarios(string nombre,string apellido)
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Usuarios(nombre,apellido);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
         #endregion
 
         #endregion

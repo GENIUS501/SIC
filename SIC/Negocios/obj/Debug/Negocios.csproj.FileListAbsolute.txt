@@ -1,7 +1,7 @@
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\Negocios\bin\Debug\Negocios.dll
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\Negocios\bin\Debug\Negocios.pdb
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\Negocios\bin\Debug\AccesoDatos.dll
+C:\Users\HP 640\Desktop\SIC\SIC\SIC\Negocios\bin\Debug\AccesoDatos.pdb
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\Negocios\obj\Debug\Negocios.dll
 C:\Users\HP 640\Desktop\SIC\SIC\SIC\Negocios\obj\Debug\Negocios.pdb
-C:\Users\HP 640\Desktop\SIC\SIC\SIC\Negocios\bin\Debug\AccesoDatos.dll
-C:\Users\HP 640\Desktop\SIC\SIC\SIC\Negocios\bin\Debug\AccesoDatos.pdb

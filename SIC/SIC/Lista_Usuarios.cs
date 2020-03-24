@@ -178,5 +178,17 @@ namespace SIC
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_buscar_nombre_Click(object sender, EventArgs e)
+        {
+            try {
+                Negocios = new Gestor();
+                this.dat_usuarios.DataSource = Negocios.llenar_Usuarios(this.txt_nombre.Text,this.txt_apellido1.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

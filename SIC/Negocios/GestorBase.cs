@@ -321,6 +321,27 @@ namespace Negocios
                 throw ex;
             }
         }
+
+        public DataTable llenar_Usuarios(string nombre,string apellido)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Usuarios WHERE Nombre LIKE '%" + nombre + "%' AND Apellido1 LIKE '%"+ apellido +"%'";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         #endregion
 
         #endregion

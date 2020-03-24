@@ -121,9 +121,88 @@ namespace Negocios
         }
         #endregion
 
+        #region Usuarios
+        public Int32 Actualizar_Usuario_pass(Usuarios obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "UPDATE Tab_Usuarios SET Nombre = @Nombre, Nombre_Usuario = @Nombre_Usuario,Apellido1 = @Apellido1,Apellido2 = @Apellido2,Id_Perfil = @Id_Perfil,Cedula = @Cedula,Genero = @Genero,Contrasena = @Contrasena WHERE Cedula = @Cedula";
+                Parameter[] parametros = {
+                                                     new Parameter("@Apellido1",obj.Apellido1),
+                                                     new Parameter("@Apellido2",obj.Apellido2),
+                                                     new Parameter("@Cedula",obj.Cedula),
+                                                     new Parameter("@Contrasena",obj.Contrasena),
+                                                     new Parameter("@Genero",obj.Genero),
+                                                     new Parameter("@Id_Perfil",obj.Id_Perfil),
+                                                     new Parameter("@Nombre",obj.Nombre),
+                                                     new Parameter("@Nombre_Usuario",obj.Nombre_Usuario),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Usuarios", "Modifico");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Int32 Actualizar_Usuario(Usuarios obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "UPDATE Tab_Usuarios SET Nombre = @Nombre, Nombre_Usuario = @Nombre_Usuario,Apellido1 = @Apellido1,Apellido2 = @Apellido2,Id_Perfil = @Id_Perfil,Cedula = @Cedula,Genero = @Genero WHERE Cedula = @Cedula";
+                Parameter[] parametros = {
+                                                     new Parameter("@Apellido1",obj.Apellido1),
+                                                     new Parameter("@Apellido2",obj.Apellido2),
+                                                     new Parameter("@Cedula",obj.Cedula),
+                                                     new Parameter("@Contrasena",obj.Contrasena),
+                                                     new Parameter("@Genero",obj.Genero),
+                                                     new Parameter("@Id_Perfil",obj.Id_Perfil),
+                                                     new Parameter("@Nombre",obj.Nombre),
+                                                     new Parameter("@Nombre_Usuario",obj.Nombre_Usuario),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Usuarios", "Modifico");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region Eliminar
+
+        #region Usuario
+        public Int32 EliminarUsuario(int Cedula, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "DELETE FROM Tab_Usuarios WHERE Cedula = @Cedula";
+                Parameter[] parametros = {
+                                         new Parameter("@Cedula",Cedula),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Usuarios", "Elimino");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
 
         #region Rol
         public Int32 EliminarRol(Int32 Id_Perfil, string usuario)
@@ -431,7 +510,7 @@ namespace Negocios
                 }
                 else
                 {
-                    FilasAfectadas = 3;
+                    FilasAfectadas = -1;
                 }
             }
             else

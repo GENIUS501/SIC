@@ -69,6 +69,40 @@ namespace Negocios
 
         #region Actualizar
 
+        #region Usuario
+        public Int32 Modificar_Usuario_pass(Usuarios obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Actualizar_Usuario_pass(obj, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+
+        public Int32 Modificar_Usuario(Usuarios obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Actualizar_Usuario(obj, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
         #region Rol
         public Int32 ModificarRol(Perfiles rol, string usuario)
         {
@@ -90,6 +124,24 @@ namespace Negocios
         #endregion
 
         #region Eliminar
+
+        #region Usuario
+        public Int32 Eliminar_Usuario(int cedula, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.EliminarUsuario(cedula, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
 
         #region Rol
         public Int32 EliminarRol(Int32 id_perfil, string usuario)

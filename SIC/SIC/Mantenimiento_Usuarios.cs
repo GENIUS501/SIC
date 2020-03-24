@@ -108,26 +108,97 @@ namespace SIC
                         Usua.Nombre_Usuario = this.txt_usuario.Text;
                         Usua.Id_Perfil = int.Parse(this.cbo_rol.SelectedValue.ToString());
                         Usua.Genero = this.cbo_genero.SelectedValue.ToString();
-                        if(Accion=="A")
+                        Int32 FilasAfectadas = 0;
+                        if (this.txt_apellido1.Text != ""||this.txt_apellido2.Text!=""||this.txt_nombre.Text!="" ||this.txt_usuario.Text!="" ||this.txt_contrasena.Text!="")
                         {
-                            Int32 FilasAfectadas = 0;
-                            if(this.txt_contrasena.Text==this.txt_confirmar_contrasena.Text)
+                            if (Accion == "A")
                             {
-                                Usua.Contrasena = Helper.EncodePassword(string.Concat(this.txt_usuario.Text.ToString(), this.txt_contrasena.ToString()));
-                                FilasAfectadas = Negocios.AgregarUsuarios(Usua,Usuario);
-                                if(FilasAfectadas>0)
+                                if (this.txt_contrasena.Text == this.txt_confirmar_contrasena.Text)
                                 {
-                                    MessageBox.Show("Usuario Agregado exitosamente!!!","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                                    Usua.Contrasena = Helper.EncodePassword(string.Concat(this.txt_usuario.Text.ToString(), this.txt_contrasena.ToString()));
+                                    FilasAfectadas = Negocios.AgregarUsuarios(Usua, Usuario);
+                                    if (FilasAfectadas > 0)
+                                    {
+                                        MessageBox.Show("Usuario Agregado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        if (FilasAfectadas == -1)
+                                        {
+                                            MessageBox.Show("El usuario se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Error al agregar el usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
+                                    }
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Las contrasañas no coinciden!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            if (Accion=="M")
+                            {
+                                if(contrasena==this.txt_contrasena.Text)
+                                {
+                                    FilasAfectadas = Negocios.Modificar_Usuario(Usua, Usuario);
+                                }
+                                else
+                                {
+                                    Usua.Contrasena = Helper.EncodePassword(string.Concat(this.txt_usuario.Text.ToString(), this.txt_contrasena.ToString()));
+                                    FilasAfectadas = Negocios.Modificar_Usuario_pass(Usua,Usuario);
+                                }
+                                if (FilasAfectadas > 0)
+                                {
+                                    MessageBox.Show("Usuario modificado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
+                                }
+                                else
+                                {
+                                    if (FilasAfectadas == -1)
+                                    {
+                                        MessageBox.Show("El usuario se ha modificado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error al agregar el usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            }
+                            if (Accion== "E")
+                            {
+                                DialogResult dr = MessageBox.Show("Realmente desea eliminar el Usuario?", "Eliminar el Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                                if (dr == DialogResult.Yes)
+                                {
+                                    FilasAfectadas = Negocios.Eliminar_Usuario(Usua.Cedula, Usuario);
+                                    if (FilasAfectadas > 0)
+                                    {
+                                        MessageBox.Show("Usuario Eliminado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        if (FilasAfectadas == -1)
+                                        {
+                                            MessageBox.Show("El usuario se ha eliminado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Error al eliminar el usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
+                                    }
                                 }else
                                 {
-                                    MessageBox.Show("Error al agregar el usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    this.Close();
                                 }
-
-                            }else
-                            {
-                                MessageBox.Show("Las contrasañas no coinciden!!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                             }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error no ha llenado uno o varios campos!!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                         }
                     }
                 }

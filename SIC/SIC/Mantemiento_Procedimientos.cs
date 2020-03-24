@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocios;
 
 namespace SIC
 {
@@ -15,6 +16,15 @@ namespace SIC
         public Mantemiento_Procedimientos()
         {
             InitializeComponent();
+        }
+        public string Accion { get; set; }
+        public string Usuario { get; set; }
+        public int Id_Procedimiento { get; set;}
+        Gestor Negocios;
+        Procedimiento Proc;
+        private void Mantemiento_Procedimientos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

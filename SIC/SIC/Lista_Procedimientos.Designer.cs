@@ -34,9 +34,9 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_agregar = new System.Windows.Forms.Button();
-            this.dat_usuarios = new System.Windows.Forms.DataGridView();
+            this.dat_procedimientos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dat_usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dat_procedimientos)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -58,6 +58,7 @@
             this.btn_consultar.Size = new System.Drawing.Size(50, 41);
             this.btn_consultar.TabIndex = 47;
             this.btn_consultar.UseVisualStyleBackColor = true;
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // btn_eliminar
             // 
@@ -68,6 +69,7 @@
             this.btn_eliminar.Size = new System.Drawing.Size(50, 41);
             this.btn_eliminar.TabIndex = 46;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_editar
             // 
@@ -78,6 +80,7 @@
             this.btn_editar.Size = new System.Drawing.Size(50, 41);
             this.btn_editar.TabIndex = 45;
             this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_agregar
             // 
@@ -88,14 +91,16 @@
             this.btn_agregar.Size = new System.Drawing.Size(50, 41);
             this.btn_agregar.TabIndex = 44;
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
-            // dat_usuarios
+            // dat_procedimientos
             // 
-            this.dat_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dat_usuarios.Location = new System.Drawing.Point(12, 109);
-            this.dat_usuarios.Name = "dat_usuarios";
-            this.dat_usuarios.Size = new System.Drawing.Size(739, 185);
-            this.dat_usuarios.TabIndex = 48;
+            this.dat_procedimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dat_procedimientos.Location = new System.Drawing.Point(12, 109);
+            this.dat_procedimientos.Name = "dat_procedimientos";
+            this.dat_procedimientos.Size = new System.Drawing.Size(739, 185);
+            this.dat_procedimientos.TabIndex = 48;
+            this.dat_procedimientos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_procedimientos_CellClick);
             // 
             // Lista_Procedimiento
             // 
@@ -107,13 +112,13 @@
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_agregar);
-            this.Controls.Add(this.dat_usuarios);
+            this.Controls.Add(this.dat_procedimientos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Lista_Procedimiento";
             this.Text = "Lista de procedimientos";
             this.Load += new System.EventHandler(this.Lista_Procedimiento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dat_usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dat_procedimientos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,6 +130,6 @@
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_editar;
         private System.Windows.Forms.Button btn_agregar;
-        private System.Windows.Forms.DataGridView dat_usuarios;
+        private System.Windows.Forms.DataGridView dat_procedimientos;
     }
 }

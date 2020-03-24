@@ -137,6 +137,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Mantemiento_Procedimientos";
             this.Text = "Mantemiento_Procedimientos";
+            this.Load += new System.EventHandler(this.Mantemiento_Procedimientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

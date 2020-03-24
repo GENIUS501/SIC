@@ -50,5 +50,42 @@ namespace SIC
                 this.btn_consultar.Enabled = true;
             }
         }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Mantemiento_Procedimientos frm = new Mantemiento_Procedimientos();
+                frm.Accion = "A";
+                frm.Usuario = usuario;
+                frm.Text = "Mantenimiento de Procedimientos: Agregar Procedimiento.";
+                frm.ShowDialog();
+                Lista_Procedimiento_Load(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_consultar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dat_procedimientos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

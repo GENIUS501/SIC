@@ -48,6 +48,8 @@
             this.chb_usuarios = new System.Windows.Forms.CheckBox();
             this.clb_Roles = new System.Windows.Forms.CheckedListBox();
             this.chb_Roles = new System.Windows.Forms.CheckBox();
+            this.clb_procedimientos = new System.Windows.Forms.CheckedListBox();
+            this.chb_Procedimientos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -67,7 +69,7 @@
             // 
             this.btn_acpetar.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Check;
             this.btn_acpetar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_acpetar.Location = new System.Drawing.Point(170, 318);
+            this.btn_acpetar.Location = new System.Drawing.Point(177, 386);
             this.btn_acpetar.Name = "btn_acpetar";
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
             this.btn_acpetar.TabIndex = 0;
@@ -78,7 +80,7 @@
             // 
             this.btn_cancelar.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
             this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_cancelar.Location = new System.Drawing.Point(445, 318);
+            this.btn_cancelar.Location = new System.Drawing.Point(452, 386);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
             this.btn_cancelar.TabIndex = 45;
@@ -133,6 +135,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.clb_procedimientos);
+            this.groupBox2.Controls.Add(this.chb_Procedimientos);
             this.groupBox2.Controls.Add(this.chb_movimientos);
             this.groupBox2.Controls.Add(this.chb_sesiones);
             this.groupBox2.Controls.Add(this.clb_Casos);
@@ -145,7 +149,7 @@
             this.groupBox2.Controls.Add(this.chb_Roles);
             this.groupBox2.Location = new System.Drawing.Point(12, 134);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(671, 164);
+            this.groupBox2.Size = new System.Drawing.Size(671, 231);
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Permisos";
@@ -153,7 +157,7 @@
             // chb_movimientos
             // 
             this.chb_movimientos.AutoSize = true;
-            this.chb_movimientos.Location = new System.Drawing.Point(165, 127);
+            this.chb_movimientos.Location = new System.Drawing.Point(352, 128);
             this.chb_movimientos.Name = "chb_movimientos";
             this.chb_movimientos.Size = new System.Drawing.Size(141, 17);
             this.chb_movimientos.TabIndex = 57;
@@ -163,7 +167,7 @@
             // chb_sesiones
             // 
             this.chb_sesiones.AutoSize = true;
-            this.chb_sesiones.Location = new System.Drawing.Point(6, 126);
+            this.chb_sesiones.Location = new System.Drawing.Point(193, 127);
             this.chb_sesiones.Name = "chb_sesiones";
             this.chb_sesiones.Size = new System.Drawing.Size(124, 17);
             this.chb_sesiones.TabIndex = 56;
@@ -267,11 +271,36 @@
             this.chb_Roles.UseVisualStyleBackColor = true;
             this.chb_Roles.CheckedChanged += new System.EventHandler(this.chb_Roles_CheckedChanged);
             // 
+            // clb_procedimientos
+            // 
+            this.clb_procedimientos.Enabled = false;
+            this.clb_procedimientos.FormattingEnabled = true;
+            this.clb_procedimientos.Items.AddRange(new object[] {
+            "Agrergar",
+            "Actualizar",
+            "Borrar",
+            "Consultar"});
+            this.clb_procedimientos.Location = new System.Drawing.Point(2, 150);
+            this.clb_procedimientos.Name = "clb_procedimientos";
+            this.clb_procedimientos.Size = new System.Drawing.Size(86, 64);
+            this.clb_procedimientos.TabIndex = 59;
+            // 
+            // chb_Procedimientos
+            // 
+            this.chb_Procedimientos.AutoSize = true;
+            this.chb_Procedimientos.Location = new System.Drawing.Point(2, 127);
+            this.chb_Procedimientos.Name = "chb_Procedimientos";
+            this.chb_Procedimientos.Size = new System.Drawing.Size(185, 17);
+            this.chb_Procedimientos.TabIndex = 58;
+            this.chb_Procedimientos.Text = "Mantenimiento de Procedimientos";
+            this.chb_Procedimientos.UseVisualStyleBackColor = true;
+            this.chb_Procedimientos.CheckedChanged += new System.EventHandler(this.chb_Procedimientos_CheckedChanged);
+            // 
             // Mantenimiento_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 373);
+            this.ClientSize = new System.Drawing.Size(695, 441);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_cancelar);
@@ -311,5 +340,7 @@
         private System.Windows.Forms.CheckBox chb_usuarios;
         private System.Windows.Forms.CheckedListBox clb_Roles;
         private System.Windows.Forms.CheckBox chb_Roles;
+        private System.Windows.Forms.CheckedListBox clb_procedimientos;
+        private System.Windows.Forms.CheckBox chb_Procedimientos;
     }
 }

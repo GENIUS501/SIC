@@ -266,7 +266,60 @@ namespace SIC
 
                 }
                 #endregion
-            }catch(Exception ex)
+                Permi = new Permisos();
+                #region Procedimientos 7
+                ////////Procedimientos//7////////////////////////////////////
+                Permi = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 7);
+                if (Permi.Modulo > 0)
+                {
+                    this.clb_procedimientos.Enabled = true;
+                    this.chb_Procedimientos.Checked = true;
+                    if (Permi.Agregar == "S")
+                    {
+                        this.clb_procedimientos.Items.Add("Agrergar", true);
+                    }
+                    else
+                    {
+                        this.clb_procedimientos.Items.Add("Agrergar");
+                    }
+                    ///
+                    if (Permi.Consultar == "S")
+                    {
+                        this.clb_procedimientos.Items.Add("Consultar", true);
+                    }
+                    else
+                    {
+                        this.clb_procedimientos.Items.Add("Consultar");
+                    }
+                    /////
+                    if (Permi.Eliminar == "S")
+                    {
+                        this.clb_procedimientos.Items.Add("Borrar", true);
+                    }
+                    else
+                    {
+                        this.clb_procedimientos.Items.Add("Borrar");
+                    }
+                    /////
+                    if (Permi.Modificar == "S")
+                    {
+                        this.clb_procedimientos.Items.Add("Actualizar", true);
+                    }
+                    else
+                    {
+                        this.clb_procedimientos.Items.Add("Actualizar");
+                    }
+                }
+                else
+                {
+                    this.clb_procedimientos.Items.Add("Agrergar");
+                    this.clb_procedimientos.Items.Add("Actualizar");
+                    this.clb_procedimientos.Items.Add("Borrar");
+                    this.clb_procedimientos.Items.Add("Consultar");
+                }
+                #endregion
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
@@ -290,6 +343,7 @@ namespace SIC
                     this.clb_Casos.Items.Clear();
                     this.clb_funcionarios.Items.Clear();
                     this.clb_usuarios.Items.Clear();
+                    this.clb_procedimientos.Items.Clear();
                     Llenar();
                 }
                 if (Accion == "C"|| Accion == "E")
@@ -299,6 +353,7 @@ namespace SIC
                     this.clb_Casos.Items.Clear();
                     this.clb_funcionarios.Items.Clear();
                     this.clb_usuarios.Items.Clear();
+                    this.clb_procedimientos.Items.Clear();
                     Llenar();
                     this.chb_Casos.Enabled = false;
                     this.chb_funcionarios.Enabled = false;
@@ -306,10 +361,12 @@ namespace SIC
                     this.chb_Roles.Enabled = false;
                     this.chb_sesiones.Enabled = false;
                     this.chb_usuarios.Enabled = false;
+                    this.chb_Procedimientos.Enabled = false;
                     this.clb_Casos.Enabled = false;
                     this.clb_funcionarios.Enabled = false;
                     this.clb_Roles.Enabled = false;
                     this.clb_usuarios.Enabled = false;
+                    this.clb_procedimientos.Enabled = false;
                 }
             }
             catch (Exception ex)
@@ -607,7 +664,43 @@ namespace SIC
                         MessageBox.Show("No se pudo agregar el permiso sobre el modulo bitacora movimientos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }catch(Exception ex)
+                ////////Procedimientos////7//////////////////////////////////////////////////////////////////////////////////
+                Permi = new Permisos();
+                if (this.chb_Procedimientos.Checked == true)
+                {
+                    FilasAfectadas = 0;
+                    Permi.Id_Perfil = id_perfil;
+                    Permi.Modulo = 7;
+                    foreach (string value in clb_procedimientos.CheckedItems)
+                    {
+                        switch (value)
+                        {
+                            case "Agrergar":
+                                Permi.Agregar = "S";
+                                break;
+                            case "Actualizar":
+                                Permi.Modificar = "S";
+                                break;
+                            case "Borrar":
+                                Permi.Eliminar = "S";
+                                break;
+                            case "Consultar":
+                                Permi.Consultar = "S";
+                                break;
+                        }
+                    }
+                    FilasAfectadas = Negocios.AgregarPermisos(Permi);
+                    if (FilasAfectadas > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo agregar el permiso sobre el modulo casos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -707,6 +800,25 @@ namespace SIC
             else
             {
                 e.Handled = e.KeyChar != (char)Keys.Back;
+            }
+        }
+
+        private void chb_Procedimientos_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.chb_Procedimientos.Checked == true)
+                {
+                    this.clb_procedimientos.Enabled = true;
+                }
+                else if (this.chb_Procedimientos.Checked == false)
+                {
+                    this.clb_procedimientos.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

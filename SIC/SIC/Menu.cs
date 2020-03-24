@@ -74,6 +74,9 @@ namespace SIC
                             case 6:
                                 bitacoraDeMovimientosToolStripMenuItem.Visible = true;
                                 break;
+                            case 7:
+                                mantenimientoDeProcedimientosToolStripMenuItem.Visible = true;
+                                break;
                         }
                     }
                     i++;
@@ -238,6 +241,22 @@ namespace SIC
                 Cambiar_Contrasena frm = new Cambiar_Contrasena();
                 //frm.Id_Perfil = Id_Perfil;
                 //frm.usuario = usuario;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void mantenimientoDeProcedimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Lista_Procedimiento frm = new Lista_Procedimiento();
+                frm.Id_Perfil = Id_Perfil;
+                frm.usuario = usuario;
                 frm.MdiParent = this;
                 frm.Show();
             }

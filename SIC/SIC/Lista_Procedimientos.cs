@@ -32,7 +32,7 @@ namespace SIC
             this.btn_consultar.Enabled = false;
             this.btn_editar.Enabled = false;
             this.btn_eliminar.Enabled = false;
-            perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 2);
+            perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 7);
             if (perm.Agregar == "S")
             {
                 this.btn_agregar.Enabled = true;

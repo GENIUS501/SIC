@@ -62,6 +62,13 @@ namespace SIC
                 {
                     Llenar();
                     this.txt_cedula.Enabled = false;
+                    if(Accion == "E" || Accion == "C")
+                    {
+                        this.txt_apellido1.Enabled = false;
+                        this.txt_apellido2.Enabled = false;
+                        this.txt_nombre.Enabled = false;
+                        this.cbo_genero.Enabled = false;
+                    }
                 }
             }
             catch (Exception ex)
@@ -109,23 +116,54 @@ namespace SIC
                             }
                              if(Accion=="M")
                             {
-                                FilasAfectadas = Negocios.AgregarFuncionario(Func, Usuario);
+                                FilasAfectadas = Negocios.Modificar_Funcionario(Func, Usuario);
                                 if (FilasAfectadas > 0)
                                 {
-                                    MessageBox.Show("Funcionario Agregado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Funcionario Actualizado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                                 else
                                 {
                                     if (FilasAfectadas == -1)
                                     {
-                                        MessageBox.Show("El Funcionario se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        MessageBox.Show("El Funcionario se ha actualizado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Error al agregar el Funcionario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("Error al actualizar el Funcionario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     }
                                 }
+                            }
+                             if(Accion=="E")
+                            {
+                                DialogResult dr = MessageBox.Show("Realmente desea eliminar el Funcionario?", "Eliminar el Funcionario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                                if (dr == DialogResult.Yes)
+                                {
+                                    FilasAfectadas = Negocios.Eliminar_Funcionario(Func.Cedula, Usuario);
+                                    if (FilasAfectadas > 0)
+                                    {
+                                        MessageBox.Show("Funcionario eliminado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        if (FilasAfectadas == -1)
+                                        {
+                                            MessageBox.Show("El Funcionario se ha eliminado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Error al eliminar el Funcionario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
+                                    }
+                                }else
+                                {
+                                    this.Close();
+                                }
+                            }
+                             if(Accion == "C")
+                            {
+                                this.Close();
                             }
                             }
                             else

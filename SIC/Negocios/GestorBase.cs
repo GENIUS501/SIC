@@ -307,6 +307,28 @@ namespace Negocios
         }
         #endregion
 
+        #region Funcionario
+        public Int32 EliminarFuncionario(int cedula, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "DELETE FROM Tab_Funcionarios WHERE Cedula = @Cedula";
+                Parameter[] parametros = {
+                                         new Parameter("@Cedula",cedula),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Funcionarios", "Elimino");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #region Rol
         public Int32 EliminarRol(Int32 Id_Perfil, string usuario)
         {

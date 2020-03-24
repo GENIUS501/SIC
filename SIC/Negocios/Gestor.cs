@@ -162,6 +162,24 @@ namespace Negocios
 
         #region Eliminar
 
+        #region Funcionario
+        public Int32 Eliminar_Funcionario(int cedula, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.EliminarFuncionario(cedula, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
         #region Usuario
         public Int32 Eliminar_Usuario(string Usuario, string usuario)
         {

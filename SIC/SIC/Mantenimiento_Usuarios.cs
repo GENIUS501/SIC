@@ -73,6 +73,7 @@ namespace SIC
                 {
                     llenar_usuario();
                     this.txt_cedula.Enabled = false;
+                    this.txt_usuario.Enabled = false;
                     if (Accion == "E" || Accion == "C")
                     {
                         this.txt_apellido1.Enabled = false;

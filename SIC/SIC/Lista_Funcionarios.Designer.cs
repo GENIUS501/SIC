@@ -54,6 +54,7 @@
             this.dat_funcionarios.Name = "dat_funcionarios";
             this.dat_funcionarios.Size = new System.Drawing.Size(739, 185);
             this.dat_funcionarios.TabIndex = 48;
+            this.dat_funcionarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_funcionarios_CellClick);
             // 
             // pictureBox1
             // 
@@ -94,6 +95,7 @@
             this.btn_editar.Size = new System.Drawing.Size(50, 41);
             this.btn_editar.TabIndex = 45;
             this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_agregar
             // 
@@ -133,6 +135,7 @@
             this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar_nombre.TabIndex = 55;
             this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
             // 
             // txt_apellido
             // 
@@ -165,6 +168,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar.TabIndex = 51;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // label1
             // 

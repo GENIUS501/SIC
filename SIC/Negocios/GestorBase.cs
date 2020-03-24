@@ -205,6 +205,34 @@ namespace Negocios
 
         #endregion
 
+        #region Funcionarios
+
+        public Int32 Actualizar_Funcionario(Funcionarios obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "UPDATE Tab_Funcionarios SET Nombre = @Nombre,Apellido1 = @Apellido1,Apellido2 = @Apellido2,Genero = @Genero WHERE Cedula = @Cedula";
+                Parameter[] parametros = {
+                                                     new Parameter("@Apellido1",obj.Apellido1),
+                                                     new Parameter("@Apellido2",obj.Apellido2),
+                                                     new Parameter("@Cedula",obj.Cedula),
+                                                     new Parameter("@Genero",obj.Genero),
+                                                     new Parameter("@Nombre",obj.Nombre),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Funcionarios", "Modifico");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region Eliminar
@@ -419,6 +447,71 @@ namespace Negocios
         }
         #endregion
 
+        #region Mostrar_Funcionarios
+        public DataTable llenar_Funcionarios()
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Funcionarios";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataTable llenar_Funcionarios(int cedula)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Funcionarios WHERE Cedula LIKE '%" + cedula + "%'";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataTable llenar_Funcionarios(string nombre, string apellido)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Funcionarios WHERE Nombre LIKE '%" + nombre + "%' AND Apellido1 LIKE '%" + apellido + "%'";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #endregion
 
         #region Mostrar especifico
@@ -453,6 +546,45 @@ namespace Negocios
                     vRegistro.Nombre = dtConsulta.Rows[0]["Nombre"].ToString();
                     vRegistro.Nombre_Usuario = dtConsulta.Rows[0]["Nombre_Usuario"].ToString();
 
+                }
+
+
+                return vRegistro;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region Funcionario
+        public Funcionarios Mostrar_Funcionario_Unico(Int32 pCodigo)
+        {
+            try
+            {
+                DataTable dtConsulta = new DataTable();
+                Funcionarios vRegistro = new Funcionarios();
+
+                string commandText = "SELECT * FROM [dbo].[Tab_Funcionarios] WHERE [Cedula] =  " + pCodigo;
+                //string commandText = commandTexta;
+
+                using (SqlConnection connection = new SqlConnection(vCadenaConexion))
+                {
+                    SqlCommand command = new SqlCommand(commandText, connection);
+
+                    SqlDataAdapter DataAdapter = new SqlDataAdapter(command);
+                    DataAdapter.Fill(dtConsulta);
+                }
+
+                if (dtConsulta.Rows.Count != 0)
+                {
+                    vRegistro.Cedula = int.Parse(dtConsulta.Rows[0]["Cedula"].ToString());
+                    vRegistro.Apellido1 = dtConsulta.Rows[0]["Apellido1"].ToString();
+                    vRegistro.Apellido2 = dtConsulta.Rows[0]["Apellido2"].ToString();
+                    vRegistro.Genero = dtConsulta.Rows[0]["Genero"].ToString();
+                    vRegistro.Nombre = dtConsulta.Rows[0]["Nombre"].ToString();
                 }
 
 

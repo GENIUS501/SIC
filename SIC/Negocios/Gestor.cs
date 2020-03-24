@@ -87,6 +87,25 @@ namespace Negocios
 
         #region Actualizar
 
+        #region Funcionario
+
+        public Int32 Modificar_Funcionario(Funcionarios obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Actualizar_Funcionario(obj, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
         #region Usuario
         public Int32 Modificar_Usuario_pass(Usuarios obj, string usuario)
         {
@@ -221,6 +240,62 @@ namespace Negocios
         }
         #endregion
 
+        #region Funcionario
+        public DataTable llenar_Funcionarios()
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Funcionarios();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+
+        public DataTable llenar_Funcionarios(int cedula)
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Funcionarios(cedula);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+
+        public DataTable llenar_Funcionarios(string nombre, string apellido)
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Funcionarios(nombre, apellido);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+        #endregion
+
         #region Usuario
         public DataTable llenar_Usuarios()
         {
@@ -288,6 +363,21 @@ namespace Negocios
             {
                 GestorBase BD = new GestorBase();
                 return BD.Mostrar_Usuario_Unico(pCodigo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+        #endregion
+
+        #region Funcionario
+        public Funcionarios Mostrar_Funcionario_Unico(Int32 pCodigo)
+        {
+            try
+            {
+                GestorBase BD = new GestorBase();
+                return BD.Mostrar_Funcionario_Unico(pCodigo);
             }
             catch (Exception ex)
             {

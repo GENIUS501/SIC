@@ -42,11 +42,27 @@ namespace SIC
 
 
         }
+        private void Llenar()
+        {
+            Negocios = new Gestor();
+            Func = new Funcionarios();
+            Func = Negocios.Mostrar_Funcionario_Unico(Cedula);
+            this.txt_apellido1.Text = Func.Apellido1;
+            this.txt_apellido2.Text = Func.Apellido2;
+            this.txt_cedula.Text = Func.Cedula.ToString();
+            this.txt_nombre.Text = Func.Nombre.ToString();
+            this.cbo_genero.SelectedValue = Func.Genero;
+        }
         private void Mantenimiento_Funcionarios_Load(object sender, EventArgs e)
         {
             try {
                 Llenar_cbo_genero();
                 this.cbo_genero.DropDownStyle = ComboBoxStyle.DropDownList;
+                if(Accion=="M"||Accion == "E" ||Accion == "C" )
+                {
+                    Llenar();
+                    this.txt_cedula.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
@@ -91,6 +107,26 @@ namespace SIC
                                         }
                                     }
                             }
+                             if(Accion=="M")
+                            {
+                                FilasAfectadas = Negocios.AgregarFuncionario(Func, Usuario);
+                                if (FilasAfectadas > 0)
+                                {
+                                    MessageBox.Show("Funcionario Agregado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    if (FilasAfectadas == -1)
+                                    {
+                                        MessageBox.Show("El Funcionario se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error al agregar el Funcionario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            }
                             }
                             else
                             {
@@ -112,6 +148,17 @@ namespace SIC
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }catch(Exception ex)
+            { 
+              MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

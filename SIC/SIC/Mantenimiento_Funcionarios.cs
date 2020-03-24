@@ -46,6 +46,7 @@ namespace SIC
         {
             try {
                 Llenar_cbo_genero();
+                this.cbo_genero.DropDownStyle = ComboBoxStyle.DropDownList;
             }
             catch (Exception ex)
             {
@@ -70,7 +71,26 @@ namespace SIC
                             Int32 FilasAfectadas = 0;
                             if (this.txt_apellido1.Text != "" || this.txt_apellido2.Text != "" || this.txt_nombre.Text != "" || this.txt_cedula.Text != "")
                             {
-
+                                if(Accion=="A")
+                                {
+                                    FilasAfectadas = Negocios.AgregarFuncionario(Func,Usuario);
+                                    if (FilasAfectadas > 0)
+                                    {
+                                        MessageBox.Show("Funcionario Agregado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        if (FilasAfectadas == -1)
+                                        {
+                                            MessageBox.Show("El Funcionario se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Error al agregar el Funcionario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
+                                    }
+                            }
                             }
                             else
                             {

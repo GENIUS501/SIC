@@ -66,6 +66,7 @@
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
             this.btn_acpetar.TabIndex = 46;
             this.btn_acpetar.UseVisualStyleBackColor = true;
+            this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
             // pictureBox1
             // 
@@ -95,6 +96,7 @@
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del funcionario";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cbo_genero
             // 

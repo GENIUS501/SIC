@@ -15,6 +15,32 @@ namespace Negocios
 
         #region Agregar
 
+        #region Funcionarios
+        public Int32 Agregar_Funcionario(Funcionarios obj, string usuario)
+        {
+            try
+            {
+                Int32 FilasAfectadas = 0;
+                string sentencia;
+                sentencia = "insert into Tab_Usuarios (Nombre,Cedula,Apellido1,Apellido2,Genero) values(@Nombre,@Cedula,@Apellido1,@Apellido2,@Genero)";
+                Parameter[] parametros = {
+                                                     new Parameter("@Nombre",obj.Nombre),
+                                                     new Parameter("@Cedula",obj.Cedula),
+                                                     new Parameter("@Apellido1",obj.Apellido1),
+                                                     new Parameter("@Apellido2",obj.Apellido2),
+                                                     new Parameter("@Genero",obj.Genero),
+                                              };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Funcionarios", "Agrego");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        #endregion
+
         #region Usuarios
         public Int32 Agregar_Usuario(Usuarios obj, string usuario)
         {
@@ -22,7 +48,7 @@ namespace Negocios
             {
                 Int32 FilasAfectadas = 0;
                 string sentencia;
-                sentencia = "insert into Tab_Usuarios (Nombre,Cedula,Nombre_Usuario,Apellido1,Apellido2,Contrasena,Id_Perfil) values(@Nombre,@Cedula,@Nombre_Usuario,@Apellido1,@Apellido2,@Contrasena,@Id_Perfil)";
+                sentencia = "insert into Tab_Usuarios (Nombre,Cedula,Nombre_Usuario,Apellido1,Apellido2,Contrasena,Id_Perfil,Genero) values(@Nombre,@Cedula,@Nombre_Usuario,@Apellido1,@Apellido2,@Contrasena,@Id_Perfil,@Genero)";
                 Parameter[] parametros = {
                                                      new Parameter("@Id_Perfil",obj.Id_Perfil),
                                                      new Parameter("@Nombre",obj.Nombre),
@@ -31,6 +57,7 @@ namespace Negocios
                                                      new Parameter("@Apellido2",obj.Apellido2),
                                                      new Parameter("@Contrasena",obj.Contrasena),
                                                      new Parameter("@Nombre_Usuario",obj.Nombre_Usuario),
+                                                     new Parameter("@Genero",obj.Genero),
                                               };
                 FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
                 return Registrar(FilasAfectadas, usuario, "Usuarios", "Agrego");
@@ -182,18 +209,66 @@ namespace Negocios
 
         #region Eliminar
 
-        #region Usuario
-        public Int32 EliminarUsuario(int Cedula, string usuario)
+        #region Eliminar Movimientos
+        public Int32 EliminarMovimientos(string User)
         {
             Int32 FilasAfectadas = 0;
 
             try
             {
                 string sentencia;
-                sentencia = "DELETE FROM Tab_Usuarios WHERE Cedula = @Cedula";
+                sentencia = "DELETE FROM Tab_Bitacora_Movimientos WHERE Usuario = @Usuario";
                 Parameter[] parametros = {
-                                         new Parameter("@Cedula",Cedula),
+                                         new Parameter("@Usuario",User),
                                        };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return FilasAfectadas;
+        }
+        #endregion
+
+        #region Eliminar Sessiones
+        public Int32 EliminarSessiones(string User)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "DELETE FROM Tab_Bitacora_Sesiones WHERE Usuario = @Usuario";
+                Parameter[] parametros = {
+                                         new Parameter("@Usuario",User),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return FilasAfectadas;
+        }
+        #endregion
+
+        #region Usuario
+        public Int32 EliminarUsuario(string Usuario, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "DELETE FROM Tab_Usuarios WHERE Nombre_Usuario = @Nombre_Usuario";
+                Parameter[] parametros = {
+                                         new Parameter("@Nombre_Usuario",Usuario),
+                                       };
+                EliminarMovimientos(Usuario);
+                EliminarSessiones(Usuario);
                 FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
                 return Registrar(FilasAfectadas, usuario, "Usuarios", "Elimino");
             }

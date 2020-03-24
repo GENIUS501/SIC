@@ -11,6 +11,24 @@ namespace Negocios
     {
         #region Agregar
 
+        #region Funcionarios
+        public Int32 AgregarFuncionario(Funcionarios obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Agregar_Funcionario(obj, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
         #region Usuarios
         public Int32 AgregarUsuarios(Usuarios obj, string usuario)
         {
@@ -126,13 +144,13 @@ namespace Negocios
         #region Eliminar
 
         #region Usuario
-        public Int32 Eliminar_Usuario(int cedula, string usuario)
+        public Int32 Eliminar_Usuario(string Usuario, string usuario)
         {
             Int32 FilasAfectadas = 0;
             try
             {
                 GestorBase BD = new GestorBase();
-                FilasAfectadas = BD.EliminarUsuario(cedula, usuario);
+                FilasAfectadas = BD.EliminarUsuario(Usuario, usuario);
 
             }
             catch (Exception ex)

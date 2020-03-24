@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,8 @@ namespace SIC
         public string Accion { get; set; }
         public string Usuario { get; set; }
         public int Cedula { get; set; }
+        Gestor Negocios;
+        Funcionarios Func;
         private void Llenar_cbo_genero()
         {
             try
@@ -49,5 +52,42 @@ namespace SIC
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 }
+
+        private void btn_acpetar_Click(object sender, EventArgs e)
+        {
+            try {
+                if (Accion == "A" || Accion == "M" || Accion == "E")
+                {
+                        Negocios = new Gestor();
+                        Func = new Funcionarios();
+                       if (this.txt_cedula.Text.Length > 8 && this.txt_cedula.Text.Length < 11)
+                        {
+                            Func.Apellido1 = this.txt_apellido1.Text;
+                            Func.Apellido2 = this.txt_apellido2.Text;
+                            Func.Cedula = int.Parse(this.txt_cedula.Text);
+                            Func.Nombre = this.txt_nombre.Text;
+                            Func.Genero = this.cbo_genero.SelectedValue.ToString();
+                            Int32 FilasAfectadas = 0;
+                            if (this.txt_apellido1.Text != "" || this.txt_apellido2.Text != "" || this.txt_nombre.Text != "" || this.txt_cedula.Text != "")
+                            {
+
+                            }
+                        }
+                        else
+                        {
+
+                        }
+                  }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

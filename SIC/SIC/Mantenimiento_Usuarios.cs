@@ -186,7 +186,7 @@ namespace SIC
                                 DialogResult dr = MessageBox.Show("Realmente desea eliminar el Usuario?", "Eliminar el Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                                 if (dr == DialogResult.Yes)
                                 {
-                                    FilasAfectadas = Negocios.Eliminar_Usuario(Usua.Cedula, Usuario);
+                                    FilasAfectadas = Negocios.Eliminar_Usuario(Usua.Nombre_Usuario, Usuario);
                                     if (FilasAfectadas > 0)
                                     {
                                         MessageBox.Show("Usuario Eliminado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);

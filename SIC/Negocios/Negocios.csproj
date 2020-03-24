@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Funcionarios.cs" />
     <Compile Include="Gestor.cs" />
     <Compile Include="GestorBase.cs" />
     <Compile Include="Helper.cs" />

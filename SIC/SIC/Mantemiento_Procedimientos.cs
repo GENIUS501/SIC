@@ -24,7 +24,14 @@ namespace SIC
         Procedimiento Proc;
         private void Llenar()
         {
-
+            Negocios = new Gestor();
+            Proc = new Procedimiento();
+            Proc = Negocios.Mostrar_Procedimiento_Unico(Id_Procedimiento);
+            this.txt_id_procedimiento.Text = Proc.Id_Procedimiento.ToString();
+            this.txt_descripcion.Text = Proc.Descripcion_Procedimiento;
+            this.txt_nombre.Text = Proc.Nombre_Procedimiento;
+            this.lbl_id_procedimiento.Visible = true;
+            this.txt_id_procedimiento.Visible = true;
         }
         private void Mantemiento_Procedimientos_Load(object sender, EventArgs e)
         {
@@ -35,7 +42,13 @@ namespace SIC
             }
             if(Accion == "M" || Accion == "E" ||Accion=="C")
             {
-
+                Llenar();
+                this.txt_id_procedimiento.Enabled = false;
+                if (Accion == "E" || Accion == "C")
+                {
+                    this.txt_descripcion.Enabled = false;
+                    this.txt_nombre.Enabled = false;
+                }
             }
         }
 
@@ -75,6 +88,23 @@ namespace SIC
                         if(Accion=="M")
                         {
                             Proc.Id_Procedimiento = int.Parse(this.txt_id_procedimiento.Text);
+                            FilasAfectadas = Negocios.ModificarProcedimiento(Proc, Usuario);
+                            if (FilasAfectadas > 0)
+                            {
+                                MessageBox.Show("Procedimiento Modificado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                            {
+                                if (FilasAfectadas == -1)
+                                {
+                                    MessageBox.Show("El procedimiento se ha Modificado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error al modificar el procedimiento!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
                         }
                     }
                     else
@@ -82,6 +112,17 @@ namespace SIC
                         MessageBox.Show("No se a llenado uno o varios campos!!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     }
                 }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);

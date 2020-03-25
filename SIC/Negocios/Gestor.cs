@@ -176,6 +176,24 @@ namespace Negocios
         }
         #endregion
 
+        #region Procedimientp
+        public Int32 ModificarProcedimiento(Procedimiento proc, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Actualizar_Procedimiento(proc, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
         #endregion
 
         #region Eliminar
@@ -479,6 +497,21 @@ namespace Negocios
             {
                 GestorBase BD = new GestorBase();
                 return BD.Mostrar_rol(pCodigo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+        #endregion
+
+        #region Procedimiento
+        public Procedimiento Mostrar_Procedimiento_Unico(Int32 pCodigo)
+        {
+            try
+            {
+                GestorBase BD = new GestorBase();
+                return BD.Mostrar_procedimiento(pCodigo);
             }
             catch (Exception ex)
             {

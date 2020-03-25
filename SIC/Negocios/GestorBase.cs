@@ -148,6 +148,30 @@ namespace Negocios
 
         #region Modificar
 
+        #region Procedimiento
+        public Int32 Actualizar_Procedimiento(Procedimiento uRegistro, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "UPDATE Tab_Procedimiento SET Nombre_Procedimiento = @Nombre_Procedimiento,Descripcion_Procedimiento=@Descripcion_Procedimiento WHERE Id_Procedimiento = @Id_Procedimiento";
+                Parameter[] parametros = {
+                                         new Parameter("@Nombre_Perfil",uRegistro.Nombre_Procedimiento),
+                                         new Parameter("@Id_Procedimiento",uRegistro.Id_Procedimiento),
+                                         new Parameter("@Descripcion_Procedimiento",uRegistro.Descripcion_Procedimiento),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Procedimientos", "Modifico");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #region Rol
         public Int32 Actualizar_Rol(Perfiles uRegistro, string usuario)
         {
@@ -771,6 +795,44 @@ namespace Negocios
                 {
                     vRegistro.Nombre_Perfil = dtConsulta.Rows[0]["Nombre_Perfil"].ToString();
                     vRegistro.Id_Perfil = Convert.ToInt32(dtConsulta.Rows[0]["Id_Perfil"]);
+
+                }
+
+
+                return vRegistro;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region Procedimiento
+        public Procedimiento Mostrar_procedimiento(Int32 pCodigo)
+        {
+            try
+            {
+                DataTable dtConsulta = new DataTable();
+                Procedimiento vRegistro = new Procedimiento();
+
+                string commandText = "SELECT * FROM [dbo].[Tab_Procedimiento] WHERE [Id_Procedimiento] =  " + pCodigo;
+                //string commandText = commandTexta;
+
+                using (SqlConnection connection = new SqlConnection(vCadenaConexion))
+                {
+                    SqlCommand command = new SqlCommand(commandText, connection);
+
+                    SqlDataAdapter DataAdapter = new SqlDataAdapter(command);
+                    DataAdapter.Fill(dtConsulta);
+                }
+
+                if (dtConsulta.Rows.Count != 0)
+                {
+                    vRegistro.Nombre_Procedimiento = dtConsulta.Rows[0]["Nombre_Procedimiento"].ToString();
+                    vRegistro.Descripcion_Procedimiento = dtConsulta.Rows[0]["Descripcion_Procedimiento"].ToString();
+                    vRegistro.Id_Procedimiento = Convert.ToInt32(dtConsulta.Rows[0]["Id_Procedimiento"]);
 
                 }
 

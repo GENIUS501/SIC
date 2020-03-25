@@ -91,7 +91,7 @@ namespace SIC
                 }
                 else
                 {
-                    MessageBox.Show("Error debe elegir un rol!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error debe elegir un Procedimiento!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -102,12 +102,52 @@ namespace SIC
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (valor_celda != -1)
+                {
+                    Mantemiento_Procedimientos frm = new Mantemiento_Procedimientos();
+                    frm.Accion = "E";
+                    frm.Usuario = usuario;
+                    frm.Id_Procedimiento = valor_celda;
+                    frm.Text = "Mantenimiento de Procedimientos: Eliminar Procedimiento.";
+                    frm.ShowDialog();
+                    Lista_Procedimiento_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Error debe elegir un Procedimiento!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_consultar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (valor_celda != -1)
+                {
+                    Mantemiento_Procedimientos frm = new Mantemiento_Procedimientos();
+                    frm.Accion = "C";
+                    frm.Usuario = usuario;
+                    frm.Id_Procedimiento = valor_celda;
+                    frm.Text = "Mantenimiento de Procedimientos: Consultar Procedimiento.";
+                    frm.ShowDialog();
+                    Lista_Procedimiento_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Error debe elegir un Procedimiento!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dat_procedimientos_CellClick(object sender, DataGridViewCellEventArgs e)

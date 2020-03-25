@@ -158,7 +158,7 @@ namespace Negocios
                 string sentencia;
                 sentencia = "UPDATE Tab_Procedimiento SET Nombre_Procedimiento = @Nombre_Procedimiento,Descripcion_Procedimiento=@Descripcion_Procedimiento WHERE Id_Procedimiento = @Id_Procedimiento";
                 Parameter[] parametros = {
-                                         new Parameter("@Nombre_Perfil",uRegistro.Nombre_Procedimiento),
+                                         new Parameter("@Nombre_Procedimiento",uRegistro.Nombre_Procedimiento),
                                          new Parameter("@Id_Procedimiento",uRegistro.Id_Procedimiento),
                                          new Parameter("@Descripcion_Procedimiento",uRegistro.Descripcion_Procedimiento),
                                        };
@@ -283,6 +283,30 @@ namespace Negocios
         #endregion
 
         #region Eliminar
+
+        #region Procedimiento
+        public Int32 EliminarProcedimiento(Int32 Id_Procedimiento, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "DELETE FROM Tab_Procedimiento WHERE Id_Procedimiento = @Id_Procedimiento";
+                Parameter[] parametros = {
+                                         new Parameter("@Id_Procedimiento",Id_Procedimiento),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Procedimientos", "Elimino");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+        }
+        #endregion
 
         #region Eliminar Movimientos
         public Int32 EliminarMovimientos(string User)

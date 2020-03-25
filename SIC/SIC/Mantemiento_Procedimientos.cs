@@ -106,11 +106,43 @@ namespace SIC
                                 }
                             }
                         }
+                        if(Accion == "E")
+                        {
+                            DialogResult dr = MessageBox.Show("Realmente desea eliminar el proceso?", "Eliminar el proceso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (dr == DialogResult.Yes)
+                            {
+                                FilasAfectadas = Negocios.EliminarProcedimiento(int.Parse(this.txt_id_procedimiento.Text), Usuario);
+                                if (FilasAfectadas > 0)
+                                {
+                                    MessageBox.Show("Procedimiento eliminado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    if (FilasAfectadas == -1)
+                                    {
+                                        MessageBox.Show("El procedimiento se ha eliminado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error al eliminar el procedimiento!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                this.Close();
+                            }
+                        }
                     }
                     else
                     {
                         MessageBox.Show("No se a llenado uno o varios campos!!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     }
+                }
+                if(Accion=="C")
+                {
+                    this.Close();
                 }
             }catch(Exception ex)
             {

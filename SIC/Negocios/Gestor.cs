@@ -176,7 +176,7 @@ namespace Negocios
         }
         #endregion
 
-        #region Procedimientp
+        #region Procedimiento
         public Int32 ModificarProcedimiento(Procedimiento proc, string usuario)
         {
             Int32 FilasAfectadas = 0;
@@ -242,6 +242,24 @@ namespace Negocios
             {
                 GestorBase BD = new GestorBase();
                 FilasAfectadas = BD.EliminarRol(id_perfil, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
+        #region Procedimiento
+        public Int32 EliminarProcedimiento(Int32 id_procedimiento, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.EliminarProcedimiento(id_procedimiento, usuario);
 
             }
             catch (Exception ex)

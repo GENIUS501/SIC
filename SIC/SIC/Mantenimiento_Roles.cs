@@ -23,6 +23,7 @@ namespace SIC
         {
             InitializeComponent();
         }
+        #region llenar Permisos
         private void Llenar()
         {
             try
@@ -324,6 +325,7 @@ namespace SIC
                 throw new Exception(ex.ToString());
             }
         }
+        #endregion
         private void Mantenimiento_Roles_Load(object sender, EventArgs e)
         {
             try
@@ -477,6 +479,7 @@ namespace SIC
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #region Agregar Permisos
         private void Permisos(int id_perfil)
         {
             try
@@ -705,6 +708,7 @@ namespace SIC
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
         private void chb_Roles_CheckedChanged(object sender, EventArgs e)
         {

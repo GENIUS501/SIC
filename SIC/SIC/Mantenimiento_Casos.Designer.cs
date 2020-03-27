@@ -37,13 +37,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cbo_estado = new System.Windows.Forms.ComboBox();
             this.cbo_tipo_procedimiento = new System.Windows.Forms.ComboBox();
+            this.tabProcedimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sICDataSet1 = new SIC.SICDataSet1();
             this.cbo_parte_procesal = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_lugar_trabajo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_cedula = new System.Windows.Forms.TextBox();
             this.txt_num_expediente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -52,21 +53,23 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.sICDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sICDataSet1 = new SIC.SICDataSet1();
-            this.tabProcedimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tab_ProcedimientoTableAdapter = new SIC.SICDataSet1TableAdapters.Tab_ProcedimientoTableAdapter();
+            this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
+            this.txt_organo_director = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabProcedimientoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_cancelar
             // 
             this.btn_cancelar.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
             this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_cancelar.Location = new System.Drawing.Point(424, 434);
+            this.btn_cancelar.Location = new System.Drawing.Point(424, 480);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
             this.btn_cancelar.TabIndex = 47;
@@ -77,7 +80,7 @@
             // 
             this.btn_acpetar.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Check;
             this.btn_acpetar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_acpetar.Location = new System.Drawing.Point(149, 434);
+            this.btn_acpetar.Location = new System.Drawing.Point(149, 480);
             this.btn_acpetar.Name = "btn_acpetar";
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
             this.btn_acpetar.TabIndex = 46;
@@ -89,13 +92,16 @@
             this.pictureBox1.Image = global::SIC.Properties.Resources.IMG_Cliente_Logo;
             this.pictureBox1.Location = new System.Drawing.Point(465, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(144, 171);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 64;
             this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_organo_director);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.txt_cedula);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cbo_estado);
             this.groupBox1.Controls.Add(this.cbo_tipo_procedimiento);
@@ -105,12 +111,11 @@
             this.groupBox1.Controls.Add(this.txt_lugar_trabajo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txt_cedula);
             this.groupBox1.Controls.Add(this.txt_num_expediente);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(15, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(444, 129);
+            this.groupBox1.Size = new System.Drawing.Size(444, 175);
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del expediente";
@@ -142,6 +147,16 @@
             this.cbo_tipo_procedimiento.Size = new System.Drawing.Size(121, 21);
             this.cbo_tipo_procedimiento.TabIndex = 69;
             this.cbo_tipo_procedimiento.ValueMember = "Id_Procedimiento";
+            // 
+            // tabProcedimientoBindingSource
+            // 
+            this.tabProcedimientoBindingSource.DataMember = "Tab_Procedimiento";
+            this.tabProcedimientoBindingSource.DataSource = this.sICDataSet1;
+            // 
+            // sICDataSet1
+            // 
+            this.sICDataSet1.DataSetName = "SICDataSet1";
+            this.sICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbo_parte_procesal
             // 
@@ -194,13 +209,6 @@
             this.label2.TabIndex = 63;
             this.label2.Text = "Cedula";
             // 
-            // txt_cedula
-            // 
-            this.txt_cedula.Location = new System.Drawing.Point(144, 32);
-            this.txt_cedula.Name = "txt_cedula";
-            this.txt_cedula.Size = new System.Drawing.Size(100, 20);
-            this.txt_cedula.TabIndex = 62;
-            // 
             // txt_num_expediente
             // 
             this.txt_num_expediente.Location = new System.Drawing.Point(9, 32);
@@ -223,7 +231,7 @@
             this.groupBox2.Controls.Add(this.txt_medida_cautelar);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txt_descripcion);
-            this.groupBox2.Location = new System.Drawing.Point(4, 143);
+            this.groupBox2.Location = new System.Drawing.Point(4, 189);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(605, 285);
             this.groupBox2.TabIndex = 66;
@@ -264,25 +272,39 @@
             this.txt_descripcion.Size = new System.Drawing.Size(576, 100);
             this.txt_descripcion.TabIndex = 64;
             // 
-            // sICDataSet1
-            // 
-            this.sICDataSet1.DataSetName = "SICDataSet1";
-            this.sICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tabProcedimientoBindingSource
-            // 
-            this.tabProcedimientoBindingSource.DataMember = "Tab_Procedimiento";
-            this.tabProcedimientoBindingSource.DataSource = this.sICDataSet1;
-            // 
             // tab_ProcedimientoTableAdapter
             // 
             this.tab_ProcedimientoTableAdapter.ClearBeforeFill = true;
+            // 
+            // txt_cedula
+            // 
+            this.txt_cedula.Location = new System.Drawing.Point(144, 31);
+            this.txt_cedula.Mask = "0000000000";
+            this.txt_cedula.Name = "txt_cedula";
+            this.txt_cedula.Size = new System.Drawing.Size(100, 20);
+            this.txt_cedula.TabIndex = 72;
+            // 
+            // txt_organo_director
+            // 
+            this.txt_organo_director.Location = new System.Drawing.Point(9, 141);
+            this.txt_organo_director.Name = "txt_organo_director";
+            this.txt_organo_director.Size = new System.Drawing.Size(100, 20);
+            this.txt_organo_director.TabIndex = 74;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 125);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 73;
+            this.label9.Text = "Organo director";
             // 
             // Mantenimiento_Casos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 479);
+            this.ClientSize = new System.Drawing.Size(614, 535);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -295,11 +317,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabProcedimientoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sICDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabProcedimientoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -319,7 +341,6 @@
         private System.Windows.Forms.TextBox txt_lugar_trabajo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_cedula;
         private System.Windows.Forms.TextBox txt_num_expediente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -331,5 +352,8 @@
         private SICDataSet1 sICDataSet1;
         private System.Windows.Forms.BindingSource tabProcedimientoBindingSource;
         private SICDataSet1TableAdapters.Tab_ProcedimientoTableAdapter tab_ProcedimientoTableAdapter;
+        private System.Windows.Forms.MaskedTextBox txt_cedula;
+        private System.Windows.Forms.TextBox txt_organo_director;
+        private System.Windows.Forms.Label label9;
     }
 }

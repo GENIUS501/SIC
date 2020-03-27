@@ -23,6 +23,7 @@ namespace SIC
         public string Num_Expediente { get; set; }
         Gestor Negocios;
         Expedientes Exp;
+        Funcionarios Func;
 
         private void Llenar_cbo_parte_procesal()
         {
@@ -100,7 +101,72 @@ namespace SIC
 
         private void btn_acpetar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if(Accion=="A"|| Accion == "M" || Accion == "E")
+                {
+                    //Validacion de campos llenos
+                    if(this.txt_cedula.Text!=""&&this.txt_descripcion.Text!=""&&this.txt_lugar_trabajo.Text!=""&&this.txt_medida_cautelar.Text!=""&&this.txt_num_expediente.Text!=""&&this.txt_cedula.Text.Length>8&&this.txt_cedula.Text.Length<11)
+                    {
+                        Negocios = new Gestor();
+                        Func = new Funcionarios();
+                        Func = Negocios.Mostrar_Funcionario_Unico(int.Parse(this.txt_cedula.Text));
+                        if (Func.Cedula > 0)
+                        {
+                            Exp = new Expedientes(int.Parse(this.txt_cedula.Text), Usuario, this.txt_num_expediente.Text, this.cbo_parte_procesal.SelectedValue.ToString(), this.txt_lugar_trabajo.Text, this.txt_descripcion.Text, this.txt_medida_cautelar.Text, int.Parse(this.cbo_tipo_procedimiento.SelectedValue.ToString()), this.txt_organo_director.Text);
+                            Int32 FilasAfectadas = 0;
+                            if (Accion == "A")
+                            {
+                                FilasAfectadas = Negocios.AgregarExpediente(Exp, Usuario);
+                                if (FilasAfectadas > 0)
+                                {
+                                    MessageBox.Show("Caso agregado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    if (FilasAfectadas == -1)
+                                    {
+                                        MessageBox.Show("El caso se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error al agregar el caso!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            }
+                            if(Accion=="M")
+                            {
 
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("No existe funcionario asosiado al numero de cedula introducido!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
+                    else
+                    {
+                        if (this.txt_cedula.Text != "" && this.txt_descripcion.Text != "" && this.txt_lugar_trabajo.Text != "" && this.txt_medida_cautelar.Text != "" && this.txt_num_expediente.Text != "")
+                        {
+                            MessageBox.Show("Uno o varios Campos no han sido llenados!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        if(this.txt_cedula.Text.Length < 9 && this.txt_cedula.Text.Length >10)
+                        {
+                            MessageBox.Show("Formato de cedula incorrecto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                if(Accion == "C")
+                {
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -15,6 +15,36 @@ namespace Negocios
 
         #region Agregar
 
+        #region Expedientes
+        public Int32 Agregar_Expediente(Expedientes obj, string usuario)
+        {
+            try
+            {
+                Int32 FilasAfectadas = 0;
+                string sentencia;
+                sentencia = "insert into Tab_Expedientes (Num_Expediente,Usuario_Generador,Cedula,Descripcion,Id_Tipo_Procedimiento,Lugar_Trabajo,Medida_Cautelar,Organo_Director,Parte_Procesal) values(@Num_Expediente,@Usuario_Generador,@Cedula,@Descripcion,@Id_Tipo_Procedimiento,@Lugar_Trabajo,@Medida_Cautelar,@Organo_Director,@Parte_Procesal)";
+                Parameter[] parametros = {
+                                                     new Parameter("@Num_Expediente",obj.Num_Expediente),
+                                                     new Parameter("@Usuario_Generador",obj.Usuario_Generador),
+                                                     new Parameter("@Cedula",obj.Cedula),
+                                                     new Parameter("@Descripcion",obj.Descripcion),
+                                                     new Parameter("@Id_Tipo_Procedimiento",obj.Id_Tipo_Procedimiento),
+                                                     new Parameter("@Lugar_Trabajo",obj.Lugar_Trabajo),
+                                                     new Parameter("@Medida_Cautelar",obj.Medida_Cautelar),
+                                                     new Parameter("@Organo_Director",obj.Organo_Director),
+                                                     new Parameter("@Parte_Procesal",obj.Parte_Procesal),
+                                              };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Casos", "Agrego");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        #endregion
+
         #region Procedimientos
         public Int32 Agregar_Procedimiento(Procedimiento obj, string usuario)
         {

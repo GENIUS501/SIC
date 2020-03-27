@@ -11,6 +11,24 @@ namespace Negocios
     {
         #region Agregar
 
+        #region Expedientes
+        public Int32 AgregarExpediente(Expedientes obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Agregar_Expediente(obj, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
         #region Procedimiento
         public Int32 AgregarProcedimiento(Procedimiento obj, string usuario)
         {

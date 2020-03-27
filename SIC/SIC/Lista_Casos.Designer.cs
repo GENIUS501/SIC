@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lista_Casos));
-            this.dat_usuarios = new System.Windows.Forms.DataGridView();
+            this.dat_casos = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_consultar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
@@ -41,18 +41,18 @@
             this.txt_num_expediente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_buscar_num_expediente = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dat_usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dat_casos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dat_usuarios
+            // dat_casos
             // 
-            this.dat_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dat_usuarios.Location = new System.Drawing.Point(14, 153);
-            this.dat_usuarios.Name = "dat_usuarios";
-            this.dat_usuarios.Size = new System.Drawing.Size(739, 185);
-            this.dat_usuarios.TabIndex = 48;
-            this.dat_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_usuarios_CellClick);
+            this.dat_casos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dat_casos.Location = new System.Drawing.Point(14, 153);
+            this.dat_casos.Name = "dat_casos";
+            this.dat_casos.Size = new System.Drawing.Size(739, 185);
+            this.dat_casos.TabIndex = 48;
+            this.dat_casos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_usuarios_CellClick);
             // 
             // pictureBox1
             // 
@@ -167,6 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(765, 353);
             this.Controls.Add(this.btn_buscar_num_expediente);
             this.Controls.Add(this.label2);
@@ -179,12 +180,13 @@
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_agregar);
-            this.Controls.Add(this.dat_usuarios);
+            this.Controls.Add(this.dat_casos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Lista_Casos";
             this.Text = "Lista de Casos";
             this.Load += new System.EventHandler(this.Lista_Casos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dat_usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dat_casos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,7 +200,7 @@
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_editar;
         private System.Windows.Forms.Button btn_agregar;
-        private System.Windows.Forms.DataGridView dat_usuarios;
+        private System.Windows.Forms.DataGridView dat_casos;
         private System.Windows.Forms.MaskedTextBox txt_buscar;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Label label1;

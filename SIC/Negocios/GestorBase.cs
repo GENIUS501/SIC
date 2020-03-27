@@ -22,7 +22,7 @@ namespace Negocios
             {
                 Int32 FilasAfectadas = 0;
                 string sentencia;
-                sentencia = "insert into Tab_Expedientes (Num_Expediente,Usuario_Generador,Cedula,Descripcion,Id_Tipo_Procedimiento,Lugar_Trabajo,Medida_Cautelar,Organo_Director,Parte_Procesal) values(@Num_Expediente,@Usuario_Generador,@Cedula,@Descripcion,@Id_Tipo_Procedimiento,@Lugar_Trabajo,@Medida_Cautelar,@Organo_Director,@Parte_Procesal)";
+                sentencia = "insert into Tab_Expedientes (Num_Expediente,Usuario_Generador,Cedula,Descripcion,Id_Tipo_Procedimiento,Lugar_Trabajo,Medida_Cautelar,Organo_Director,Parte_Procesal,Estado) values(@Num_Expediente,@Usuario_Generador,@Cedula,@Descripcion,@Id_Tipo_Procedimiento,@Lugar_Trabajo,@Medida_Cautelar,@Organo_Director,@Parte_Procesal,@Estado)";
                 Parameter[] parametros = {
                                                      new Parameter("@Num_Expediente",obj.Num_Expediente),
                                                      new Parameter("@Usuario_Generador",obj.Usuario_Generador),
@@ -482,6 +482,71 @@ namespace Negocios
 
         #region Mostrar varios
 
+        #region Mostrar_Expedientes
+        public DataTable llenar_Expedientes()
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Expedientes";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+       public DataTable llenar_Expedientes(int cedula)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Expedientes WHERE Cedula LIKE '%" + cedula + "%'";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        
+        public DataTable llenar_Expedientes(string num_expediente)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Expedientes WHERE Num_Expediente LIKE '%" + num_expediente + "%'";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #region Mostrar_Roles
         public DataTable llenar_Roles()
         {
@@ -888,6 +953,49 @@ namespace Negocios
                     vRegistro.Descripcion_Procedimiento = dtConsulta.Rows[0]["Descripcion_Procedimiento"].ToString();
                     vRegistro.Id_Procedimiento = Convert.ToInt32(dtConsulta.Rows[0]["Id_Procedimiento"]);
 
+                }
+
+
+                return vRegistro;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region Expediente
+        public Expedientes Mostrar_Expediente_Unico(string pCodigo)
+        {
+            try
+            {
+                DataTable dtConsulta = new DataTable();
+                Expedientes vRegistro = new Expedientes();
+
+                string commandText = "SELECT * FROM [dbo].[Tab_Expedientes] WHERE [Num_Expediente] =  " + pCodigo;
+                //string commandText = commandTexta;
+
+                using (SqlConnection connection = new SqlConnection(vCadenaConexion))
+                {
+                    SqlCommand command = new SqlCommand(commandText, connection);
+
+                    SqlDataAdapter DataAdapter = new SqlDataAdapter(command);
+                    DataAdapter.Fill(dtConsulta);
+                }
+
+                if (dtConsulta.Rows.Count != 0)
+                {
+                    vRegistro.Cedula = int.Parse(dtConsulta.Rows[0]["Cedula"].ToString());
+                    vRegistro.Descripcion = dtConsulta.Rows[0]["Descripcion"].ToString();
+                    vRegistro.Id_Tipo_Procedimiento = int.Parse(dtConsulta.Rows[0]["Id_Tipo_Procedimiento"].ToString());
+                    vRegistro.Lugar_Trabajo = dtConsulta.Rows[0]["Lugar_Trabajo"].ToString();
+                    vRegistro.Medida_Cautelar = dtConsulta.Rows[0]["Medida_Cautelar"].ToString();
+                    vRegistro.Num_Expediente = dtConsulta.Rows[0]["Num_Expediente"].ToString();
+                    vRegistro.Organo_Director = dtConsulta.Rows[0]["Organo_Director"].ToString();
+                    vRegistro.Parte_Procesal = dtConsulta.Rows[0]["Parte_Procesal"].ToString();
+                    vRegistro.Usuario_Generador = dtConsulta.Rows[0]["Usuario_Generador"].ToString();
                 }
 
 

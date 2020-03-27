@@ -18,6 +18,7 @@ namespace Negocios
         public string Medida_Cautelar { get; set; }
         public int Id_Tipo_Procedimiento { get; set; }
         public string Organo_Director { get; set; }
+        public string Estado { get; set; }
         #endregion
 
         #region Constructor sin parametros
@@ -32,6 +33,7 @@ namespace Negocios
             Medida_Cautelar = "";
             Id_Tipo_Procedimiento = 0;
             Organo_Director = "";
+            Estado = "";
         }
         #endregion
 

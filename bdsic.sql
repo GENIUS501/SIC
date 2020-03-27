@@ -82,6 +82,7 @@ CREATE TABLE Tab_Expedientes
 	Id_Tipo_Procedimiento	INT,
 	Medida_Cautelar	VARCHAR(MAX),
 	Organo_Director	VARCHAR(25),
+	Estado VARCHAR(25),
 	CONSTRAINT Fk_Exp_Usu FOREIGN KEY(Usuario_Generador) REFERENCES Tab_Usuarios(Nombre_Usuario),
 	CONSTRAINT Fk_Exp_Pro FOREIGN KEY(Id_Tipo_Procedimiento) REFERENCES Tab_Procedimiento(Id_Procedimiento),
 	CONSTRAINT Fk_Exp_Fun FOREIGN KEY(Cedula) REFERENCES Tab_Funcionarios(Cedula)

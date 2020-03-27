@@ -25,6 +25,7 @@ namespace SIC
         Expedientes Exp;
         Funcionarios Func;
 
+        #region Llenar combos
         private void Llenar_cbo_parte_procesal()
         {
             try
@@ -67,6 +68,27 @@ namespace SIC
 
 
         }
+        #endregion
+
+        #region Llenar Campos
+        private void Llenar_Campos()
+        {
+            Negocios = new Gestor();
+            Exp = new Expedientes();
+            Exp = Negocios.Mostrar_Expediente_Unico(Num_Expediente);
+            this.txt_cedula.Text = Exp.Cedula.ToString();
+            this.txt_descripcion.Text = Exp.Descripcion;
+            this.txt_lugar_trabajo.Text = Exp.Lugar_Trabajo;
+            this.txt_medida_cautelar.Text = Exp.Medida_Cautelar;
+            this.txt_num_expediente.Text = Exp.Num_Expediente;
+            this.txt_organo_director.Text = Exp.Organo_Director;
+            this.cbo_estado.SelectedValue = Exp.Estado;
+            this.cbo_parte_procesal.SelectedValue = Exp.Parte_Procesal;
+            this.cbo_tipo_procedimiento.SelectedValue = Exp.Id_Tipo_Procedimiento;
+        }
+        #endregion
+
+        #region Cargador
         private void Mantenimiento_Casos_Load(object sender, EventArgs e)
         {
             try
@@ -78,12 +100,17 @@ namespace SIC
                 this.cbo_estado.DropDownStyle = ComboBoxStyle.DropDownList;
                 this.cbo_parte_procesal.DropDownStyle = ComboBoxStyle.DropDownList;
                 this.cbo_tipo_procedimiento.DropDownStyle = ComboBoxStyle.DropDownList;
+                if(Accion == "M"|| Accion == "E" || Accion == "C")
+                {
+                    Llenar_Campos();
+                }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
+        #endregion
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {

@@ -27,6 +27,8 @@ namespace SIC
         {
             try
             {
+                this.dat_funcionarios.ReadOnly = true;
+                valor_celda = -1;
                 perm = new Permisos();
                 Negocios = new Gestor();
                 this.btn_agregar.Enabled = false;

@@ -462,6 +462,62 @@ namespace Negocios
         }
         #endregion
 
+        #region Expedientes
+        public DataTable llenar_expedientes()
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Expedientes();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+        
+        public DataTable llenar_expedientes(int cedula)
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Expedientes(cedula);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+        
+        public DataTable llenar_expedientes(string num_expediente)
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Expedientes(num_expediente);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+        #endregion
+
         #endregion
 
         #region Mostrar especifico
@@ -548,6 +604,21 @@ namespace Negocios
             {
                 GestorBase BD = new GestorBase();
                 return BD.Mostrar_procedimiento(pCodigo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+        #endregion
+
+        #region Expedientes
+        public Expedientes Mostrar_Expediente_Unico(string pCodigo)
+        {
+            try
+            {
+                GestorBase BD = new GestorBase();
+                return BD.Mostrar_Expediente_Unico(pCodigo);
             }
             catch (Exception ex)
             {

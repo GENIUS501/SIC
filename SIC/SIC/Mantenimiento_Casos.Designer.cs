@@ -36,7 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbo_parte_procesal = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -90,7 +90,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbo_parte_procesal);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.textBox3);
@@ -131,13 +131,13 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 69;
             // 
-            // comboBox1
+            // cbo_parte_procesal
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(144, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 68;
+            this.cbo_parte_procesal.FormattingEnabled = true;
+            this.cbo_parte_procesal.Location = new System.Drawing.Point(144, 92);
+            this.cbo_parte_procesal.Name = "cbo_parte_procesal";
+            this.cbo_parte_procesal.Size = new System.Drawing.Size(121, 21);
+            this.cbo_parte_procesal.TabIndex = 68;
             // 
             // label5
             // 
@@ -153,9 +153,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(141, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 13);
+            this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 66;
-            this.label4.Text = "Parte procedimental";
+            this.label4.Text = "Parte procesal";
             // 
             // textBox3
             // 
@@ -284,7 +284,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbo_parte_procesal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;

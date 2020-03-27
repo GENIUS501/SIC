@@ -24,31 +24,90 @@ namespace SIC
             InitializeComponent();
         }
 
+        #region Cargador
         private void Lista_Casos_Load(object sender, EventArgs e)
         {
-            perm = new Permisos();
-            Negocios = new Gestor();
-            perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 4);
-            this.btn_agregar.Enabled = false;
-            this.btn_consultar.Enabled = false;
-            this.btn_editar.Enabled = false;
-            this.btn_eliminar.Enabled = false;
-            if (perm.Agregar == "S")
+            try
             {
-                this.btn_agregar.Enabled = true;
-            }
-            if (perm.Modificar == "S")
+                perm = new Permisos();
+                Negocios = new Gestor();
+                this.btn_agregar.Enabled = false;
+                this.btn_consultar.Enabled = false;
+                this.btn_editar.Enabled = false;
+                this.btn_eliminar.Enabled = false;
+                perm = Negocios.Mostrar_Permisos_Unico(Id_Perfil, 4);
+                if (perm.Agregar == "S")
+                {
+                    this.btn_agregar.Enabled = true;
+                }
+                if (perm.Modificar == "S")
+                {
+                    this.btn_editar.Enabled = true;
+                }
+                if (perm.Eliminar == "S")
+                {
+                    this.btn_eliminar.Enabled = true;
+                }
+                if (perm.Consultar == "S")
+                {
+                    this.btn_consultar.Enabled = true;
+                }
+            }catch(Exception ex)
             {
-                this.btn_editar.Enabled = true;
+                MessageBox.Show(ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            if (perm.Eliminar == "S")
+        }
+        #endregion
+
+        #region Filtros de busqueda
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_buscar_num_expediente_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Botones
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            try
             {
-                this.btn_eliminar.Enabled = true;
+                Mantenimiento_Casos frm = new Mantenimiento_Casos();
+                frm.Accion = "A";
+                frm.Usuario = usuario;
+                frm.Text = "Mantenimiento de Procedimientos: Agregar Procedimiento.";
+                frm.ShowDialog();
+                Lista_Casos_Load(null, null);
             }
-            if (perm.Consultar == "S")
+            catch (Exception ex)
             {
-                this.btn_consultar.Enabled = true;
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_consultar_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        private void dat_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

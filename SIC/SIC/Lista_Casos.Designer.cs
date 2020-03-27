@@ -38,9 +38,9 @@
             this.txt_buscar = new System.Windows.Forms.MaskedTextBox();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_num_expediente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_buscar_num_expediente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dat_usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,7 @@
             this.dat_usuarios.Name = "dat_usuarios";
             this.dat_usuarios.Size = new System.Drawing.Size(739, 185);
             this.dat_usuarios.TabIndex = 48;
+            this.dat_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_usuarios_CellClick);
             // 
             // pictureBox1
             // 
@@ -72,6 +73,7 @@
             this.btn_consultar.Size = new System.Drawing.Size(50, 41);
             this.btn_consultar.TabIndex = 47;
             this.btn_consultar.UseVisualStyleBackColor = true;
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // btn_eliminar
             // 
@@ -82,6 +84,7 @@
             this.btn_eliminar.Size = new System.Drawing.Size(50, 41);
             this.btn_eliminar.TabIndex = 46;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_editar
             // 
@@ -92,6 +95,7 @@
             this.btn_editar.Size = new System.Drawing.Size(50, 41);
             this.btn_editar.TabIndex = 45;
             this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_agregar
             // 
@@ -102,6 +106,7 @@
             this.btn_agregar.Size = new System.Drawing.Size(50, 41);
             this.btn_agregar.TabIndex = 44;
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // txt_buscar
             // 
@@ -120,6 +125,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar.TabIndex = 51;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // label1
             // 
@@ -130,12 +136,12 @@
             this.label1.TabIndex = 52;
             this.label1.Text = "Cedula del funcionario";
             // 
-            // textBox1
+            // txt_num_expediente
             // 
-            this.textBox1.Location = new System.Drawing.Point(14, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 53;
+            this.txt_num_expediente.Location = new System.Drawing.Point(14, 79);
+            this.txt_num_expediente.Name = "txt_num_expediente";
+            this.txt_num_expediente.Size = new System.Drawing.Size(100, 20);
+            this.txt_num_expediente.TabIndex = 53;
             // 
             // label2
             // 
@@ -146,24 +152,25 @@
             this.label2.TabIndex = 54;
             this.label2.Text = "Numero de Expediente";
             // 
-            // button1
+            // btn_buscar_num_expediente
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(120, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 20);
-            this.button1.TabIndex = 55;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_buscar_num_expediente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_num_expediente.BackgroundImage")));
+            this.btn_buscar_num_expediente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_num_expediente.Location = new System.Drawing.Point(120, 79);
+            this.btn_buscar_num_expediente.Name = "btn_buscar_num_expediente";
+            this.btn_buscar_num_expediente.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_num_expediente.TabIndex = 55;
+            this.btn_buscar_num_expediente.UseVisualStyleBackColor = true;
+            this.btn_buscar_num_expediente.Click += new System.EventHandler(this.btn_buscar_num_expediente_Click);
             // 
             // Lista_Casos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 353);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_buscar_num_expediente);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_num_expediente);
             this.Controls.Add(this.txt_buscar);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.label1);
@@ -195,8 +202,8 @@
         private System.Windows.Forms.MaskedTextBox txt_buscar;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_num_expediente;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_buscar_num_expediente;
     }
 }

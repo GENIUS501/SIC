@@ -12,6 +12,7 @@ namespace Negocios
         public int Cedula { get; set; }
         public string Usuario_Generador { get; set; }
         public string Num_Expediente { get; set; }
+        public string Parte_Procesal { get; set; }
         public string Lugar_Trabajo { get; set; }
         public string Descripcion { get; set; }
         public string Medida_Cautelar { get; set; }
@@ -25,6 +26,7 @@ namespace Negocios
             Cedula = 0;
             Usuario_Generador = "";
             Num_Expediente = "";
+            Parte_Procesal = "";
             Lugar_Trabajo = "";
             Descripcion = "";
             Medida_Cautelar = "";
@@ -34,16 +36,17 @@ namespace Negocios
         #endregion
 
         #region Constructos con parametros
-        public Usuarios(int cedula, string nombre_usuario, string nombre, string apellido1, string apellido2, string contrasena, int id_perfil, string genero)
+        public Expedientes(int cedula, string usuario_generador, string num_expediente,string parte_procesal, string lugar_trabajo, string descripcion, string medida_cautelar, int id_tipo_procedimiento, string organo_director)
         {
             Cedula = cedula;
-            Nombre_Usuario = nombre_usuario;
-            Nombre = nombre;
-            Apellido1 = apellido1;
-            Apellido2 = apellido2;
-            Contrasena = contrasena;
-            Id_Perfil = id_perfil;
-            Genero = genero;
+            Usuario_Generador = usuario_generador;
+            Num_Expediente = num_expediente;
+            Parte_Procesal = parte_procesal;
+            Lugar_Trabajo = lugar_trabajo;
+            Descripcion = descripcion;
+            Medida_Cautelar = medida_cautelar;
+            Id_Tipo_Procedimiento = id_tipo_procedimiento;
+            Organo_Director = organo_director;
         }
         #endregion
     }

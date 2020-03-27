@@ -64,8 +64,8 @@ namespace SIC
         {
             try
             {
-                // TODO: esta línea de código carga datos en la tabla 'sICDataSet.Tab_Perfiles' Puede moverla o quitarla según sea necesario.
-                this.tab_PerfilesTableAdapter.Fill(this.sICDataSet.Tab_Perfiles);
+                // TODO: esta línea de código carga datos en la tabla 'sICDataSet1.Tab_Perfiles' Puede moverla o quitarla según sea necesario.
+                this.tab_PerfilesTableAdapter1.Fill(this.sICDataSet1.Tab_Perfiles);
                 this.cbo_genero.DropDownStyle = ComboBoxStyle.DropDownList;
                 this.cbo_rol.DropDownStyle = ComboBoxStyle.DropDownList;
                 Llenar_cbo_genero();

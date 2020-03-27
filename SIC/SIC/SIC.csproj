@@ -156,10 +156,10 @@
     <Compile Include="Reporte_por_Cedula.Designer.cs">
       <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
     </Compile>
-    <Compile Include="SICDataSet.Designer.cs">
+    <Compile Include="SICDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SICDataSet.xsd</DependentUpon>
+      <DependentUpon>SICDataSet1.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Bitacora_Movimientos.resx">
       <DependentUpon>Bitacora_Movimientos.cs</DependentUpon>
@@ -234,16 +234,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SICDataSet.xsc">
-      <DependentUpon>SICDataSet.xsd</DependentUpon>
+    <None Include="SICDataSet1.xsc">
+      <DependentUpon>SICDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="SICDataSet.xsd">
+    <None Include="SICDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SICDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>SICDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SICDataSet.xss">
-      <DependentUpon>SICDataSet.xsd</DependentUpon>
+    <None Include="SICDataSet1.xss">
+      <DependentUpon>SICDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -38,8 +38,6 @@
             this.lbl_contrasena = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbo_rol = new System.Windows.Forms.ComboBox();
-            this.tabPerfilesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sICDataSet = new SIC.SICDataSet();
             this.label6 = new System.Windows.Forms.Label();
             this.cbo_genero = new System.Windows.Forms.ComboBox();
             this.txt_apellido2 = new System.Windows.Forms.TextBox();
@@ -54,11 +52,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_acpetar = new System.Windows.Forms.Button();
-            this.tab_PerfilesTableAdapter = new SIC.SICDataSetTableAdapters.Tab_PerfilesTableAdapter();
+            this.sICDataSet1 = new SIC.SICDataSet1();
+            this.tabPerfilesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tab_PerfilesTableAdapter1 = new SIC.SICDataSet1TableAdapters.Tab_PerfilesTableAdapter();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabPerfilesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabPerfilesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -140,7 +140,7 @@
             // 
             // cbo_rol
             // 
-            this.cbo_rol.DataSource = this.tabPerfilesBindingSource;
+            this.cbo_rol.DataSource = this.tabPerfilesBindingSource1;
             this.cbo_rol.DisplayMember = "Nombre_Perfil";
             this.cbo_rol.FormattingEnabled = true;
             this.cbo_rol.Location = new System.Drawing.Point(126, 185);
@@ -148,16 +148,6 @@
             this.cbo_rol.Size = new System.Drawing.Size(100, 21);
             this.cbo_rol.TabIndex = 70;
             this.cbo_rol.ValueMember = "Id_Perfil";
-            // 
-            // tabPerfilesBindingSource
-            // 
-            this.tabPerfilesBindingSource.DataMember = "Tab_Perfiles";
-            this.tabPerfilesBindingSource.DataSource = this.sICDataSet;
-            // 
-            // sICDataSet
-            // 
-            this.sICDataSet.DataSetName = "SICDataSet";
-            this.sICDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label6
             // 
@@ -282,9 +272,19 @@
             this.btn_acpetar.UseVisualStyleBackColor = true;
             this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
-            // tab_PerfilesTableAdapter
+            // sICDataSet1
             // 
-            this.tab_PerfilesTableAdapter.ClearBeforeFill = true;
+            this.sICDataSet1.DataSetName = "SICDataSet1";
+            this.sICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPerfilesBindingSource1
+            // 
+            this.tabPerfilesBindingSource1.DataMember = "Tab_Perfiles";
+            this.tabPerfilesBindingSource1.DataSource = this.sICDataSet1;
+            // 
+            // tab_PerfilesTableAdapter1
+            // 
+            this.tab_PerfilesTableAdapter1.ClearBeforeFill = true;
             // 
             // Mantenimiento_Usuarios
             // 
@@ -301,9 +301,9 @@
             this.Load += new System.EventHandler(this.Mantenimiento_Usuarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabPerfilesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabPerfilesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,10 +330,10 @@
         private System.Windows.Forms.TextBox txt_contrasena;
         private System.Windows.Forms.Label lbl_contrasena;
         private System.Windows.Forms.Label label8;
-        private SICDataSet sICDataSet;
-        private System.Windows.Forms.BindingSource tabPerfilesBindingSource;
-        private SICDataSetTableAdapters.Tab_PerfilesTableAdapter tab_PerfilesTableAdapter;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_usuario;
+        private SICDataSet1 sICDataSet1;
+        private System.Windows.Forms.BindingSource tabPerfilesBindingSource1;
+        private SICDataSet1TableAdapters.Tab_PerfilesTableAdapter tab_PerfilesTableAdapter1;
     }
 }

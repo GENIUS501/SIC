@@ -28,42 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento_Casos));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_acpetar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbo_estado = new System.Windows.Forms.ComboBox();
+            this.cbo_tipo_procedimiento = new System.Windows.Forms.ComboBox();
             this.cbo_parte_procesal = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_lugar_trabajo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_cedula = new System.Windows.Forms.TextBox();
+            this.txt_num_expediente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_medida_cautelar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_descripcion = new System.Windows.Forms.TextBox();
+            this.sICDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sICDataSet1 = new SIC.SICDataSet1();
+            this.tabProcedimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tab_ProcedimientoTableAdapter = new SIC.SICDataSet1TableAdapters.Tab_ProcedimientoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabProcedimientoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_cancelar
             // 
-            this.button1.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(424, 434);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 43);
-            this.button1.TabIndex = 47;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_cancelar.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
+            this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cancelar.Location = new System.Drawing.Point(424, 434);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
+            this.btn_cancelar.TabIndex = 47;
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_acpetar
             // 
@@ -74,6 +82,7 @@
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
             this.btn_acpetar.TabIndex = 46;
             this.btn_acpetar.UseVisualStyleBackColor = true;
+            this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
             // pictureBox1
             // 
@@ -88,16 +97,16 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbo_estado);
+            this.groupBox1.Controls.Add(this.cbo_tipo_procedimiento);
             this.groupBox1.Controls.Add(this.cbo_parte_procesal);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_lugar_trabajo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_cedula);
+            this.groupBox1.Controls.Add(this.txt_num_expediente);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(15, 8);
             this.groupBox1.Name = "groupBox1";
@@ -115,21 +124,24 @@
             this.label6.TabIndex = 71;
             this.label6.Text = "Estado";
             // 
-            // comboBox3
+            // cbo_estado
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(306, 31);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 70;
+            this.cbo_estado.FormattingEnabled = true;
+            this.cbo_estado.Location = new System.Drawing.Point(306, 31);
+            this.cbo_estado.Name = "cbo_estado";
+            this.cbo_estado.Size = new System.Drawing.Size(121, 21);
+            this.cbo_estado.TabIndex = 70;
             // 
-            // comboBox2
+            // cbo_tipo_procedimiento
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(306, 91);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 69;
+            this.cbo_tipo_procedimiento.DataSource = this.tabProcedimientoBindingSource;
+            this.cbo_tipo_procedimiento.DisplayMember = "Nombre_Procedimiento";
+            this.cbo_tipo_procedimiento.FormattingEnabled = true;
+            this.cbo_tipo_procedimiento.Location = new System.Drawing.Point(306, 91);
+            this.cbo_tipo_procedimiento.Name = "cbo_tipo_procedimiento";
+            this.cbo_tipo_procedimiento.Size = new System.Drawing.Size(121, 21);
+            this.cbo_tipo_procedimiento.TabIndex = 69;
+            this.cbo_tipo_procedimiento.ValueMember = "Id_Procedimiento";
             // 
             // cbo_parte_procesal
             // 
@@ -157,12 +169,12 @@
             this.label4.TabIndex = 66;
             this.label4.Text = "Parte procesal";
             // 
-            // textBox3
+            // txt_lugar_trabajo
             // 
-            this.textBox3.Location = new System.Drawing.Point(9, 92);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 65;
+            this.txt_lugar_trabajo.Location = new System.Drawing.Point(9, 92);
+            this.txt_lugar_trabajo.Name = "txt_lugar_trabajo";
+            this.txt_lugar_trabajo.Size = new System.Drawing.Size(100, 20);
+            this.txt_lugar_trabajo.TabIndex = 65;
             // 
             // label3
             // 
@@ -182,19 +194,19 @@
             this.label2.TabIndex = 63;
             this.label2.Text = "Cedula";
             // 
-            // textBox2
+            // txt_cedula
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 62;
+            this.txt_cedula.Location = new System.Drawing.Point(144, 32);
+            this.txt_cedula.Name = "txt_cedula";
+            this.txt_cedula.Size = new System.Drawing.Size(100, 20);
+            this.txt_cedula.TabIndex = 62;
             // 
-            // textBox1
+            // txt_num_expediente
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 61;
+            this.txt_num_expediente.Location = new System.Drawing.Point(9, 32);
+            this.txt_num_expediente.Name = "txt_num_expediente";
+            this.txt_num_expediente.Size = new System.Drawing.Size(100, 20);
+            this.txt_num_expediente.TabIndex = 61;
             // 
             // label1
             // 
@@ -208,9 +220,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txt_medida_cautelar);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txt_descripcion);
             this.groupBox2.Location = new System.Drawing.Point(4, 143);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(605, 285);
@@ -227,13 +239,13 @@
             this.label8.TabIndex = 67;
             this.label8.Text = "Medida cautelar";
             // 
-            // textBox5
+            // txt_medida_cautelar
             // 
-            this.textBox5.Location = new System.Drawing.Point(11, 162);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(576, 111);
-            this.textBox5.TabIndex = 66;
+            this.txt_medida_cautelar.Location = new System.Drawing.Point(11, 162);
+            this.txt_medida_cautelar.Multiline = true;
+            this.txt_medida_cautelar.Name = "txt_medida_cautelar";
+            this.txt_medida_cautelar.Size = new System.Drawing.Size(576, 111);
+            this.txt_medida_cautelar.TabIndex = 66;
             // 
             // label7
             // 
@@ -244,13 +256,27 @@
             this.label7.TabIndex = 65;
             this.label7.Text = "Descripcion";
             // 
-            // textBox4
+            // txt_descripcion
             // 
-            this.textBox4.Location = new System.Drawing.Point(9, 32);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(576, 100);
-            this.textBox4.TabIndex = 64;
+            this.txt_descripcion.Location = new System.Drawing.Point(9, 32);
+            this.txt_descripcion.Multiline = true;
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(576, 100);
+            this.txt_descripcion.TabIndex = 64;
+            // 
+            // sICDataSet1
+            // 
+            this.sICDataSet1.DataSetName = "SICDataSet1";
+            this.sICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabProcedimientoBindingSource
+            // 
+            this.tabProcedimientoBindingSource.DataMember = "Tab_Procedimiento";
+            this.tabProcedimientoBindingSource.DataSource = this.sICDataSet1;
+            // 
+            // tab_ProcedimientoTableAdapter
+            // 
+            this.tab_ProcedimientoTableAdapter.ClearBeforeFill = true;
             // 
             // Mantenimiento_Casos
             // 
@@ -260,7 +286,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_acpetar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Mantenimiento_Casos";
@@ -271,32 +297,39 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sICDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabProcedimientoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_acpetar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbo_estado;
+        private System.Windows.Forms.ComboBox cbo_tipo_procedimiento;
         private System.Windows.Forms.ComboBox cbo_parte_procesal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_lugar_trabajo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_cedula;
+        private System.Windows.Forms.TextBox txt_num_expediente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_medida_cautelar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_descripcion;
+        private System.Windows.Forms.BindingSource sICDataSetBindingSource;
+        private SICDataSet1 sICDataSet1;
+        private System.Windows.Forms.BindingSource tabProcedimientoBindingSource;
+        private SICDataSet1TableAdapters.Tab_ProcedimientoTableAdapter tab_ProcedimientoTableAdapter;
     }
 }

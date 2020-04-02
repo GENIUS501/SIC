@@ -13,7 +13,7 @@ namespace SIC
 {
     public partial class Menu : Form
     {
-        //Sesiones ses;
+        Sesiones ses;
         Gestor Negocios;
         Permisos perm;
         public string usuario { get; set; }
@@ -27,12 +27,54 @@ namespace SIC
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            try
+            {
+                ses = new Sesiones();
+                Negocios = new Gestor();
+                Int32 FilasAfectadas;
+                ses.Id_Sesion = Id_Session;
+                ses.fecha_Salio = DateTime.Now;
+                FilasAfectadas = Negocios.Salir(ses);
+                if (FilasAfectadas > 0)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    MessageBox.Show("Error al cerrar session!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                ses = new Sesiones();
+                Negocios = new Gestor();
+                Int32 FilasAfectadas;
+                ses.Id_Sesion = Id_Session;
+                ses.fecha_Salio = DateTime.Now;
+                FilasAfectadas = Negocios.Salir(ses);
+                if (FilasAfectadas > 0)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    MessageBox.Show("Error al cerrar session!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -208,7 +250,7 @@ namespace SIC
             {
                 Bitacora_Sesiones frm = new Bitacora_Sesiones();
                 //frm.Id_Perfil = Id_Perfil;
-                //frm.usuario = usuario;
+                frm.Usuario = usuario;
                 frm.MdiParent = this;
                 frm.Show();
             }

@@ -38,7 +38,7 @@ namespace Negocios
         #endregion
 
         #region Constructos con parametros
-        public Expedientes(int cedula, string usuario_generador, string num_expediente,string parte_procesal, string lugar_trabajo, string descripcion, string medida_cautelar, int id_tipo_procedimiento, string organo_director)
+        public Expedientes(int cedula, string usuario_generador, string num_expediente,string parte_procesal, string lugar_trabajo, string descripcion, string medida_cautelar, int id_tipo_procedimiento, string organo_director,string estado)
         {
             Cedula = cedula;
             Usuario_Generador = usuario_generador;
@@ -49,6 +49,7 @@ namespace Negocios
             Medida_Cautelar = medida_cautelar;
             Id_Tipo_Procedimiento = id_tipo_procedimiento;
             Organo_Director = organo_director;
+            Estado = estado;
         }
         #endregion
     }

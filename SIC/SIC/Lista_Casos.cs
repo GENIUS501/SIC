@@ -180,7 +180,7 @@ namespace SIC
                 }
                 else
                 {
-                    valor_celda = this.dat_casos.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    valor_celda = this.dat_casos.Rows[e.RowIndex].Cells[1].Value.ToString();
                 }
             }
             catch (Exception ex)

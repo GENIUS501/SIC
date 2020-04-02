@@ -142,7 +142,7 @@ namespace SIC
                                     {
                                         MessageBox.Show("La contraseña es muy corta!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     }
-                                    if (this.txt_contrasena.Text == this.txt_confirmar_contrasena.Text)
+                                    if (this.txt_contrasena.Text != this.txt_confirmar_contrasena.Text)
                                     {
                                         MessageBox.Show("Las contraseñas no coinciden!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     }

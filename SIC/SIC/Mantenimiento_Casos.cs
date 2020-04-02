@@ -140,7 +140,7 @@ namespace SIC
                         Func = Negocios.Mostrar_Funcionario_Unico(int.Parse(this.txt_cedula.Text));
                         if (Func.Cedula > 0)
                         {
-                            Exp = new Expedientes(int.Parse(this.txt_cedula.Text), Usuario, this.txt_num_expediente.Text, this.cbo_parte_procesal.SelectedValue.ToString(), this.txt_lugar_trabajo.Text, this.txt_descripcion.Text, this.txt_medida_cautelar.Text, int.Parse(this.cbo_tipo_procedimiento.SelectedValue.ToString()), this.txt_organo_director.Text);
+                            Exp = new Expedientes(int.Parse(this.txt_cedula.Text), Usuario, this.txt_num_expediente.Text, this.cbo_parte_procesal.SelectedValue.ToString(), this.txt_lugar_trabajo.Text, this.txt_descripcion.Text, this.txt_medida_cautelar.Text, int.Parse(this.cbo_tipo_procedimiento.SelectedValue.ToString()), this.txt_organo_director.Text,cbo_estado.SelectedValue.ToString());
                             Int32 FilasAfectadas = 0;
                             if (Accion == "A")
                             {

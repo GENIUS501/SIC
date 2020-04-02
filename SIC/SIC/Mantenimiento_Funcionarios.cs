@@ -84,7 +84,7 @@ namespace SIC
                 {
                         Negocios = new Gestor();
                         Func = new Funcionarios();
-                       if (this.txt_cedula.Text.Length > 8 && this.txt_cedula.Text.Length < 11)
+                    if (this.txt_apellido1.Text != "" || this.txt_apellido2.Text != "" || this.txt_nombre.Text != "" || this.txt_cedula.Text != "")
                         {
                             Func.Apellido1 = this.txt_apellido1.Text;
                             Func.Apellido2 = this.txt_apellido2.Text;
@@ -92,7 +92,7 @@ namespace SIC
                             Func.Nombre = this.txt_nombre.Text;
                             Func.Genero = this.cbo_genero.SelectedValue.ToString();
                             Int32 FilasAfectadas = 0;
-                            if (this.txt_apellido1.Text != "" || this.txt_apellido2.Text != "" || this.txt_nombre.Text != "" || this.txt_cedula.Text != "")
+                            if (this.txt_cedula.Text.Length > 8 && this.txt_cedula.Text.Length < 11)
                             {
                                 if(Accion=="A")
                                 {
@@ -168,12 +168,12 @@ namespace SIC
                             }
                             else
                             {
-                                MessageBox.Show("Error no ha llenado uno o varios campos!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Formato de cedula incorrecto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                     }
                         else
                         {
-                            MessageBox.Show("Formato de cedula incorrecto!!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show("Error no ha llenado uno o varios campos!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                   }
             }

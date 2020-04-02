@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -161,6 +164,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SICDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Visor_Bitacora_sesiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Bitacora_sesiones.Designer.cs">
+      <DependentUpon>Visor_Bitacora_sesiones.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bitacora_Movimientos.resx">
       <DependentUpon>Bitacora_Movimientos.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +233,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte_por_Cedula.resx">
       <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_Bitacora_Sesiones.rdlc" />
+    <EmbeddedResource Include="Visor_Bitacora_sesiones.resx">
+      <DependentUpon>Visor_Bitacora_sesiones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

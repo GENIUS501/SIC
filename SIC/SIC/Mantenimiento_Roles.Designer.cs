@@ -38,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.clb_procedimientos = new System.Windows.Forms.CheckedListBox();
+            this.chb_Procedimientos = new System.Windows.Forms.CheckBox();
             this.chb_movimientos = new System.Windows.Forms.CheckBox();
             this.chb_sesiones = new System.Windows.Forms.CheckBox();
             this.clb_Casos = new System.Windows.Forms.CheckedListBox();
@@ -48,8 +50,6 @@
             this.chb_usuarios = new System.Windows.Forms.CheckBox();
             this.clb_Roles = new System.Windows.Forms.CheckedListBox();
             this.chb_Roles = new System.Windows.Forms.CheckBox();
-            this.clb_procedimientos = new System.Windows.Forms.CheckedListBox();
-            this.chb_Procedimientos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -153,6 +153,31 @@
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Permisos";
+            // 
+            // clb_procedimientos
+            // 
+            this.clb_procedimientos.Enabled = false;
+            this.clb_procedimientos.FormattingEnabled = true;
+            this.clb_procedimientos.Items.AddRange(new object[] {
+            "Agrergar",
+            "Actualizar",
+            "Borrar",
+            "Consultar"});
+            this.clb_procedimientos.Location = new System.Drawing.Point(2, 150);
+            this.clb_procedimientos.Name = "clb_procedimientos";
+            this.clb_procedimientos.Size = new System.Drawing.Size(86, 64);
+            this.clb_procedimientos.TabIndex = 59;
+            // 
+            // chb_Procedimientos
+            // 
+            this.chb_Procedimientos.AutoSize = true;
+            this.chb_Procedimientos.Location = new System.Drawing.Point(2, 127);
+            this.chb_Procedimientos.Name = "chb_Procedimientos";
+            this.chb_Procedimientos.Size = new System.Drawing.Size(185, 17);
+            this.chb_Procedimientos.TabIndex = 58;
+            this.chb_Procedimientos.Text = "Mantenimiento de Procedimientos";
+            this.chb_Procedimientos.UseVisualStyleBackColor = true;
+            this.chb_Procedimientos.CheckedChanged += new System.EventHandler(this.chb_Procedimientos_CheckedChanged);
             // 
             // chb_movimientos
             // 
@@ -271,35 +296,11 @@
             this.chb_Roles.UseVisualStyleBackColor = true;
             this.chb_Roles.CheckedChanged += new System.EventHandler(this.chb_Roles_CheckedChanged);
             // 
-            // clb_procedimientos
-            // 
-            this.clb_procedimientos.Enabled = false;
-            this.clb_procedimientos.FormattingEnabled = true;
-            this.clb_procedimientos.Items.AddRange(new object[] {
-            "Agrergar",
-            "Actualizar",
-            "Borrar",
-            "Consultar"});
-            this.clb_procedimientos.Location = new System.Drawing.Point(2, 150);
-            this.clb_procedimientos.Name = "clb_procedimientos";
-            this.clb_procedimientos.Size = new System.Drawing.Size(86, 64);
-            this.clb_procedimientos.TabIndex = 59;
-            // 
-            // chb_Procedimientos
-            // 
-            this.chb_Procedimientos.AutoSize = true;
-            this.chb_Procedimientos.Location = new System.Drawing.Point(2, 127);
-            this.chb_Procedimientos.Name = "chb_Procedimientos";
-            this.chb_Procedimientos.Size = new System.Drawing.Size(185, 17);
-            this.chb_Procedimientos.TabIndex = 58;
-            this.chb_Procedimientos.Text = "Mantenimiento de Procedimientos";
-            this.chb_Procedimientos.UseVisualStyleBackColor = true;
-            this.chb_Procedimientos.CheckedChanged += new System.EventHandler(this.chb_Procedimientos_CheckedChanged);
-            // 
             // Mantenimiento_Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(695, 441);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -307,6 +308,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_acpetar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Mantenimiento_Roles";
             this.Text = "Mantenimiento de roles";
             this.Load += new System.EventHandler(this.Mantenimiento_Roles_Load);

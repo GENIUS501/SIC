@@ -33,6 +33,7 @@ namespace Negocios
                                                      new Parameter("@Medida_Cautelar",obj.Medida_Cautelar),
                                                      new Parameter("@Organo_Director",obj.Organo_Director),
                                                      new Parameter("@Parte_Procesal",obj.Parte_Procesal),
+                                                     new Parameter("@Estado",obj.Estado),
                                               };
                 FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
                 return Registrar(FilasAfectadas, usuario, "Casos", "Agrego");
@@ -177,6 +178,36 @@ namespace Negocios
         #endregion
 
         #region Modificar
+
+        #region Expedientes
+        public Int32 Modificar_Expediente(Expedientes obj, string usuario)
+        {
+            try
+            {
+                Int32 FilasAfectadas = 0;
+                string sentencia;
+                sentencia = "UPDATE Tab_Expedientes SET Cedula = @Cedula, Nombre_Usuario = @Nombre_Usuario,Apellido1 = @Apellido1,Apellido2 = @Apellido2,Id_Perfil = @Id_Perfil,Cedula = @Cedula,Genero = @Genero,Contrasena = @Contrasena WHERE Cedula = @Cedula";
+                Parameter[] parametros = {
+                                                     new Parameter("@Num_Expediente",obj.Num_Expediente),
+                                                     new Parameter("@Cedula",obj.Cedula),
+                                                     new Parameter("@Descripcion",obj.Descripcion),
+                                                     new Parameter("@Id_Tipo_Procedimiento",obj.Id_Tipo_Procedimiento),
+                                                     new Parameter("@Lugar_Trabajo",obj.Lugar_Trabajo),
+                                                     new Parameter("@Medida_Cautelar",obj.Medida_Cautelar),
+                                                     new Parameter("@Organo_Director",obj.Organo_Director),
+                                                     new Parameter("@Parte_Procesal",obj.Parte_Procesal),
+                                                     new Parameter("@Estado",obj.Estado),
+                                              };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Casos", "Modifico");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        #endregion
 
         #region Procedimiento
         public Int32 Actualizar_Procedimiento(Procedimiento uRegistro, string usuario)
@@ -724,6 +755,50 @@ namespace Negocios
         }
         #endregion
 
+        #region Mostrar_Sesiones
+        public DataTable llenar_Sesiones(string Nombre)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Bitacora_Sesiones WHERE Usuario LIKE '%" + Nombre + "%'";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataTable llenar_Sesiones()
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT * FROM Tab_Bitacora_Sesiones";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #endregion
 
         #region Mostrar especifico
@@ -974,7 +1049,7 @@ namespace Negocios
                 DataTable dtConsulta = new DataTable();
                 Expedientes vRegistro = new Expedientes();
 
-                string commandText = "SELECT * FROM [dbo].[Tab_Expedientes] WHERE [Num_Expediente] =  " + pCodigo;
+                string commandText = "SELECT * FROM [dbo].[Tab_Expedientes] WHERE [Num_Expediente] =  '" + pCodigo+"'";
                 //string commandText = commandTexta;
 
                 using (SqlConnection connection = new SqlConnection(vCadenaConexion))
@@ -1038,6 +1113,76 @@ namespace Negocios
             {
                 FilasAfectadas = 0;
             }
+            return FilasAfectadas;
+        }
+        #endregion
+
+        #region Metodo Ingresar Sesion
+        public Int32 Ingresar(Sesiones obj)
+        {
+            try
+            {
+                Int32 FilasAfectadas = 0;
+                Int32 Id_Session = 0;
+                string sentencia;
+                sentencia = "insert into Tab_Bitacora_Sesiones (Usuario,Fecha_inicio,Direccion_Ip) values(@Usuario,@Ingreso,@Dip)";
+                Parameter[] parametros = {
+                                                     new Parameter("@Usuario",obj.Usuario),
+                                                     new Parameter("@Ingreso",obj.Fecha_inicio),
+                                                    // new Parameter("@Salida",obj.Salida),
+                                                     new Parameter("@Dip",obj.Direccion_Ip),
+                };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                if (FilasAfectadas > 0)
+                {
+                    Id_Session = Obtenerid();
+                }
+                return Id_Session;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        private Int32 Obtenerid()
+        {
+            Int32 Respuesta = 0;
+
+            string sentencia;
+            DataSet data = null;
+            sentencia = "SELECT TOP 1 * FROM Tab_Bitacora_Sesiones ORDER BY Id_Sesion DESC";
+            Parameter[] parametros = { new Parameter("",0)
+                                         };
+            data = Database.executeDataset(sentencia, parametros);
+            foreach (DataRow row in data.Tables[0].Rows)
+            {
+                Respuesta = (Int32)row["Id_Sesion"];
+            }
+            return Respuesta;
+        }
+
+        #endregion
+
+        #region Salida Sesion
+        public Int32 Salir(Sesiones obj)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "UPDATE Tab_Bitacora_Sesiones SET fecha_Salio=@Salida WHERE Id_Sesion = @Id_Sesion";
+                Parameter[] parametros = {
+                                                     new Parameter("@Salida",obj.fecha_Salio),
+                                                     new Parameter("@Id_Sesion",obj.Id_Sesion),
+                };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
             return FilasAfectadas;
         }
         #endregion

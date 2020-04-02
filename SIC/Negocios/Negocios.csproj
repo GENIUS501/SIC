@@ -49,6 +49,7 @@
     <Compile Include="Permisos.cs" />
     <Compile Include="Procedimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sesiones.cs" />
     <Compile Include="Usuarios.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -462,6 +462,44 @@ namespace Negocios
         }
         #endregion
 
+        #region Sesiones
+        public DataTable llenar_sesiones()
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Sesiones();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+
+        public DataTable llenar_sesiones(string usuario)
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Sesiones(usuario);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+        #endregion
+
         #region Expedientes
         public DataTable llenar_expedientes()
         {
@@ -624,6 +662,48 @@ namespace Negocios
             {
                 throw new Exception(ex.Message, ex);
             }
+        }
+        #endregion
+
+        #endregion
+
+        #region Sessiones
+
+        #region Ingreso
+        public Int32 Ingreso(Sesiones data)
+        {
+            Int32 Id_Session = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                Id_Session = BD.Ingresar(data);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return Id_Session;
+        }
+        #endregion
+
+        #region Salida
+        public Int32 Salir(Sesiones Data)
+        {
+            Int32 FilasAfectadas = 0;
+            GestorBase BD;
+
+            try
+            {
+                BD = new GestorBase();
+                FilasAfectadas = BD.Salir(Data);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return FilasAfectadas;
         }
         #endregion
 

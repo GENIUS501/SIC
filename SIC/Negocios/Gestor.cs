@@ -142,6 +142,25 @@ namespace Negocios
         }
         #endregion
 
+        #region Expedientes
+
+        public Int32 Modificar_Expendiente(Expedientes obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.Actualizar_Expendiente(obj, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
         #region Usuario
         public Int32 Modificar_Usuario_pass(Usuarios obj, string usuario)
         {
@@ -278,6 +297,24 @@ namespace Negocios
             {
                 GestorBase BD = new GestorBase();
                 FilasAfectadas = BD.EliminarProcedimiento(id_procedimiento, usuario);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return FilasAfectadas;
+        }
+        #endregion
+
+        #region Expediente
+        public Int32 EliminarExpediente(string num_expediente, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+            try
+            {
+                GestorBase BD = new GestorBase();
+                FilasAfectadas = BD.EliminarExpediente(num_expediente, usuario);
 
             }
             catch (Exception ex)

@@ -313,6 +313,39 @@ namespace Negocios
 
         #endregion
 
+        #region Expedientes
+
+        public Int32 Actualizar_Expendiente(Expedientes obj, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "UPDATE Tab_Expedientes SET Usuario_Generador = @Usuario_Generador,Cedula=@Cedula,Descripcion = @Descripcion,Id_Tipo_Procedimiento= @Id_Tipo_Procedimiento,Lugar_Trabajo=@Lugar_Trabajo,Medida_Cautelar=@Medida_Cautelar,Organo_Director=@Organo_Director,Parte_Procesal=@Parte_Procesal,Estado=@Estado WHERE Num_Expediente = @Num_Expediente";
+                Parameter[] parametros = {
+                                                     new Parameter("@Num_Expediente",obj.Num_Expediente),
+                                                     new Parameter("@Usuario_Generador",obj.Usuario_Generador),
+                                                     new Parameter("@Cedula",obj.Cedula),
+                                                     new Parameter("@Descripcion",obj.Descripcion),
+                                                     new Parameter("@Id_Tipo_Procedimiento",obj.Id_Tipo_Procedimiento),
+                                                     new Parameter("@Lugar_Trabajo",obj.Lugar_Trabajo),
+                                                     new Parameter("@Medida_Cautelar",obj.Medida_Cautelar),
+                                                     new Parameter("@Organo_Director",obj.Organo_Director),
+                                                     new Parameter("@Parte_Procesal",obj.Parte_Procesal),
+                                                     new Parameter("@Estado",obj.Estado),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Expedientes", "Modifico");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
         #region Funcionarios
 
         public Int32 Actualizar_Funcionario(Funcionarios obj, string usuario)
@@ -344,6 +377,30 @@ namespace Negocios
         #endregion
 
         #region Eliminar
+
+        #region Expediente
+        public Int32 EliminarExpediente(string num_expediente, string usuario)
+        {
+            Int32 FilasAfectadas = 0;
+
+            try
+            {
+                string sentencia;
+                sentencia = "DELETE FROM Tab_Expedientes WHERE Num_Expediente = @Num_Expediente";
+                Parameter[] parametros = {
+                                         new Parameter("@Num_Expediente",num_expediente),
+                                       };
+                FilasAfectadas = Database.exectuteNonQuery(sentencia, parametros);
+                return Registrar(FilasAfectadas, usuario, "Expedientes", "Elimino");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+        }
+        #endregion
 
         #region Procedimiento
         public Int32 EliminarProcedimiento(Int32 Id_Procedimiento, string usuario)

@@ -164,8 +164,51 @@ namespace SIC
                             }
                             if(Accion=="M")
                             {
-
+                                FilasAfectadas = Negocios.Modificar_Expendiente(Exp, Usuario);
+                                if (FilasAfectadas > 0)
+                                {
+                                    MessageBox.Show("Caso modificado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    if (FilasAfectadas == -1)
+                                    {
+                                        MessageBox.Show("El caso se ha modicado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error al modificar el caso!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
                             }
+                            if(Accion=="E")
+                            {
+                                DialogResult dr = MessageBox.Show("Realmente desea eliminar el Caso?", "Eliminar el Funcionario", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                                if (dr == DialogResult.Yes)
+                                {
+                                    FilasAfectadas = Negocios.EliminarExpediente(this.txt_num_expediente.Text, Usuario);
+                                    if (FilasAfectadas > 0)
+                                    {
+                                        MessageBox.Show("Caso Eliminado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        if (FilasAfectadas == -1)
+                                        {
+                                            MessageBox.Show("El caso se ha eliminado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Error al eliminar el caso!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    this.Close();
+                                }
                         }
                         else
                         {

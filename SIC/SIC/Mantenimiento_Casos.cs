@@ -103,6 +103,19 @@ namespace SIC
                 if(Accion == "M"|| Accion == "E" || Accion == "C")
                 {
                     Llenar_Campos();
+                    this.txt_num_expediente.Enabled = false;
+                    if (Accion == "E" || Accion == "C")
+                    {
+                        this.txt_cedula.Enabled = false;
+                        this.txt_descripcion.Enabled = false;
+                        this.txt_lugar_trabajo.Enabled = false;
+                        this.txt_medida_cautelar.Enabled = false;
+                        this.txt_num_expediente.Enabled = false;
+                        this.txt_organo_director.Enabled = false;
+                        this.cbo_estado.Enabled = false;
+                        this.cbo_parte_procesal.Enabled = false;
+                        this.cbo_tipo_procedimiento.Enabled = false;
+                    }
                 }
             }
             catch(Exception ex)
@@ -155,6 +168,7 @@ namespace SIC
                                     if (FilasAfectadas == -1)
                                     {
                                         MessageBox.Show("El caso se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        this.Close();
                                     }
                                     else
                                     {
@@ -175,6 +189,7 @@ namespace SIC
                                     if (FilasAfectadas == -1)
                                     {
                                         MessageBox.Show("El caso se ha modicado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        this.Close();
                                     }
                                     else
                                     {
@@ -198,6 +213,7 @@ namespace SIC
                                         if (FilasAfectadas == -1)
                                         {
                                             MessageBox.Show("El caso se ha eliminado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                            this.Close();
                                         }
                                         else
                                         {
@@ -209,6 +225,7 @@ namespace SIC
                                 {
                                     this.Close();
                                 }
+                            }
                             }
                             else
                             {
@@ -233,7 +250,6 @@ namespace SIC
                         this.Close();
                     }
                 }
-            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

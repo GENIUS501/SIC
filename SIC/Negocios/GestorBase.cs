@@ -1128,6 +1128,7 @@ namespace Negocios
                     vRegistro.Organo_Director = dtConsulta.Rows[0]["Organo_Director"].ToString();
                     vRegistro.Parte_Procesal = dtConsulta.Rows[0]["Parte_Procesal"].ToString();
                     vRegistro.Usuario_Generador = dtConsulta.Rows[0]["Usuario_Generador"].ToString();
+                    vRegistro.Estado = dtConsulta.Rows[0]["Estado"].ToString();
                 }
 
 

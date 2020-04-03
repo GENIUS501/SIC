@@ -122,6 +122,7 @@ namespace SIC
                                     if (FilasAfectadas == -1)
                                     {
                                         MessageBox.Show("El procedimiento se ha eliminado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        this.Close();
                                     }
                                     else
                                     {

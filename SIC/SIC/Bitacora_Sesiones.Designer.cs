@@ -77,6 +77,7 @@
             this.btn_imprimir_fecha.Size = new System.Drawing.Size(30, 20);
             this.btn_imprimir_fecha.TabIndex = 33;
             this.btn_imprimir_fecha.UseVisualStyleBackColor = true;
+            this.btn_imprimir_fecha.Click += new System.EventHandler(this.btn_imprimir_fecha_Click);
             // 
             // btn_generar_fecha
             // 
@@ -87,6 +88,7 @@
             this.btn_generar_fecha.Size = new System.Drawing.Size(32, 20);
             this.btn_generar_fecha.TabIndex = 32;
             this.btn_generar_fecha.UseVisualStyleBackColor = true;
+            this.btn_generar_fecha.Click += new System.EventHandler(this.btn_generar_fecha_Click);
             // 
             // txt_fecha_fin
             // 
@@ -129,6 +131,7 @@
             this.btn_imprimir_usuario.Size = new System.Drawing.Size(30, 20);
             this.btn_imprimir_usuario.TabIndex = 27;
             this.btn_imprimir_usuario.UseVisualStyleBackColor = true;
+            this.btn_imprimir_usuario.Click += new System.EventHandler(this.btn_imprimir_usuario_Click);
             // 
             // btn_generar_bit_usua
             // 

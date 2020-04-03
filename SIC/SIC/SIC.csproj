@@ -170,6 +170,12 @@
     <Compile Include="Visor_Bitacora_sesiones.Designer.cs">
       <DependentUpon>Visor_Bitacora_sesiones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visor_Bitacora_Sesiones_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Bitacora_Sesiones_Usuario.Designer.cs">
+      <DependentUpon>Visor_Bitacora_Sesiones_Usuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bitacora_Movimientos.resx">
       <DependentUpon>Bitacora_Movimientos.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +243,9 @@
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones.rdlc" />
     <EmbeddedResource Include="Visor_Bitacora_sesiones.resx">
       <DependentUpon>Visor_Bitacora_sesiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visor_Bitacora_Sesiones_Usuario.resx">
+      <DependentUpon>Visor_Bitacora_Sesiones_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

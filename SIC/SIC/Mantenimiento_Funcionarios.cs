@@ -107,6 +107,7 @@ namespace SIC
                                         if (FilasAfectadas == -1)
                                         {
                                             MessageBox.Show("El Funcionario se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                            this.Close();
                                         }
                                         else
                                         {
@@ -127,6 +128,7 @@ namespace SIC
                                     if (FilasAfectadas == -1)
                                     {
                                         MessageBox.Show("El Funcionario se ha actualizado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        this.Close();
                                     }
                                     else
                                     {
@@ -150,6 +152,7 @@ namespace SIC
                                         if (FilasAfectadas == -1)
                                         {
                                             MessageBox.Show("El Funcionario se ha eliminado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                            this.Close();
                                         }
                                         else
                                         {

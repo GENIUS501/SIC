@@ -70,7 +70,12 @@ namespace SIC
         {
             try
             {
-                
+                Visor_Bitacora_Sesiones_Usuario frm = new Visor_Bitacora_Sesiones_Usuario();
+                frm.Usuario = Usuario;
+                frm.Usu = this.txt_usuario.Text;
+                frm.Usu = this.txt_usuario.Text;
+                frm.MdiParent = this.MdiParent;
+                frm.Show();
             }
             catch (Exception ex)
             {

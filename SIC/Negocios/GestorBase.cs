@@ -854,6 +854,27 @@ namespace Negocios
                 throw ex;
             }
         }
+
+        public DataTable llenar_Sesiones(DateTime fecha_ini,DateTime fecha_fin)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT*FROM Tab_Bitacora_Sesiones WHERE Fecha_inicio BETWEEN '"+fecha_ini+"' AND '"+fecha_fin+"'";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         #endregion
 
         #endregion

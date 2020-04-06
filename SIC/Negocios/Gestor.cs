@@ -535,6 +535,23 @@ namespace Negocios
 
             return dt;
         }
+        public DataTable llenar_sesiones(DateTime fecha_ini, DateTime fecha_fin)
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Sesiones(fecha_ini,fecha_fin);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
         #endregion
 
         #region Expedientes

@@ -73,7 +73,6 @@ namespace SIC
                 Visor_Bitacora_Sesiones_Usuario frm = new Visor_Bitacora_Sesiones_Usuario();
                 frm.Usuario = Usuario;
                 frm.Usu = this.txt_usuario.Text;
-                frm.Usu = this.txt_usuario.Text;
                 frm.MdiParent = this.MdiParent;
                 frm.Show();
             }
@@ -100,7 +99,11 @@ namespace SIC
         {
             try
             {
-                
+                Visor_Bitacora_Sesiones_Fechas frm = new Visor_Bitacora_Sesiones_Fechas();
+                frm.fechaini = Convert.ToDateTime(this.txt_fecha_ini.Text);
+                frm.fechafin = Convert.ToDateTime(this.txt_fecha_fin.Text);
+                frm.MdiParent = this.MdiParent;
+                frm.Show();
             }
             catch (Exception ex)
             {

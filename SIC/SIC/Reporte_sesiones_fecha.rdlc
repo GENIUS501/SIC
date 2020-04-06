@@ -460,11 +460,32 @@
               <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
-              <Group Name="Detalles" />
+              <Group Name="Detalles">
+                <Filters>
+                  <Filter>
+                    <FilterExpression>=Fields!Fecha_inicio.Value</FilterExpression>
+                    <Operator>Between</Operator>
+                    <FilterValues>
+                      <FilterValue>=Parameters!fechaini.Value</FilterValue>
+                      <FilterValue>=Parameters!fechafin.Value</FilterValue>
+                    </FilterValues>
+                  </Filter>
+                </Filters>
+              </Group>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
+        <Filters>
+          <Filter>
+            <FilterExpression>=Fields!Fecha_inicio.Value</FilterExpression>
+            <Operator>Between</Operator>
+            <FilterValues>
+              <FilterValue>=Parameters!fechaini.Value</FilterValue>
+              <FilterValue>=Parameters!fechafin.Value</FilterValue>
+            </FilterValues>
+          </Filter>
+        </Filters>
         <Top>4.33599cm</Top>
         <Left>0.42205cm</Left>
         <Height>1.2cm</Height>

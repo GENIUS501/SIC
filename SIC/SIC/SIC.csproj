@@ -159,6 +159,9 @@
     <Compile Include="Reporte_por_Cedula.Designer.cs">
       <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
     </Compile>
+    <Compile Include="SICDataSet1.cs">
+      <DependentUpon>SICDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SICDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

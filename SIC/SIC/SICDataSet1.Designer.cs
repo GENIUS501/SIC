@@ -1086,7 +1086,7 @@ namespace SIC {
                 this.columnId_Sesion.ReadOnly = true;
                 this.columnId_Sesion.Unique = true;
                 this.columnUsuario.MaxLength = 25;
-                this.columnDireccion_Ip.MaxLength = 12;
+                this.columnDireccion_Ip.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1238,6 +1238,8 @@ namespace SIC {
             
             private global::System.Data.DataColumn columnOrgano_Director;
             
+            private global::System.Data.DataColumn columnEstado;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Tab_ExpedientesDataTable() {
@@ -1345,6 +1347,14 @@ namespace SIC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EstadoColumn {
+                get {
+                    return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1380,7 +1390,7 @@ namespace SIC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Tab_ExpedientesRow AddTab_ExpedientesRow(Tab_FuncionariosRow parentTab_FuncionariosRowByFk_Exp_Fun, string Num_Expediente, string Parte_Procesal, Tab_UsuariosRow parentTab_UsuariosRowByFk_Exp_Usu, string Lugar_Trabajo, string Descripcion, Tab_ProcedimientoRow parentTab_ProcedimientoRowByFk_Exp_Pro, string Medida_Cautelar, string Organo_Director) {
+            public Tab_ExpedientesRow AddTab_ExpedientesRow(Tab_FuncionariosRow parentTab_FuncionariosRowByFk_Exp_Fun, string Num_Expediente, string Parte_Procesal, Tab_UsuariosRow parentTab_UsuariosRowByFk_Exp_Usu, string Lugar_Trabajo, string Descripcion, Tab_ProcedimientoRow parentTab_ProcedimientoRowByFk_Exp_Pro, string Medida_Cautelar, string Organo_Director, string Estado) {
                 Tab_ExpedientesRow rowTab_ExpedientesRow = ((Tab_ExpedientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1391,7 +1401,8 @@ namespace SIC {
                         Descripcion,
                         null,
                         Medida_Cautelar,
-                        Organo_Director};
+                        Organo_Director,
+                        Estado};
                 if ((parentTab_FuncionariosRowByFk_Exp_Fun != null)) {
                     columnValuesArray[0] = parentTab_FuncionariosRowByFk_Exp_Fun[0];
                 }
@@ -1439,6 +1450,7 @@ namespace SIC {
                 this.columnId_Tipo_Procedimiento = base.Columns["Id_Tipo_Procedimiento"];
                 this.columnMedida_Cautelar = base.Columns["Medida_Cautelar"];
                 this.columnOrgano_Director = base.Columns["Organo_Director"];
+                this.columnEstado = base.Columns["Estado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1462,6 +1474,8 @@ namespace SIC {
                 base.Columns.Add(this.columnMedida_Cautelar);
                 this.columnOrgano_Director = new global::System.Data.DataColumn("Organo_Director", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOrgano_Director);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNum_Expediente}, true));
                 this.columnNum_Expediente.AllowDBNull = false;
@@ -1473,6 +1487,7 @@ namespace SIC {
                 this.columnDescripcion.MaxLength = 2147483647;
                 this.columnMedida_Cautelar.MaxLength = 2147483647;
                 this.columnOrgano_Director.MaxLength = 25;
+                this.columnEstado.MaxLength = 25;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3648,6 +3663,22 @@ namespace SIC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Estado {
+                get {
+                    try {
+                        return ((string)(this[this.tableTab_Expedientes.EstadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Estado\' de la tabla \'Tab_Expedientes\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTab_Expedientes.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Tab_FuncionariosRow Tab_FuncionariosRow {
                 get {
                     return ((Tab_FuncionariosRow)(this.GetParentRow(this.Table.ParentRelations["Fk_Exp_Fun"])));
@@ -3773,6 +3804,18 @@ namespace SIC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetOrgano_DirectorNull() {
                 this[this.tableTab_Expedientes.Organo_DirectorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEstadoNull() {
+                return this.IsNull(this.tableTab_Expedientes.EstadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEstadoNull() {
+                this[this.tableTab_Expedientes.EstadoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5784,10 +5827,11 @@ SELECT Id_Sesion, Fecha_inicio, fecha_Salio, Usuario, Direccion_Ip FROM Tab_Bita
             tableMapping.ColumnMappings.Add("Id_Tipo_Procedimiento", "Id_Tipo_Procedimiento");
             tableMapping.ColumnMappings.Add("Medida_Cautelar", "Medida_Cautelar");
             tableMapping.ColumnMappings.Add("Organo_Director", "Organo_Director");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Tab_Expedientes] WHERE (((@IsNull_Cedula = 1 AND [Cedula] IS NULL) OR ([Cedula] = @Original_Cedula)) AND ([Num_Expediente] = @Original_Num_Expediente) AND ((@IsNull_Parte_Procesal = 1 AND [Parte_Procesal] IS NULL) OR ([Parte_Procesal] = @Original_Parte_Procesal)) AND ((@IsNull_Usuario_Generador = 1 AND [Usuario_Generador] IS NULL) OR ([Usuario_Generador] = @Original_Usuario_Generador)) AND ((@IsNull_Lugar_Trabajo = 1 AND [Lugar_Trabajo] IS NULL) OR ([Lugar_Trabajo] = @Original_Lugar_Trabajo)) AND ((@IsNull_Id_Tipo_Procedimiento = 1 AND [Id_Tipo_Procedimiento] IS NULL) OR ([Id_Tipo_Procedimiento] = @Original_Id_Tipo_Procedimiento)) AND ((@IsNull_Organo_Director = 1 AND [Organo_Director] IS NULL) OR ([Organo_Director] = @Original_Organo_Director)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Tab_Expedientes] WHERE (((@IsNull_Cedula = 1 AND [Cedula] IS NULL) OR ([Cedula] = @Original_Cedula)) AND ([Num_Expediente] = @Original_Num_Expediente) AND ((@IsNull_Parte_Procesal = 1 AND [Parte_Procesal] IS NULL) OR ([Parte_Procesal] = @Original_Parte_Procesal)) AND ((@IsNull_Usuario_Generador = 1 AND [Usuario_Generador] IS NULL) OR ([Usuario_Generador] = @Original_Usuario_Generador)) AND ((@IsNull_Lugar_Trabajo = 1 AND [Lugar_Trabajo] IS NULL) OR ([Lugar_Trabajo] = @Original_Lugar_Trabajo)) AND ((@IsNull_Id_Tipo_Procedimiento = 1 AND [Id_Tipo_Procedimiento] IS NULL) OR ([Id_Tipo_Procedimiento] = @Original_Id_Tipo_Procedimiento)) AND ((@IsNull_Organo_Director = 1 AND [Organo_Director] IS NULL) OR ([Organo_Director] = @Original_Organo_Director)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Cedula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cedula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5802,10 +5846,12 @@ SELECT Id_Sesion, Fecha_inicio, fecha_Salio, Usuario, Direccion_Ip FROM Tab_Bita
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Tipo_Procedimiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Tipo_Procedimiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Organo_Director", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Organo_Director", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Organo_Director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Organo_Director", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Tab_Expedientes] ([Cedula], [Num_Expediente], [Parte_Procesal], [Usuario_Generador], [Lugar_Trabajo], [Descripcion], [Id_Tipo_Procedimiento], [Medida_Cautelar], [Organo_Director]) VALUES (@Cedula, @Num_Expediente, @Parte_Procesal, @Usuario_Generador, @Lugar_Trabajo, @Descripcion, @Id_Tipo_Procedimiento, @Medida_Cautelar, @Organo_Director);
-SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo, Descripcion, Id_Tipo_Procedimiento, Medida_Cautelar, Organo_Director FROM Tab_Expedientes WHERE (Num_Expediente = @Num_Expediente)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Tab_Expedientes] ([Cedula], [Num_Expediente], [Parte_Procesal], [Usuario_Generador], [Lugar_Trabajo], [Descripcion], [Id_Tipo_Procedimiento], [Medida_Cautelar], [Organo_Director], [Estado]) VALUES (@Cedula, @Num_Expediente, @Parte_Procesal, @Usuario_Generador, @Lugar_Trabajo, @Descripcion, @Id_Tipo_Procedimiento, @Medida_Cautelar, @Organo_Director, @Estado);
+SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo, Descripcion, Id_Tipo_Procedimiento, Medida_Cautelar, Organo_Director, Estado FROM Tab_Expedientes WHERE (Num_Expediente = @Num_Expediente)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Expediente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Expediente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5816,10 +5862,11 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Tipo_Procedimiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Tipo_Procedimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Medida_Cautelar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medida_Cautelar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Organo_Director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Organo_Director", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Tab_Expedientes] SET [Cedula] = @Cedula, [Num_Expediente] = @Num_Expediente, [Parte_Procesal] = @Parte_Procesal, [Usuario_Generador] = @Usuario_Generador, [Lugar_Trabajo] = @Lugar_Trabajo, [Descripcion] = @Descripcion, [Id_Tipo_Procedimiento] = @Id_Tipo_Procedimiento, [Medida_Cautelar] = @Medida_Cautelar, [Organo_Director] = @Organo_Director WHERE (((@IsNull_Cedula = 1 AND [Cedula] IS NULL) OR ([Cedula] = @Original_Cedula)) AND ([Num_Expediente] = @Original_Num_Expediente) AND ((@IsNull_Parte_Procesal = 1 AND [Parte_Procesal] IS NULL) OR ([Parte_Procesal] = @Original_Parte_Procesal)) AND ((@IsNull_Usuario_Generador = 1 AND [Usuario_Generador] IS NULL) OR ([Usuario_Generador] = @Original_Usuario_Generador)) AND ((@IsNull_Lugar_Trabajo = 1 AND [Lugar_Trabajo] IS NULL) OR ([Lugar_Trabajo] = @Original_Lugar_Trabajo)) AND ((@IsNull_Id_Tipo_Procedimiento = 1 AND [Id_Tipo_Procedimiento] IS NULL) OR ([Id_Tipo_Procedimiento] = @Original_Id_Tipo_Procedimiento)) AND ((@IsNull_Organo_Director = 1 AND [Organo_Director] IS NULL) OR ([Organo_Director] = @Original_Organo_Director)));
-SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo, Descripcion, Id_Tipo_Procedimiento, Medida_Cautelar, Organo_Director FROM Tab_Expedientes WHERE (Num_Expediente = @Num_Expediente)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Tab_Expedientes] SET [Cedula] = @Cedula, [Num_Expediente] = @Num_Expediente, [Parte_Procesal] = @Parte_Procesal, [Usuario_Generador] = @Usuario_Generador, [Lugar_Trabajo] = @Lugar_Trabajo, [Descripcion] = @Descripcion, [Id_Tipo_Procedimiento] = @Id_Tipo_Procedimiento, [Medida_Cautelar] = @Medida_Cautelar, [Organo_Director] = @Organo_Director, [Estado] = @Estado WHERE (((@IsNull_Cedula = 1 AND [Cedula] IS NULL) OR ([Cedula] = @Original_Cedula)) AND ([Num_Expediente] = @Original_Num_Expediente) AND ((@IsNull_Parte_Procesal = 1 AND [Parte_Procesal] IS NULL) OR ([Parte_Procesal] = @Original_Parte_Procesal)) AND ((@IsNull_Usuario_Generador = 1 AND [Usuario_Generador] IS NULL) OR ([Usuario_Generador] = @Original_Usuario_Generador)) AND ((@IsNull_Lugar_Trabajo = 1 AND [Lugar_Trabajo] IS NULL) OR ([Lugar_Trabajo] = @Original_Lugar_Trabajo)) AND ((@IsNull_Id_Tipo_Procedimiento = 1 AND [Id_Tipo_Procedimiento] IS NULL) OR ([Id_Tipo_Procedimiento] = @Original_Id_Tipo_Procedimiento)) AND ((@IsNull_Organo_Director = 1 AND [Organo_Director] IS NULL) OR ([Organo_Director] = @Original_Organo_Director)) AND ((@IsNull_Estado = 1 AND [Estado] IS NULL) OR ([Estado] = @Original_Estado)));
+SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo, Descripcion, Id_Tipo_Procedimiento, Medida_Cautelar, Organo_Director, Estado FROM Tab_Expedientes WHERE (Num_Expediente = @Num_Expediente)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Expediente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Expediente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5830,6 +5877,7 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Tipo_Procedimiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Tipo_Procedimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Medida_Cautelar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medida_Cautelar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Organo_Director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Organo_Director", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Cedula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cedula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Expediente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Expediente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5843,6 +5891,8 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Tipo_Procedimiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Tipo_Procedimiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Organo_Director", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Organo_Director", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Organo_Director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Organo_Director", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5859,8 +5909,8 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo, " +
-                "Descripcion, Id_Tipo_Procedimiento, Medida_Cautelar, Organo_Director FROM dbo.Ta" +
-                "b_Expedientes";
+                "Descripcion, Id_Tipo_Procedimiento, Medida_Cautelar, Organo_Director, Estado FRO" +
+                "M dbo.Tab_Expedientes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5921,7 +5971,7 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_Cedula, string Original_Num_Expediente, string Original_Parte_Procesal, string Original_Usuario_Generador, string Original_Lugar_Trabajo, global::System.Nullable<int> Original_Id_Tipo_Procedimiento, string Original_Organo_Director) {
+        public virtual int Delete(global::System.Nullable<int> Original_Cedula, string Original_Num_Expediente, string Original_Parte_Procesal, string Original_Usuario_Generador, string Original_Lugar_Trabajo, global::System.Nullable<int> Original_Id_Tipo_Procedimiento, string Original_Organo_Director, string Original_Estado) {
             if ((Original_Cedula.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Cedula.Value));
@@ -5976,6 +6026,14 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Organo_Director));
             }
+            if ((Original_Estado == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Estado));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5996,7 +6054,7 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> Cedula, string Num_Expediente, string Parte_Procesal, string Usuario_Generador, string Lugar_Trabajo, string Descripcion, global::System.Nullable<int> Id_Tipo_Procedimiento, string Medida_Cautelar, string Organo_Director) {
+        public virtual int Insert(global::System.Nullable<int> Cedula, string Num_Expediente, string Parte_Procesal, string Usuario_Generador, string Lugar_Trabajo, string Descripcion, global::System.Nullable<int> Id_Tipo_Procedimiento, string Medida_Cautelar, string Organo_Director, string Estado) {
             if ((Cedula.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Cedula.Value));
             }
@@ -6051,6 +6109,12 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Organo_Director));
             }
+            if ((Estado == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Estado));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6081,13 +6145,15 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
                     global::System.Nullable<int> Id_Tipo_Procedimiento, 
                     string Medida_Cautelar, 
                     string Organo_Director, 
+                    string Estado, 
                     global::System.Nullable<int> Original_Cedula, 
                     string Original_Num_Expediente, 
                     string Original_Parte_Procesal, 
                     string Original_Usuario_Generador, 
                     string Original_Lugar_Trabajo, 
                     global::System.Nullable<int> Original_Id_Tipo_Procedimiento, 
-                    string Original_Organo_Director) {
+                    string Original_Organo_Director, 
+                    string Original_Estado) {
             if ((Cedula.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Cedula.Value));
             }
@@ -6142,59 +6208,73 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Organo_Director));
             }
-            if ((Original_Cedula.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Cedula.Value));
+            if ((Estado == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Estado));
+            }
+            if ((Original_Cedula.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Cedula.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((Original_Num_Expediente == null)) {
                 throw new global::System.ArgumentNullException("Original_Num_Expediente");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Num_Expediente));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Num_Expediente));
             }
             if ((Original_Parte_Procesal == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Parte_Procesal));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Parte_Procesal));
             }
             if ((Original_Usuario_Generador == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Usuario_Generador));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Usuario_Generador));
             }
             if ((Original_Lugar_Trabajo == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Lugar_Trabajo));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Lugar_Trabajo));
             }
             if ((Original_Id_Tipo_Procedimiento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Id_Tipo_Procedimiento.Value));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_Id_Tipo_Procedimiento.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             if ((Original_Organo_Director == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Organo_Director));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Organo_Director));
+            }
+            if ((Original_Estado == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Estado));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6216,8 +6296,25 @@ SELECT Cedula, Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Cedula, string Parte_Procesal, string Usuario_Generador, string Lugar_Trabajo, string Descripcion, global::System.Nullable<int> Id_Tipo_Procedimiento, string Medida_Cautelar, string Organo_Director, global::System.Nullable<int> Original_Cedula, string Original_Num_Expediente, string Original_Parte_Procesal, string Original_Usuario_Generador, string Original_Lugar_Trabajo, global::System.Nullable<int> Original_Id_Tipo_Procedimiento, string Original_Organo_Director) {
-            return this.Update(Cedula, Original_Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo, Descripcion, Id_Tipo_Procedimiento, Medida_Cautelar, Organo_Director, Original_Cedula, Original_Num_Expediente, Original_Parte_Procesal, Original_Usuario_Generador, Original_Lugar_Trabajo, Original_Id_Tipo_Procedimiento, Original_Organo_Director);
+        public virtual int Update(
+                    global::System.Nullable<int> Cedula, 
+                    string Parte_Procesal, 
+                    string Usuario_Generador, 
+                    string Lugar_Trabajo, 
+                    string Descripcion, 
+                    global::System.Nullable<int> Id_Tipo_Procedimiento, 
+                    string Medida_Cautelar, 
+                    string Organo_Director, 
+                    string Estado, 
+                    global::System.Nullable<int> Original_Cedula, 
+                    string Original_Num_Expediente, 
+                    string Original_Parte_Procesal, 
+                    string Original_Usuario_Generador, 
+                    string Original_Lugar_Trabajo, 
+                    global::System.Nullable<int> Original_Id_Tipo_Procedimiento, 
+                    string Original_Organo_Director, 
+                    string Original_Estado) {
+            return this.Update(Cedula, Original_Num_Expediente, Parte_Procesal, Usuario_Generador, Lugar_Trabajo, Descripcion, Id_Tipo_Procedimiento, Medida_Cautelar, Organo_Director, Estado, Original_Cedula, Original_Num_Expediente, Original_Parte_Procesal, Original_Usuario_Generador, Original_Lugar_Trabajo, Original_Id_Tipo_Procedimiento, Original_Organo_Director, Original_Estado);
         }
     }
     

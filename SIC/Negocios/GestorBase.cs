@@ -862,7 +862,7 @@ namespace Negocios
                 using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
                 {
 
-                    string query = "SELECT*FROM Tab_Bitacora_Sesiones WHERE Fecha_inicio BETWEEN '"+fecha_ini+"' AND '"+fecha_fin+"'";
+                    string query = "SELECT*FROM Tab_Bitacora_Sesiones WHERE Fecha_inicio BETWEEN '"+fecha_ini.ToString()+"' AND '"+fecha_fin.ToString()+ "'";
                     SqlCommand cmd = new SqlCommand(query, cnx);
                     SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();

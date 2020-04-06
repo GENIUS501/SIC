@@ -87,7 +87,8 @@ namespace SIC
         {
             try
             {
-
+                Negocios = new Gestor();
+                this.dat_sesiones.DataSource = Negocios.llenar_sesiones(Convert.ToDateTime(this.txt_fecha_ini.Text), Convert.ToDateTime(this.txt_fecha_fin.Text));
             }
             catch (Exception ex)
             {

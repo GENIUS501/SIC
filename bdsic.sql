@@ -41,7 +41,7 @@ CREATE TABLE Tab_Bitacora_Sesiones
 	Fecha_inicio	DATETIME,
 	fecha_Salio	DATETIME,
 	Usuario	VARCHAR(25),
-	Direccion_Ip VARCHAR(12),
+	Direccion_Ip VARCHAR(15),
 	CONSTRAINT Fk_Bit_Usu FOREIGN KEY(Usuario) REFERENCES Tab_Usuarios(Nombre_Usuario)
 );
 

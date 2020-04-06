@@ -120,10 +120,10 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.19334cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.95521cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -175,7 +175,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha y hora de entrada</Value>
+                              <Value>Fecha inicio</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -205,7 +205,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha y hora de salida</Value>
+                              <Value>fecha Salio</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -235,7 +235,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Direccion ip</Value>
+                              <Value>Direccion Ip</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -265,7 +265,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Id de sesion</Value>
+                              <Value>Id Sesion</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -460,36 +460,15 @@
               <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
-              <Group Name="Detalles">
-                <Filters>
-                  <Filter>
-                    <FilterExpression>=Fields!Fecha_inicio.Value</FilterExpression>
-                    <Operator>Between</Operator>
-                    <FilterValues>
-                      <FilterValue>=Parameters!fechaini.Value</FilterValue>
-                      <FilterValue>=Parameters!fechafin.Value</FilterValue>
-                    </FilterValues>
-                  </Filter>
-                </Filters>
-              </Group>
+              <Group Name="Detalles" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Filters>
-          <Filter>
-            <FilterExpression>=Fields!Fecha_inicio.Value</FilterExpression>
-            <Operator>Between</Operator>
-            <FilterValues>
-              <FilterValue>=Parameters!fechaini.Value</FilterValue>
-              <FilterValue>=Parameters!fechafin.Value</FilterValue>
-            </FilterValues>
-          </Filter>
-        </Filters>
-        <Top>4.33599cm</Top>
-        <Left>0.42205cm</Left>
+        <Top>4.62703cm</Top>
+        <Left>2.13995cm</Left>
         <Height>1.2cm</Height>
-        <Width>15.64855cm</Width>
+        <Width>12.5cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -498,7 +477,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.46875in</Height>
+    <Height>2.63786in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
@@ -649,7 +628,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>2d035898-7657-485a-b4ed-112911d2ca3a</rd:DataSourceID>
+      <rd:DataSourceID>eafb8317-e2bc-485f-915a-b4e14154ec85</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>

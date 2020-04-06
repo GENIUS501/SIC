@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.SICDataSet1 = new SIC.SICDataSet1();
             this.Tab_Bitacora_SesionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SICDataSet1 = new SIC.SICDataSet1();
             this.Tab_Bitacora_SesionesTableAdapter = new SIC.SICDataSet1TableAdapters.Tab_Bitacora_SesionesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tab_Bitacora_SesionesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -50,15 +50,15 @@
             this.reportViewer1.Size = new System.Drawing.Size(674, 301);
             this.reportViewer1.TabIndex = 0;
             // 
-            // SICDataSet1
-            // 
-            this.SICDataSet1.DataSetName = "SICDataSet1";
-            this.SICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // Tab_Bitacora_SesionesBindingSource
             // 
             this.Tab_Bitacora_SesionesBindingSource.DataMember = "Tab_Bitacora_Sesiones";
             this.Tab_Bitacora_SesionesBindingSource.DataSource = this.SICDataSet1;
+            // 
+            // SICDataSet1
+            // 
+            this.SICDataSet1.DataSetName = "SICDataSet1";
+            this.SICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Tab_Bitacora_SesionesTableAdapter
             // 
@@ -73,8 +73,8 @@
             this.Name = "Visor_Bitacora_Sesiones_Fechas";
             this.Text = "Visor_Bitacora_Sesiones_Fechas";
             this.Load += new System.EventHandler(this.Visor_Bitacora_Sesiones_Fechas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tab_Bitacora_SesionesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

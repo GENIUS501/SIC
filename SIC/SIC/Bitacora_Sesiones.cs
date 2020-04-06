@@ -102,6 +102,7 @@ namespace SIC
                 Visor_Bitacora_Sesiones_Fechas frm = new Visor_Bitacora_Sesiones_Fechas();
                 frm.fechaini = Convert.ToDateTime(this.txt_fecha_ini.Text);
                 frm.fechafin = Convert.ToDateTime(this.txt_fecha_fin.Text);
+                frm.Usuario = Usuario;
                 frm.MdiParent = this.MdiParent;
                 frm.Show();
             }

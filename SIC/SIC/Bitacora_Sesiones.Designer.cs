@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bitacora_Sesiones));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_imprimir_fecha = new System.Windows.Forms.Button();
-            this.btn_generar_fecha = new System.Windows.Forms.Button();
             this.txt_fecha_fin = new System.Windows.Forms.DateTimePicker();
             this.txt_fecha_ini = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_imprimir_usuario = new System.Windows.Forms.Button();
-            this.btn_generar_bit_usua = new System.Windows.Forms.Button();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dat_sesiones = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_imprimir = new System.Windows.Forms.Button();
+            this.btn_imprimir_fecha = new System.Windows.Forms.Button();
+            this.btn_generar_fecha = new System.Windows.Forms.Button();
+            this.btn_imprimir_usuario = new System.Windows.Forms.Button();
+            this.btn_generar_bit_usua = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dat_sesiones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,28 +67,6 @@
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de busqueda";
-            // 
-            // btn_imprimir_fecha
-            // 
-            this.btn_imprimir_fecha.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
-            this.btn_imprimir_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_imprimir_fecha.Location = new System.Drawing.Point(459, 95);
-            this.btn_imprimir_fecha.Name = "btn_imprimir_fecha";
-            this.btn_imprimir_fecha.Size = new System.Drawing.Size(30, 20);
-            this.btn_imprimir_fecha.TabIndex = 33;
-            this.btn_imprimir_fecha.UseVisualStyleBackColor = true;
-            this.btn_imprimir_fecha.Click += new System.EventHandler(this.btn_imprimir_fecha_Click);
-            // 
-            // btn_generar_fecha
-            // 
-            this.btn_generar_fecha.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Generate;
-            this.btn_generar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_generar_fecha.Location = new System.Drawing.Point(421, 95);
-            this.btn_generar_fecha.Name = "btn_generar_fecha";
-            this.btn_generar_fecha.Size = new System.Drawing.Size(32, 20);
-            this.btn_generar_fecha.TabIndex = 32;
-            this.btn_generar_fecha.UseVisualStyleBackColor = true;
-            this.btn_generar_fecha.Click += new System.EventHandler(this.btn_generar_fecha_Click);
             // 
             // txt_fecha_fin
             // 
@@ -121,28 +99,6 @@
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 28;
             this.label1.Text = "Fecha inicial";
-            // 
-            // btn_imprimir_usuario
-            // 
-            this.btn_imprimir_usuario.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
-            this.btn_imprimir_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_imprimir_usuario.Location = new System.Drawing.Point(153, 42);
-            this.btn_imprimir_usuario.Name = "btn_imprimir_usuario";
-            this.btn_imprimir_usuario.Size = new System.Drawing.Size(30, 20);
-            this.btn_imprimir_usuario.TabIndex = 27;
-            this.btn_imprimir_usuario.UseVisualStyleBackColor = true;
-            this.btn_imprimir_usuario.Click += new System.EventHandler(this.btn_imprimir_usuario_Click);
-            // 
-            // btn_generar_bit_usua
-            // 
-            this.btn_generar_bit_usua.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Generate;
-            this.btn_generar_bit_usua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_generar_bit_usua.Location = new System.Drawing.Point(115, 42);
-            this.btn_generar_bit_usua.Name = "btn_generar_bit_usua";
-            this.btn_generar_bit_usua.Size = new System.Drawing.Size(32, 20);
-            this.btn_generar_bit_usua.TabIndex = 25;
-            this.btn_generar_bit_usua.UseVisualStyleBackColor = true;
-            this.btn_generar_bit_usua.Click += new System.EventHandler(this.btn_generar_bit_usua_Click);
             // 
             // txt_usuario
             // 
@@ -200,10 +156,55 @@
             this.btn_imprimir.UseVisualStyleBackColor = true;
             this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
             // 
+            // btn_imprimir_fecha
+            // 
+            this.btn_imprimir_fecha.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
+            this.btn_imprimir_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_imprimir_fecha.Location = new System.Drawing.Point(459, 95);
+            this.btn_imprimir_fecha.Name = "btn_imprimir_fecha";
+            this.btn_imprimir_fecha.Size = new System.Drawing.Size(30, 20);
+            this.btn_imprimir_fecha.TabIndex = 33;
+            this.btn_imprimir_fecha.UseVisualStyleBackColor = true;
+            this.btn_imprimir_fecha.Click += new System.EventHandler(this.btn_imprimir_fecha_Click);
+            // 
+            // btn_generar_fecha
+            // 
+            this.btn_generar_fecha.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Generate;
+            this.btn_generar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_generar_fecha.Location = new System.Drawing.Point(421, 95);
+            this.btn_generar_fecha.Name = "btn_generar_fecha";
+            this.btn_generar_fecha.Size = new System.Drawing.Size(32, 20);
+            this.btn_generar_fecha.TabIndex = 32;
+            this.btn_generar_fecha.UseVisualStyleBackColor = true;
+            this.btn_generar_fecha.Click += new System.EventHandler(this.btn_generar_fecha_Click);
+            // 
+            // btn_imprimir_usuario
+            // 
+            this.btn_imprimir_usuario.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
+            this.btn_imprimir_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_imprimir_usuario.Location = new System.Drawing.Point(153, 42);
+            this.btn_imprimir_usuario.Name = "btn_imprimir_usuario";
+            this.btn_imprimir_usuario.Size = new System.Drawing.Size(30, 20);
+            this.btn_imprimir_usuario.TabIndex = 27;
+            this.btn_imprimir_usuario.UseVisualStyleBackColor = true;
+            this.btn_imprimir_usuario.Click += new System.EventHandler(this.btn_imprimir_usuario_Click);
+            // 
+            // btn_generar_bit_usua
+            // 
+            this.btn_generar_bit_usua.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Generate;
+            this.btn_generar_bit_usua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_generar_bit_usua.Location = new System.Drawing.Point(115, 42);
+            this.btn_generar_bit_usua.Name = "btn_generar_bit_usua";
+            this.btn_generar_bit_usua.Size = new System.Drawing.Size(32, 20);
+            this.btn_generar_bit_usua.TabIndex = 25;
+            this.btn_generar_bit_usua.UseVisualStyleBackColor = true;
+            this.btn_generar_bit_usua.Click += new System.EventHandler(this.btn_generar_bit_usua_Click);
+            // 
             // Bitacora_Sesiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(734, 390);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_cancelar);
@@ -211,6 +212,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dat_sesiones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Bitacora_Sesiones";
             this.Text = "Bitacora de Sesiones";
             this.Load += new System.EventHandler(this.Bitacora_Sesiones_Load);

@@ -24,7 +24,8 @@ namespace SIC
         private void Visor_Bitacora_Sesiones_Fechas_Load(object sender, EventArgs e)
         {
             try
-            {// TODO: esta línea de código carga datos en la tabla 'SICDataSet1.Tab_Bitacora_Sesiones' Puede moverla o quitarla según sea necesario.
+            {
+               // TODO: esta línea de código carga datos en la tabla 'SICDataSet1.Tab_Bitacora_Sesiones' Puede moverla o quitarla según sea necesario.
                 this.Tab_Bitacora_SesionesTableAdapter.Fill(this.SICDataSet1.Tab_Bitacora_Sesiones);
                 ReportParameter[] parameters = new ReportParameter[3];
                 parameters[0] = new ReportParameter("fechaini", fechaini.ToString());

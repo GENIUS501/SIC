@@ -237,7 +237,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reporte_sesiones_fecha.rdlc" />
+    <EmbeddedResource Include="Rpt_Bitacora_Sesiones_Fecha.rdlc" />
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones_Usuario.rdlc" />
     <EmbeddedResource Include="Reporte_Estado_Expediente.resx">
       <DependentUpon>Reporte_Estado_Expediente.cs</DependentUpon>

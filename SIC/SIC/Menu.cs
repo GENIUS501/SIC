@@ -265,7 +265,6 @@ namespace SIC
             try
             {
                 Bitacora_Movimientos frm = new Bitacora_Movimientos();
-                //frm.Id_Perfil = Id_Perfil;
                 frm.Usuario = usuario;
                 frm.MdiParent = this;
                 frm.Show();
@@ -281,8 +280,7 @@ namespace SIC
             try
             {
                 Cambiar_Contrasena frm = new Cambiar_Contrasena();
-                //frm.Id_Perfil = Id_Perfil;
-                //frm.usuario = usuario;
+                frm.Usuario = usuario;
                 frm.MdiParent = this;
                 frm.Show();
             }

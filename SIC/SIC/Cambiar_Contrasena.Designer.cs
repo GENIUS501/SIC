@@ -159,6 +159,7 @@
             this.Controls.Add(this.txt_usuario);
             this.Name = "Cambiar_Contrasena";
             this.Text = "Cambiar_Contrasena";
+            this.Load += new System.EventHandler(this.Cambiar_Contrasena_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -170,6 +170,12 @@
     <Compile Include="Visor_Bitacora_Movimientos.Designer.cs">
       <DependentUpon>Visor_Bitacora_Movimientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visor_Bitacora_Movimientos_Fechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Bitacora_Movimientos_Fechas.Designer.cs">
+      <DependentUpon>Visor_Bitacora_Movimientos_Fechas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visor_Bitacora_Movimientos_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +257,7 @@
     </Compile>
     <EmbeddedResource Include="Rpt_Bitacora_Movimientos_Usuarios.rdlc" />
     <EmbeddedResource Include="Rpt_Bitacora_Movimientos.rdlc" />
+    <EmbeddedResource Include="Rpt_Bitacora_Movimientos_Fecha.rdlc" />
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones_Fecha.rdlc" />
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones_Usuario.rdlc" />
     <EmbeddedResource Include="Reporte_Estado_Expediente.resx">
@@ -265,6 +272,9 @@
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones.rdlc" />
     <EmbeddedResource Include="Visor_Bitacora_Movimientos.resx">
       <DependentUpon>Visor_Bitacora_Movimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visor_Bitacora_Movimientos_Fechas.resx">
+      <DependentUpon>Visor_Bitacora_Movimientos_Fechas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visor_Bitacora_Movimientos_Usuario.resx">
       <DependentUpon>Visor_Bitacora_Movimientos_Usuario.cs</DependentUpon>

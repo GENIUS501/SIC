@@ -78,7 +78,12 @@ namespace SIC
         {
             try
             {
-
+                Visor_Bitacora_Movimientos_Fechas frm = new Visor_Bitacora_Movimientos_Fechas();
+                frm.fechaini = Convert.ToDateTime(this.txt_fecha_ini.Text);
+                frm.fechafin = Convert.ToDateTime(this.txt_fecha_fin.Text);
+                frm.Usuario = Usuario;
+                frm.MdiParent = this.MdiParent;
+                frm.Show();
             }
             catch (Exception ex)
             {
@@ -90,8 +95,14 @@ namespace SIC
         {
             try
             {
-                Negocios = new Gestor();
-                this.dat_movimientos.DataSource = Negocios.llenar_movimientos(this.Txt_Usuario.Text);
+                if (this.Txt_Usuario.Text != "")
+                {
+                    Negocios = new Gestor();
+                    this.dat_movimientos.DataSource = Negocios.llenar_movimientos(this.Txt_Usuario.Text);
+                }else
+                {
+                    MessageBox.Show("Debe digitar el usuario","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -103,11 +114,18 @@ namespace SIC
         {
             try
             {
-                Visor_Bitacora_Movimientos_Usuario frm = new Visor_Bitacora_Movimientos_Usuario();
-                frm.Usuario = Usuario;
-                frm.Usua = this.Txt_Usuario.Text;
-                frm.MdiParent = this.MdiParent;
-                frm.Show();
+                if (this.Txt_Usuario.Text != "")
+                {
+                    Visor_Bitacora_Movimientos_Usuario frm = new Visor_Bitacora_Movimientos_Usuario();
+                    frm.Usuario = Usuario;
+                    frm.Usua = this.Txt_Usuario.Text;
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Debe digitar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {

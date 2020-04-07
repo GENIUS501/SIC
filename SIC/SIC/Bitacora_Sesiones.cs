@@ -65,8 +65,15 @@ namespace SIC
         {
             try
             {
-                Negocios = new Gestor();
-                this.dat_sesiones.DataSource = Negocios.llenar_sesiones(this.txt_usuario.Text);
+                if(this.txt_usuario.Text!="")
+                {
+                    Negocios = new Gestor();
+                    this.dat_sesiones.DataSource = Negocios.llenar_sesiones(this.txt_usuario.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Debe digitar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -78,11 +85,18 @@ namespace SIC
         {
             try
             {
-                Visor_Bitacora_Sesiones_Usuario frm = new Visor_Bitacora_Sesiones_Usuario();
-                frm.Usuario = Usuario;
-                frm.Usu = this.txt_usuario.Text;
-                frm.MdiParent = this.MdiParent;
-                frm.Show();
+                if (this.txt_usuario.Text != "")
+                {
+                    Visor_Bitacora_Sesiones_Usuario frm = new Visor_Bitacora_Sesiones_Usuario();
+                    frm.Usuario = Usuario;
+                    frm.Usu = this.txt_usuario.Text;
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Debe digitar el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {

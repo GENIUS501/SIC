@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_contrasena = new System.Windows.Forms.TextBox();
+            this.txt_confirmar_contrasena = new System.Windows.Forms.TextBox();
+            this.txt_contrasena_antigua = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_acpetar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_usuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txt_usuario.Location = new System.Drawing.Point(15, 25);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(100, 20);
+            this.txt_usuario.TabIndex = 0;
             // 
             // label1
             // 
@@ -76,29 +76,29 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Confirmacion de contraseña";
             // 
-            // textBox2
+            // txt_contrasena
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.txt_contrasena.Location = new System.Drawing.Point(15, 125);
+            this.txt_contrasena.Name = "txt_contrasena";
+            this.txt_contrasena.PasswordChar = '*';
+            this.txt_contrasena.Size = new System.Drawing.Size(100, 20);
+            this.txt_contrasena.TabIndex = 6;
             // 
-            // textBox3
+            // txt_confirmar_contrasena
             // 
-            this.textBox3.Location = new System.Drawing.Point(136, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.txt_confirmar_contrasena.Location = new System.Drawing.Point(136, 125);
+            this.txt_confirmar_contrasena.Name = "txt_confirmar_contrasena";
+            this.txt_confirmar_contrasena.PasswordChar = '*';
+            this.txt_confirmar_contrasena.Size = new System.Drawing.Size(100, 20);
+            this.txt_confirmar_contrasena.TabIndex = 7;
             // 
-            // textBox5
+            // txt_contrasena_antigua
             // 
-            this.textBox5.Location = new System.Drawing.Point(15, 78);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PasswordChar = '*';
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.txt_contrasena_antigua.Location = new System.Drawing.Point(15, 78);
+            this.txt_contrasena_antigua.Name = "txt_contrasena_antigua";
+            this.txt_contrasena_antigua.PasswordChar = '*';
+            this.txt_contrasena_antigua.Size = new System.Drawing.Size(100, 20);
+            this.txt_contrasena_antigua.TabIndex = 9;
             // 
             // label6
             // 
@@ -119,15 +119,16 @@
             this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btn_cancelar
             // 
-            this.button1.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(174, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 43);
-            this.button1.TabIndex = 49;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_cancelar.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
+            this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cancelar.Location = new System.Drawing.Point(174, 175);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
+            this.btn_cancelar.TabIndex = 49;
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_acpetar
             // 
@@ -138,23 +139,24 @@
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
             this.btn_acpetar.TabIndex = 48;
             this.btn_acpetar.UseVisualStyleBackColor = true;
+            this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
             // Cambiar_Contrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 221);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_acpetar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_contrasena_antigua);
+            this.Controls.Add(this.txt_confirmar_contrasena);
+            this.Controls.Add(this.txt_contrasena);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_usuario);
             this.Name = "Cambiar_Contrasena";
             this.Text = "Cambiar_Contrasena";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -165,16 +167,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_contrasena;
+        private System.Windows.Forms.TextBox txt_confirmar_contrasena;
+        private System.Windows.Forms.TextBox txt_contrasena_antigua;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_acpetar;
     }
 }

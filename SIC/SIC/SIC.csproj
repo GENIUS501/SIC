@@ -164,6 +164,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SICDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Visor_Bitacora_Movimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Bitacora_Movimientos.Designer.cs">
+      <DependentUpon>Visor_Bitacora_Movimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visor_Bitacora_Movimientos_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Bitacora_Movimientos_Usuario.Designer.cs">
+      <DependentUpon>Visor_Bitacora_Movimientos_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visor_Bitacora_sesiones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +249,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Rpt_Bitacora_Movimientos_Usuarios.rdlc" />
+    <EmbeddedResource Include="Rpt_Bitacora_Movimientos.rdlc" />
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones_Fecha.rdlc" />
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones_Usuario.rdlc" />
     <EmbeddedResource Include="Reporte_Estado_Expediente.resx">
@@ -249,6 +263,12 @@
       <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones.rdlc" />
+    <EmbeddedResource Include="Visor_Bitacora_Movimientos.resx">
+      <DependentUpon>Visor_Bitacora_Movimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visor_Bitacora_Movimientos_Usuario.resx">
+      <DependentUpon>Visor_Bitacora_Movimientos_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visor_Bitacora_sesiones.resx">
       <DependentUpon>Visor_Bitacora_sesiones.cs</DependentUpon>
     </EmbeddedResource>

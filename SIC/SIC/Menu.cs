@@ -266,7 +266,7 @@ namespace SIC
             {
                 Bitacora_Movimientos frm = new Bitacora_Movimientos();
                 //frm.Id_Perfil = Id_Perfil;
-                //frm.usuario = usuario;
+                frm.Usuario = usuario;
                 frm.MdiParent = this;
                 frm.Show();
             }

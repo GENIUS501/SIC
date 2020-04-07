@@ -14,7 +14,6 @@ namespace SIC
 {
     public partial class Visor_Bitacora_Sesiones_Fechas : Form
     {
-        Gestor Negocios;
         public DateTime fechaini { get; set; }
         public DateTime fechafin { get; set; }
         public string Usuario { get; set; }

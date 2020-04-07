@@ -24,6 +24,7 @@ namespace SIC
         {
             try
             {
+                this.dat_sesiones.ReadOnly = true;
                 Negocios = new Gestor();
                 this.dat_sesiones.DataSource = Negocios.llenar_sesiones();
             }
@@ -62,8 +63,15 @@ namespace SIC
 
         private void btn_generar_bit_usua_Click(object sender, EventArgs e)
         {
-            Negocios = new Gestor();
-            this.dat_sesiones.DataSource = Negocios.llenar_sesiones(this.txt_usuario.Text);
+            try
+            {
+                Negocios = new Gestor();
+                this.dat_sesiones.DataSource = Negocios.llenar_sesiones(this.txt_usuario.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_imprimir_usuario_Click(object sender, EventArgs e)

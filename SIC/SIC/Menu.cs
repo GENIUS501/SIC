@@ -167,8 +167,7 @@ namespace SIC
             try
             {
                 Reporte_numero_expediente frm = new Reporte_numero_expediente();
-               // frm.Id_Perfil = Id_Perfil;
-               // frm.usuario = usuario;
+                frm.usuario = usuario;
                 frm.MdiParent = this;
                 frm.Show();
             }

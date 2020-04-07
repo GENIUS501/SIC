@@ -12,9 +12,21 @@ namespace SIC
 {
     public partial class Reporte_numero_expediente : Form
     {
+        public string usuario { get; set; }
         public Reporte_numero_expediente()
         {
             InitializeComponent();
+        }
+
+        private void Reporte_numero_expediente_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reporte_numero_expediente));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,13 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -87,6 +87,66 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de busqueda";
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.Location = new System.Drawing.Point(153, 31);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(30, 22);
+            this.button8.TabIndex = 29;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.Location = new System.Drawing.Point(368, 148);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(30, 20);
+            this.button7.TabIndex = 28;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Location = new System.Drawing.Point(153, 91);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 20);
+            this.button6.TabIndex = 27;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Generate;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(330, 148);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(32, 20);
+            this.button3.TabIndex = 26;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Generate;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(115, 91);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(32, 20);
+            this.button2.TabIndex = 25;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Generate;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(115, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 22);
+            this.button1.TabIndex = 24;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -179,36 +239,6 @@
             this.button4.TabIndex = 13;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Generate;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(330, 148);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(32, 20);
-            this.button3.TabIndex = 26;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Generate;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(115, 91);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 20);
-            this.button2.TabIndex = 25;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Generate;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(115, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 22);
-            this.button1.TabIndex = 24;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button5
             // 
             this.button5.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Cancel;
@@ -218,36 +248,6 @@
             this.button5.Size = new System.Drawing.Size(60, 41);
             this.button5.TabIndex = 14;
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Location = new System.Drawing.Point(153, 91);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(30, 20);
-            this.button6.TabIndex = 27;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.Location = new System.Drawing.Point(368, 148);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(30, 20);
-            this.button7.TabIndex = 28;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button8.Location = new System.Drawing.Point(153, 31);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(30, 22);
-            this.button8.TabIndex = 29;
-            this.button8.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -272,6 +272,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reporte_numero_expediente";
             this.Text = "Reporte por numero de expediente";
+            this.Load += new System.EventHandler(this.Reporte_numero_expediente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -33,6 +33,7 @@
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoDeFuncionariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoDeCasosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoDeProcedimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportePorExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeEstadoDelExpedienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.mantenimientoDeProcedimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +90,13 @@
             this.mantenimientoDeCasosToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.mantenimientoDeCasosToolStripMenuItem.Text = "Mantenimiento de casos";
             this.mantenimientoDeCasosToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoDeCasosToolStripMenuItem_Click);
+            // 
+            // mantenimientoDeProcedimientosToolStripMenuItem
+            // 
+            this.mantenimientoDeProcedimientosToolStripMenuItem.Name = "mantenimientoDeProcedimientosToolStripMenuItem";
+            this.mantenimientoDeProcedimientosToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.mantenimientoDeProcedimientosToolStripMenuItem.Text = "Mantenimiento de procedimientos";
+            this.mantenimientoDeProcedimientosToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoDeProcedimientosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -174,6 +181,7 @@
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
             this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -203,13 +211,6 @@
             // 
             this.lbl_Usuario.Name = "lbl_Usuario";
             this.lbl_Usuario.Size = new System.Drawing.Size(0, 17);
-            // 
-            // mantenimientoDeProcedimientosToolStripMenuItem
-            // 
-            this.mantenimientoDeProcedimientosToolStripMenuItem.Name = "mantenimientoDeProcedimientosToolStripMenuItem";
-            this.mantenimientoDeProcedimientosToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.mantenimientoDeProcedimientosToolStripMenuItem.Text = "Mantenimiento de procedimientos";
-            this.mantenimientoDeProcedimientosToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoDeProcedimientosToolStripMenuItem_Click);
             // 
             // Menu
             // 

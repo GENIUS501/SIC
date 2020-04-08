@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace SIC
 {
     public partial class Reporte_Estado_Expediente : Form
     {
+        Gestor Negocios;
+        public string usuario { get; set; }
         public Reporte_Estado_Expediente()
         {
             InitializeComponent();
@@ -21,7 +24,9 @@ namespace SIC
         {
             try
             {
-
+                this.dat_expedientes.ReadOnly = true;
+                Negocios = new Gestor();
+                this.dat_expedientes.DataSource = Negocios.llenar_expedientes_estado();
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);

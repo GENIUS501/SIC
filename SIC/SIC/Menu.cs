@@ -183,7 +183,7 @@ namespace SIC
             {
                 Reporte_Estado_Expediente frm = new Reporte_Estado_Expediente();
                 // frm.Id_Perfil = Id_Perfil;
-                // frm.usuario = usuario;
+                frm.usuario = usuario;
                 frm.MdiParent = this;
                 frm.Show();
             }

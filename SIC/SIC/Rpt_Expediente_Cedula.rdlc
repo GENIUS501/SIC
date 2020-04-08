@@ -921,7 +921,7 @@
         <Filters>
           <Filter>
             <FilterExpression>=Fields!Cedula.Value</FilterExpression>
-            <Operator>Like</Operator>
+            <Operator>Equal</Operator>
             <FilterValues>
               <FilterValue>=Parameters!Cedula.Value</FilterValue>
             </FilterValues>

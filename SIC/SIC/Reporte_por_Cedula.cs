@@ -58,7 +58,18 @@ namespace SIC
         {
             try
             {
-
+                if (this.txt_cedula.Text != "")
+                {
+                    Visor_Reporte_Expediente_Cedula frm = new Visor_Reporte_Expediente_Cedula();
+                    frm.Usuario = usuario;
+                    frm.Cedula = int.Parse(this.txt_cedula.Text);
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Debe digitar la cedula!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {

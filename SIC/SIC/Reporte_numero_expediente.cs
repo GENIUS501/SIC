@@ -38,9 +38,15 @@ namespace SIC
         {
             try
             {
-                Negocios = new Gestor();
-                this.dat_expediente.DataSource = Negocios.llenar_expedientes(int.Parse(this.txt_cedula.Text));
-            }
+                if (this.txt_cedula.Text != "")
+                { 
+                    Negocios = new Gestor();
+                    this.dat_expediente.DataSource = Negocios.llenar_expedientes(int.Parse(this.txt_cedula.Text));
+                }else
+                {
+                    MessageBox.Show("Debe digitar la cedula!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+        }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -51,7 +57,17 @@ namespace SIC
         {
             try
             {
-
+                if(this.txt_cedula.Text!="")
+                {
+                    Visor_Reporte_Expediente_Cedula frm = new Visor_Reporte_Expediente_Cedula();
+                    frm.Usuario = usuario;
+                    frm.Cedula = int.Parse(this.txt_cedula.Text);
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }else
+                {
+                    MessageBox.Show("Debe digitar la cedula!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {

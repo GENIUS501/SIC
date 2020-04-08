@@ -209,6 +209,18 @@
     <Compile Include="Visor_Reporte_Expediente.Designer.cs">
       <DependentUpon>Visor_Reporte_Expediente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visor_Reporte_Expedientes_Nombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Reporte_Expedientes_Nombre.Designer.cs">
+      <DependentUpon>Visor_Reporte_Expedientes_Nombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visor_Reporte_Expediente_Numero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Reporte_Expediente_Numero.Designer.cs">
+      <DependentUpon>Visor_Reporte_Expediente_Numero.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bitacora_Movimientos.resx">
       <DependentUpon>Bitacora_Movimientos.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +291,8 @@
       <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones.rdlc" />
+    <EmbeddedResource Include="Rpt_Expediente_Nombre.rdlc" />
+    <EmbeddedResource Include="Rpt_Expediente_Numero.rdlc" />
     <EmbeddedResource Include="Rpt_Expediente.rdlc" />
     <EmbeddedResource Include="Visor_Bitacora_Movimientos.resx">
       <DependentUpon>Visor_Bitacora_Movimientos.cs</DependentUpon>
@@ -300,6 +314,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visor_Reporte_Expediente.resx">
       <DependentUpon>Visor_Reporte_Expediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visor_Reporte_Expedientes_Nombre.resx">
+      <DependentUpon>Visor_Reporte_Expedientes_Nombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visor_Reporte_Expediente_Numero.resx">
+      <DependentUpon>Visor_Reporte_Expediente_Numero.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

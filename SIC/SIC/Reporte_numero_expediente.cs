@@ -76,7 +76,18 @@ namespace SIC
         {
             try
             {
-
+                if (this.txt_num_expediente.Text != "")
+                {
+                    Visor_Reporte_Expediente_Numero frm = new Visor_Reporte_Expediente_Numero();
+                    frm.Usuario = usuario;
+                    frm.Num_Expediente=this.txt_num_expediente.Text;
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Debe digitar el numero de expediente!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -108,7 +119,20 @@ namespace SIC
         {
             try
             {
-
+                if (this.txt_nombre.Text != "" || this.txt_apellido1.Text != "" || this.txt_apellido2.Text != "")
+                {
+                    Visor_Reporte_Expedientes_Nombre frm = new Visor_Reporte_Expedientes_Nombre();
+                    frm.Usuario = usuario;
+                    frm.Nombre = this.txt_nombre.Text;
+                    frm.Apellido1 = this.txt_apellido1.Text;
+                    frm.Apellido2 = this.txt_apellido2.Text;
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Debe llenar los campos!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {

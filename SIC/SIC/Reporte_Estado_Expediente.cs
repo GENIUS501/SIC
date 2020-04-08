@@ -57,7 +57,18 @@ namespace SIC
         {
             try
             {
-
+                if (this.txt_numero_expediente.Text != "")
+                {
+                    Visor_Reporte_Expediente_Estado_numero frm = new Visor_Reporte_Expediente_Estado_numero();
+                    frm.Usuario = usuario;
+                    frm.Num_Expediente = this.txt_numero_expediente.Text;
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Debe digitar el numero de expediente!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
@@ -69,7 +80,10 @@ namespace SIC
         {
             try
             {
-
+                Visor_Reporte_Expediente_Estado frm = new Visor_Reporte_Expediente_Estado();
+                frm.Usuario = usuario;
+                frm.MdiParent = this.MdiParent;
+                frm.Show();
             }
             catch (Exception ex)
             {

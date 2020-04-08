@@ -182,7 +182,6 @@ namespace SIC
             try
             {
                 Reporte_Estado_Expediente frm = new Reporte_Estado_Expediente();
-                // frm.Id_Perfil = Id_Perfil;
                 frm.usuario = usuario;
                 frm.MdiParent = this;
                 frm.Show();
@@ -198,8 +197,7 @@ namespace SIC
             try
             {
                 Reporte_por_Cedula frm = new Reporte_por_Cedula();
-                // frm.Id_Perfil = Id_Perfil;
-                // frm.usuario = usuario;
+                frm.usuario = usuario;
                 frm.MdiParent = this;
                 frm.Show();
             }
@@ -248,7 +246,6 @@ namespace SIC
             try
             {
                 Bitacora_Sesiones frm = new Bitacora_Sesiones();
-                //frm.Id_Perfil = Id_Perfil;
                 frm.Usuario = usuario;
                 frm.MdiParent = this;
                 frm.Show();

@@ -203,6 +203,12 @@
     <Compile Include="Visor_Bitacora_Sesiones_Usuario.Designer.cs">
       <DependentUpon>Visor_Bitacora_Sesiones_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visor_Reporte_Expediente_Cedula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor_Reporte_Expediente_Cedula.Designer.cs">
+      <DependentUpon>Visor_Reporte_Expediente_Cedula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visor_Reporte_Expediente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,7 @@
       <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones.rdlc" />
+    <EmbeddedResource Include="Rpt_Expediente_Cedula.rdlc" />
     <EmbeddedResource Include="Rpt_Expediente_Estado _Numero.rdlc" />
     <EmbeddedResource Include="Rpt_Expediente_Estado.rdlc" />
     <EmbeddedResource Include="Rpt_Expediente_Nombre.rdlc" />
@@ -325,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visor_Bitacora_Sesiones_Usuario.resx">
       <DependentUpon>Visor_Bitacora_Sesiones_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visor_Reporte_Expediente_Cedula.resx">
+      <DependentUpon>Visor_Reporte_Expediente_Cedula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visor_Reporte_Expediente.resx">
       <DependentUpon>Visor_Reporte_Expediente.cs</DependentUpon>

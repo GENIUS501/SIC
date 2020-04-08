@@ -120,7 +120,10 @@ namespace SIC
         {
             try
             {
-
+                Visor_Reporte_Expediente frm = new Visor_Reporte_Expediente();
+                frm.Usuario = usuario;
+                frm.MdiParent = this.MdiParent;
+                frm.Show();
             }
             catch (Exception ex)
             {

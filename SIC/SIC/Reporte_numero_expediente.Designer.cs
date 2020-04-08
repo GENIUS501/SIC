@@ -237,6 +237,7 @@
             // 
             // btn_imprimir
             // 
+            this.btn_imprimir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_imprimir.BackgroundImage = global::SIC.Properties.Resources.IMG_Icon_Print;
             this.btn_imprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_imprimir.Location = new System.Drawing.Point(205, 364);
@@ -271,6 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(735, 417);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_cancelar);
@@ -278,6 +280,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dat_expediente);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Reporte_numero_expediente";
             this.Text = "Reporte por numero de expediente";
             this.Load += new System.EventHandler(this.Reporte_numero_expediente_Load);

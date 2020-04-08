@@ -37,7 +37,15 @@ namespace SIC
         {
             try
             {
-
+                if(this.txt_numero_expediente.Text!="")
+                {
+                    Negocios = new Gestor();
+                    this.dat_expedientes.DataSource = Negocios.llenar_expedientes_estado(this.txt_numero_expediente.Text);
+                }
+                else
+                {
+                   MessageBox.Show("Debe digitar el numero de expediente!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {

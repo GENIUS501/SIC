@@ -291,6 +291,7 @@
       <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones.rdlc" />
+    <EmbeddedResource Include="Rpt_Expediente_Estado.rdlc" />
     <EmbeddedResource Include="Rpt_Expediente_Nombre.rdlc" />
     <EmbeddedResource Include="Rpt_Expediente_Numero.rdlc" />
     <EmbeddedResource Include="Rpt_Expediente.rdlc" />

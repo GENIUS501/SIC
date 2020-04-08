@@ -655,6 +655,27 @@ namespace Negocios
             }
         }
 
+        public DataTable llenar_Expedientes_Estado(string num_expediente)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT Tab_Expedientes.Num_Expediente, Tab_Expedientes.Cedula, Tab_Funcionarios.Nombre,Tab_Funcionarios.Apellido1,Tab_Expedientes.Estado FROM Tab_Funcionarios INNER JOIN Tab_Expedientes ON Tab_Funcionarios.Cedula = Tab_Expedientes.Cedula WHERE Tab_Expedientes.Num_Expediente LIKE '%" + num_expediente + "%'";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public DataTable llenar_Expedientes(string nombre,string apellido1,string apellido2)
         {
             try

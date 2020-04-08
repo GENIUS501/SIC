@@ -645,6 +645,25 @@ namespace Negocios
 
             return dt;
         }
+
+        public DataTable llenar_expedientes_estado(string num_expediente)
+        {
+            DataTable dt = new DataTable();
+
+
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Expedientes_Estado(num_expediente);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
+
         public DataTable llenar_expedientes(int cedula)
         {
             DataTable dt = new DataTable();

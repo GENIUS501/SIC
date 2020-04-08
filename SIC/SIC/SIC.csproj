@@ -159,6 +159,9 @@
     <Compile Include="Reporte_por_Cedula.Designer.cs">
       <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
     </Compile>
+    <Compile Include="SICDataSet1.cs">
+      <DependentUpon>SICDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SICDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -270,6 +273,7 @@
       <DependentUpon>Reporte_por_Cedula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Bitacora_Sesiones.rdlc" />
+    <EmbeddedResource Include="Rpt_Expediente.rdlc" />
     <EmbeddedResource Include="Visor_Bitacora_Movimientos.resx">
       <DependentUpon>Visor_Bitacora_Movimientos.cs</DependentUpon>
     </EmbeddedResource>

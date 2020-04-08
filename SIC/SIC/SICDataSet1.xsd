@@ -582,6 +582,38 @@ SELECT Cedula, Nombre_Usuario, Nombre, Apellido1, Apellido2, Contrasena, Id_Perf
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SICConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Tab_Expedientes.Cedula, Tab_Expedientes.Num_Expediente, Tab_Funcionarios.Nombre, Tab_Funcionarios.Apellido1, Tab_Funcionarios.Apellido2, Tab_Expedientes.Parte_Procesal, Tab_Expedientes.Usuario_Generador, 
+                         Tab_Expedientes.Lugar_Trabajo, Tab_Expedientes.Descripcion, Tab_Expedientes.Medida_Cautelar, Tab_Expedientes.Organo_Director, Tab_Expedientes.Estado, Tab_Procedimiento.Nombre_Procedimiento
+FROM            Tab_Funcionarios INNER JOIN
+                         Tab_Expedientes ON Tab_Funcionarios.Cedula = Tab_Expedientes.Cedula INNER JOIN
+                         Tab_Procedimiento ON Tab_Expedientes.Id_Tipo_Procedimiento = Tab_Procedimiento.Id_Procedimiento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cedula" DataSetColumn="Cedula" />
+              <Mapping SourceColumn="Num_Expediente" DataSetColumn="Num_Expediente" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Apellido1" DataSetColumn="Apellido1" />
+              <Mapping SourceColumn="Apellido2" DataSetColumn="Apellido2" />
+              <Mapping SourceColumn="Parte_Procesal" DataSetColumn="Parte_Procesal" />
+              <Mapping SourceColumn="Usuario_Generador" DataSetColumn="Usuario_Generador" />
+              <Mapping SourceColumn="Lugar_Trabajo" DataSetColumn="Lugar_Trabajo" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="Medida_Cautelar" DataSetColumn="Medida_Cautelar" />
+              <Mapping SourceColumn="Organo_Director" DataSetColumn="Organo_Director" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="Nombre_Procedimiento" DataSetColumn="Nombre_Procedimiento" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -862,6 +894,97 @@ SELECT Cedula, Nombre_Usuario, Nombre, Apellido1, Apellido2, Contrasena, Id_Perf
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_UserColumnName="Cedula" type="xs:int" minOccurs="0" />
+              <xs:element name="Num_Expediente" msprop:Generator_ColumnVarNameInTable="columnNum_Expediente" msprop:Generator_ColumnPropNameInRow="Num_Expediente" msprop:Generator_ColumnPropNameInTable="Num_ExpedienteColumn" msprop:Generator_UserColumnName="Num_Expediente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido1" msprop:Generator_ColumnVarNameInTable="columnApellido1" msprop:Generator_ColumnPropNameInRow="Apellido1" msprop:Generator_ColumnPropNameInTable="Apellido1Column" msprop:Generator_UserColumnName="Apellido1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido2" msprop:Generator_ColumnVarNameInTable="columnApellido2" msprop:Generator_ColumnPropNameInRow="Apellido2" msprop:Generator_ColumnPropNameInTable="Apellido2Column" msprop:Generator_UserColumnName="Apellido2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Parte_Procesal" msprop:Generator_ColumnVarNameInTable="columnParte_Procesal" msprop:Generator_ColumnPropNameInRow="Parte_Procesal" msprop:Generator_ColumnPropNameInTable="Parte_ProcesalColumn" msprop:Generator_UserColumnName="Parte_Procesal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Usuario_Generador" msprop:Generator_ColumnVarNameInTable="columnUsuario_Generador" msprop:Generator_ColumnPropNameInRow="Usuario_Generador" msprop:Generator_ColumnPropNameInTable="Usuario_GeneradorColumn" msprop:Generator_UserColumnName="Usuario_Generador" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lugar_Trabajo" msprop:Generator_ColumnVarNameInTable="columnLugar_Trabajo" msprop:Generator_ColumnPropNameInRow="Lugar_Trabajo" msprop:Generator_ColumnPropNameInTable="Lugar_TrabajoColumn" msprop:Generator_UserColumnName="Lugar_Trabajo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Medida_Cautelar" msprop:Generator_ColumnVarNameInTable="columnMedida_Cautelar" msprop:Generator_ColumnPropNameInRow="Medida_Cautelar" msprop:Generator_ColumnPropNameInTable="Medida_CautelarColumn" msprop:Generator_UserColumnName="Medida_Cautelar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Organo_Director" msprop:Generator_ColumnVarNameInTable="columnOrgano_Director" msprop:Generator_ColumnPropNameInRow="Organo_Director" msprop:Generator_ColumnPropNameInTable="Organo_DirectorColumn" msprop:Generator_UserColumnName="Organo_Director" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre_Procedimiento" msprop:Generator_ColumnVarNameInTable="columnNombre_Procedimiento" msprop:Generator_ColumnPropNameInRow="Nombre_Procedimiento" msprop:Generator_ColumnPropNameInTable="Nombre_ProcedimientoColumn" msprop:Generator_UserColumnName="Nombre_Procedimiento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -897,6 +1020,10 @@ SELECT Cedula, Nombre_Usuario, Nombre, Apellido1, Apellido2, Contrasena, Id_Perf
       <xs:selector xpath=".//mstns:Tab_Usuarios" />
       <xs:field xpath="mstns:Nombre_Usuario" />
     </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:Num_Expediente" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -907,6 +1034,8 @@ SELECT Cedula, Nombre_Usuario, Nombre, Apellido1, Apellido2, Contrasena, Id_Perf
       <msdata:Relationship name="Fk_Exp_Usu" msdata:parent="Tab_Usuarios" msdata:child="Tab_Expedientes" msdata:parentkey="Nombre_Usuario" msdata:childkey="Usuario_Generador" msprop:Generator_UserChildTable="Tab_Expedientes" msprop:Generator_ChildPropName="GetTab_ExpedientesRows" msprop:Generator_UserRelationName="Fk_Exp_Usu" msprop:Generator_RelationVarName="relationFk_Exp_Usu" msprop:Generator_UserParentTable="Tab_Usuarios" msprop:Generator_ParentPropName="Tab_UsuariosRow" />
       <msdata:Relationship name="Fk_Per_Per" msdata:parent="Tab_Perfiles" msdata:child="Tab_Permisos" msdata:parentkey="Id_Perfil" msdata:childkey="Id_Perfil" msprop:Generator_UserChildTable="Tab_Permisos" msprop:Generator_ChildPropName="GetTab_PermisosRows" msprop:Generator_UserRelationName="Fk_Per_Per" msprop:Generator_ParentPropName="Tab_PerfilesRow" msprop:Generator_RelationVarName="relationFk_Per_Per" msprop:Generator_UserParentTable="Tab_Perfiles" />
       <msdata:Relationship name="Fk_Usu_Per" msdata:parent="Tab_Perfiles" msdata:child="Tab_Usuarios" msdata:parentkey="Id_Perfil" msdata:childkey="Id_Perfil" msprop:Generator_UserChildTable="Tab_Usuarios" msprop:Generator_ChildPropName="GetTab_UsuariosRows" msprop:Generator_UserRelationName="Fk_Usu_Per" msprop:Generator_ParentPropName="Tab_PerfilesRow" msprop:Generator_RelationVarName="relationFk_Usu_Per" msprop:Generator_UserParentTable="Tab_Perfiles" />
+      <msdata:Relationship name="Fk_Exp_Fun1" msdata:parent="Tab_Funcionarios" msdata:child="DataTable1" msdata:parentkey="Cedula" msdata:childkey="Cedula" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="Fk_Exp_Fun1" msprop:Generator_RelationVarName="relationFk_Exp_Fun1" msprop:Generator_UserParentTable="Tab_Funcionarios" msprop:Generator_ParentPropName="Tab_FuncionariosRow" />
+      <msdata:Relationship name="Fk_Exp_Usu1" msdata:parent="Tab_Usuarios" msdata:child="DataTable1" msdata:parentkey="Nombre_Usuario" msdata:childkey="Usuario_Generador" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="Fk_Exp_Usu1" msprop:Generator_RelationVarName="relationFk_Exp_Usu1" msprop:Generator_UserParentTable="Tab_Usuarios" msprop:Generator_ParentPropName="Tab_UsuariosRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

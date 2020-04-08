@@ -663,6 +663,22 @@ namespace Negocios
 
             return dt;
         }
+
+        public DataTable llenar_expedientes(string Nombre,string Apellido1,string Apellido2)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                GestorBase BD = new GestorBase();
+                dt = BD.llenar_Expedientes(Nombre,Apellido1,Apellido2);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+
+            return dt;
+        }
         #endregion
 
         #endregion

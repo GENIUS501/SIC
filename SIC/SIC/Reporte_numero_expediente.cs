@@ -88,7 +88,15 @@ namespace SIC
         {
             try
             {
-
+                if(this.txt_nombre.Text!=""||this.txt_apellido1.Text!="" ||this.txt_apellido2.Text!="")
+                {
+                    Negocios = new Gestor();
+                    this.dat_expediente.DataSource = Negocios.llenar_expedientes(this.txt_nombre.Text,this.txt_apellido1.Text,this.txt_apellido2.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Debe llenar los campos!!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {

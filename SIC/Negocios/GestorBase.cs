@@ -578,7 +578,7 @@ namespace Negocios
                 using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
                 {
 
-                    string query = "SELECT * FROM Tab_Expedientes";
+                    string query = "SELECT Tab_Expedientes.Cedula, Tab_Expedientes.Num_Expediente, Tab_Funcionarios.Nombre,Tab_Funcionarios.Apellido1, Tab_Funcionarios.Apellido2, Tab_Expedientes.Parte_Procesal, Tab_Expedientes.Usuario_Generador, Tab_Expedientes.Lugar_Trabajo, Tab_Expedientes.Descripcion, Tab_Expedientes.Id_Tipo_Procedimiento, Tab_Expedientes.Medida_Cautelar, Tab_Expedientes.Organo_Director, Tab_Expedientes.Estado FROM Tab_Funcionarios INNER JOIN Tab_Expedientes ON Tab_Funcionarios.Cedula = Tab_Expedientes.Cedula";
                     SqlCommand cmd = new SqlCommand(query, cnx);
                     SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -599,7 +599,7 @@ namespace Negocios
                 using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
                 {
 
-                    string query = "SELECT * FROM Tab_Expedientes WHERE Cedula LIKE '%" + cedula + "%'";
+                    string query = "SELECT Tab_Expedientes.Cedula, Tab_Expedientes.Num_Expediente, Tab_Funcionarios.Nombre,Tab_Funcionarios.Apellido1, Tab_Funcionarios.Apellido2, Tab_Expedientes.Parte_Procesal, Tab_Expedientes.Usuario_Generador, Tab_Expedientes.Lugar_Trabajo, Tab_Expedientes.Descripcion, Tab_Expedientes.Id_Tipo_Procedimiento, Tab_Expedientes.Medida_Cautelar, Tab_Expedientes.Organo_Director, Tab_Expedientes.Estado FROM Tab_Funcionarios INNER JOIN Tab_Expedientes ON Tab_Funcionarios.Cedula = Tab_Expedientes.Cedula WHERE Tab_Funcionarios.Cedula LIKE '%"+cedula+"%'";
                     SqlCommand cmd = new SqlCommand(query, cnx);
                     SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -620,7 +620,28 @@ namespace Negocios
                 using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
                 {
 
-                    string query = "SELECT * FROM Tab_Expedientes WHERE Num_Expediente LIKE '%" + num_expediente + "%'";
+                    string query = "SELECT Tab_Expedientes.Cedula, Tab_Expedientes.Num_Expediente, Tab_Funcionarios.Nombre,Tab_Funcionarios.Apellido1, Tab_Funcionarios.Apellido2, Tab_Expedientes.Parte_Procesal, Tab_Expedientes.Usuario_Generador, Tab_Expedientes.Lugar_Trabajo, Tab_Expedientes.Descripcion, Tab_Expedientes.Id_Tipo_Procedimiento, Tab_Expedientes.Medida_Cautelar, Tab_Expedientes.Organo_Director, Tab_Expedientes.Estado FROM Tab_Funcionarios INNER JOIN Tab_Expedientes ON Tab_Funcionarios.Cedula = Tab_Expedientes.Cedula WHERE Tab_Expedientes.Num_Expediente LIKE '%"+num_expediente+"%'";
+                    SqlCommand cmd = new SqlCommand(query, cnx);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adaptador.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataTable llenar_Expedientes(string nombre,string apellido1,string apellido2)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(vCadenaConexion))
+                {
+
+                    string query = "SELECT Tab_Expedientes.Cedula, Tab_Expedientes.Num_Expediente, Tab_Funcionarios.Nombre,Tab_Funcionarios.Apellido1, Tab_Funcionarios.Apellido2, Tab_Expedientes.Parte_Procesal, Tab_Expedientes.Usuario_Generador, Tab_Expedientes.Lugar_Trabajo, Tab_Expedientes.Descripcion, Tab_Expedientes.Id_Tipo_Procedimiento, Tab_Expedientes.Medida_Cautelar, Tab_Expedientes.Organo_Director, Tab_Expedientes.Estado FROM Tab_Funcionarios INNER JOIN Tab_Expedientes ON Tab_Funcionarios.Cedula = Tab_Expedientes.Cedula WHERE Tab_Funcionarios.Nombre LIKE '%" + nombre+"%' AND Tab_Funcionarios.Apellido1 LIKE '%"+apellido1+ "%' AND Tab_Funcionarios.Apellido2 LIKE '%"+apellido2+"%'";
                     SqlCommand cmd = new SqlCommand(query, cnx);
                     SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();

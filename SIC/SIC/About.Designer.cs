@@ -43,7 +43,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SIC.Properties.Resources.IMG_Cliente_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(47, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(185, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -53,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(136, 116);
+            this.label1.Location = new System.Drawing.Point(127, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 1;
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 182);
+            this.label2.Location = new System.Drawing.Point(108, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 2;
@@ -71,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(125, 182);
+            this.label3.Location = new System.Drawing.Point(63, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 13);
             this.label3.TabIndex = 3;
@@ -80,7 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(74, 145);
+            this.label4.Location = new System.Drawing.Point(61, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(156, 13);
             this.label4.TabIndex = 4;
@@ -89,7 +89,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(74, 215);
+            this.label5.Location = new System.Drawing.Point(57, 225);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(164, 13);
             this.label5.TabIndex = 5;
@@ -98,7 +98,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(98, 250);
+            this.label6.Location = new System.Drawing.Point(102, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 13);
             this.label6.TabIndex = 6;
@@ -107,12 +107,12 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(89, 285);
+            this.linkLabel1.Location = new System.Drawing.Point(121, 284);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(94, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(37, 13);
             this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Manual de usuario";
+            this.linkLabel1.Text = "Ayuda";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // About

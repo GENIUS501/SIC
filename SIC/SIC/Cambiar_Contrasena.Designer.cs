@@ -145,6 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(284, 221);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_acpetar);
@@ -157,6 +158,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_usuario);
+            this.MaximizeBox = false;
             this.Name = "Cambiar_Contrasena";
             this.Text = "Cambiar_Contrasena";
             this.Load += new System.EventHandler(this.Cambiar_Contrasena_Load);

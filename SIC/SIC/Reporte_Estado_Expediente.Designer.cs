@@ -52,7 +52,7 @@
             this.groupBox1.Location = new System.Drawing.Point(10, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(211, 81);
-            this.groupBox1.TabIndex = 46;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de busqueda";
             // 
@@ -63,7 +63,7 @@
             this.btn_imprimir_expediente.Location = new System.Drawing.Point(153, 42);
             this.btn_imprimir_expediente.Name = "btn_imprimir_expediente";
             this.btn_imprimir_expediente.Size = new System.Drawing.Size(30, 20);
-            this.btn_imprimir_expediente.TabIndex = 27;
+            this.btn_imprimir_expediente.TabIndex = 2;
             this.btn_imprimir_expediente.UseVisualStyleBackColor = true;
             this.btn_imprimir_expediente.Click += new System.EventHandler(this.btn_imprimir_expediente_Click);
             // 
@@ -74,7 +74,7 @@
             this.btn_generar_expediente.Location = new System.Drawing.Point(115, 42);
             this.btn_generar_expediente.Name = "btn_generar_expediente";
             this.btn_generar_expediente.Size = new System.Drawing.Size(32, 20);
-            this.btn_generar_expediente.TabIndex = 25;
+            this.btn_generar_expediente.TabIndex = 1;
             this.btn_generar_expediente.UseVisualStyleBackColor = true;
             this.btn_generar_expediente.Click += new System.EventHandler(this.btn_generar_expediente_Click);
             // 
@@ -83,7 +83,7 @@
             this.txt_numero_expediente.Location = new System.Drawing.Point(9, 42);
             this.txt_numero_expediente.Name = "txt_numero_expediente";
             this.txt_numero_expediente.Size = new System.Drawing.Size(100, 20);
-            this.txt_numero_expediente.TabIndex = 18;
+            this.txt_numero_expediente.TabIndex = 0;
             // 
             // label3
             // 
@@ -100,7 +100,7 @@
             this.dat_expedientes.Location = new System.Drawing.Point(10, 94);
             this.dat_expedientes.Name = "dat_expedientes";
             this.dat_expedientes.Size = new System.Drawing.Size(711, 150);
-            this.dat_expedientes.TabIndex = 45;
+            this.dat_expedientes.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -119,7 +119,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(477, 261);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(60, 41);
-            this.btn_cancelar.TabIndex = 48;
+            this.btn_cancelar.TabIndex = 3;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
@@ -130,7 +130,7 @@
             this.btn_imprimir.Location = new System.Drawing.Point(201, 261);
             this.btn_imprimir.Name = "btn_imprimir";
             this.btn_imprimir.Size = new System.Drawing.Size(62, 41);
-            this.btn_imprimir.TabIndex = 47;
+            this.btn_imprimir.TabIndex = 2;
             this.btn_imprimir.UseVisualStyleBackColor = true;
             this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
             // 

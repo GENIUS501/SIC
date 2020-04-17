@@ -56,7 +56,7 @@
             this.btn_consultar.Location = new System.Drawing.Point(180, 62);
             this.btn_consultar.Name = "btn_consultar";
             this.btn_consultar.Size = new System.Drawing.Size(50, 41);
-            this.btn_consultar.TabIndex = 47;
+            this.btn_consultar.TabIndex = 3;
             this.btn_consultar.UseVisualStyleBackColor = true;
             this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
@@ -67,7 +67,7 @@
             this.btn_eliminar.Location = new System.Drawing.Point(124, 62);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(50, 41);
-            this.btn_eliminar.TabIndex = 46;
+            this.btn_eliminar.TabIndex = 2;
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
@@ -78,7 +78,7 @@
             this.btn_editar.Location = new System.Drawing.Point(68, 62);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(50, 41);
-            this.btn_editar.TabIndex = 45;
+            this.btn_editar.TabIndex = 1;
             this.btn_editar.UseVisualStyleBackColor = true;
             this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
@@ -89,7 +89,7 @@
             this.btn_agregar.Location = new System.Drawing.Point(12, 61);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(50, 41);
-            this.btn_agregar.TabIndex = 44;
+            this.btn_agregar.TabIndex = 0;
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
@@ -99,7 +99,7 @@
             this.dat_procedimientos.Location = new System.Drawing.Point(12, 109);
             this.dat_procedimientos.Name = "dat_procedimientos";
             this.dat_procedimientos.Size = new System.Drawing.Size(739, 185);
-            this.dat_procedimientos.TabIndex = 48;
+            this.dat_procedimientos.TabIndex = 4;
             this.dat_procedimientos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_procedimientos_CellClick);
             // 
             // Lista_Procedimiento

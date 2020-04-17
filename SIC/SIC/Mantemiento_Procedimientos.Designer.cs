@@ -48,7 +48,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(338, 229);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
-            this.btn_cancelar.TabIndex = 49;
+            this.btn_cancelar.TabIndex = 4;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
@@ -59,7 +59,7 @@
             this.btn_acpetar.Location = new System.Drawing.Point(68, 229);
             this.btn_acpetar.Name = "btn_acpetar";
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
-            this.btn_acpetar.TabIndex = 48;
+            this.btn_acpetar.TabIndex = 3;
             this.btn_acpetar.UseVisualStyleBackColor = true;
             this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
@@ -78,7 +78,7 @@
             this.txt_id_procedimiento.Location = new System.Drawing.Point(15, 25);
             this.txt_id_procedimiento.Name = "txt_id_procedimiento";
             this.txt_id_procedimiento.Size = new System.Drawing.Size(100, 20);
-            this.txt_id_procedimiento.TabIndex = 51;
+            this.txt_id_procedimiento.TabIndex = 0;
             // 
             // lbl_id_procedimiento
             // 
@@ -112,7 +112,7 @@
             this.txt_nombre.Location = new System.Drawing.Point(15, 69);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(100, 20);
-            this.txt_nombre.TabIndex = 55;
+            this.txt_nombre.TabIndex = 1;
             // 
             // txt_descripcion
             // 
@@ -120,7 +120,7 @@
             this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(432, 118);
-            this.txt_descripcion.TabIndex = 56;
+            this.txt_descripcion.TabIndex = 2;
             // 
             // Mantemiento_Procedimientos
             // 

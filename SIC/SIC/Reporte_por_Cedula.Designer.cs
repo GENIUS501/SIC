@@ -52,7 +52,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(211, 81);
-            this.groupBox1.TabIndex = 51;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de busqueda";
             // 
@@ -62,7 +62,7 @@
             this.txt_cedula.Mask = "0000000000";
             this.txt_cedula.Name = "txt_cedula";
             this.txt_cedula.Size = new System.Drawing.Size(100, 20);
-            this.txt_cedula.TabIndex = 28;
+            this.txt_cedula.TabIndex = 0;
             // 
             // btn_imprimir_cedula
             // 
@@ -71,7 +71,7 @@
             this.btn_imprimir_cedula.Location = new System.Drawing.Point(153, 42);
             this.btn_imprimir_cedula.Name = "btn_imprimir_cedula";
             this.btn_imprimir_cedula.Size = new System.Drawing.Size(30, 20);
-            this.btn_imprimir_cedula.TabIndex = 27;
+            this.btn_imprimir_cedula.TabIndex = 2;
             this.btn_imprimir_cedula.UseVisualStyleBackColor = true;
             this.btn_imprimir_cedula.Click += new System.EventHandler(this.btn_imprimir_cedula_Click);
             // 
@@ -82,7 +82,7 @@
             this.btn_generar_cedula.Location = new System.Drawing.Point(115, 42);
             this.btn_generar_cedula.Name = "btn_generar_cedula";
             this.btn_generar_cedula.Size = new System.Drawing.Size(32, 20);
-            this.btn_generar_cedula.TabIndex = 25;
+            this.btn_generar_cedula.TabIndex = 1;
             this.btn_generar_cedula.UseVisualStyleBackColor = true;
             this.btn_generar_cedula.Click += new System.EventHandler(this.btn_generar_cedula_Click);
             // 
@@ -101,7 +101,7 @@
             this.dat_expedientes.Location = new System.Drawing.Point(12, 99);
             this.dat_expedientes.Name = "dat_expedientes";
             this.dat_expedientes.Size = new System.Drawing.Size(711, 150);
-            this.dat_expedientes.TabIndex = 50;
+            this.dat_expedientes.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -120,7 +120,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(479, 266);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(60, 41);
-            this.btn_cancelar.TabIndex = 53;
+            this.btn_cancelar.TabIndex = 3;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
@@ -131,7 +131,7 @@
             this.btn_imprimir.Location = new System.Drawing.Point(203, 266);
             this.btn_imprimir.Name = "btn_imprimir";
             this.btn_imprimir.Size = new System.Drawing.Size(62, 41);
-            this.btn_imprimir.TabIndex = 52;
+            this.btn_imprimir.TabIndex = 2;
             this.btn_imprimir.UseVisualStyleBackColor = true;
             this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
             // 

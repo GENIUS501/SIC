@@ -72,7 +72,7 @@
             this.btn_acpetar.Location = new System.Drawing.Point(177, 386);
             this.btn_acpetar.Name = "btn_acpetar";
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
-            this.btn_acpetar.TabIndex = 0;
+            this.btn_acpetar.TabIndex = 1;
             this.btn_acpetar.UseVisualStyleBackColor = true;
             this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
@@ -83,7 +83,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(452, 386);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
-            this.btn_cancelar.TabIndex = 45;
+            this.btn_cancelar.TabIndex = 2;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -96,7 +96,7 @@
             this.groupBox1.Location = new System.Drawing.Point(14, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(120, 116);
-            this.groupBox1.TabIndex = 48;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del perfil";
             // 
@@ -105,14 +105,14 @@
             this.txt_nombre.Location = new System.Drawing.Point(6, 82);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(100, 20);
-            this.txt_nombre.TabIndex = 17;
+            this.txt_nombre.TabIndex = 1;
             // 
             // txt_id_rol
             // 
             this.txt_id_rol.Location = new System.Drawing.Point(6, 33);
             this.txt_id_rol.Name = "txt_id_rol";
             this.txt_id_rol.Size = new System.Drawing.Size(100, 20);
-            this.txt_id_rol.TabIndex = 16;
+            this.txt_id_rol.TabIndex = 0;
             this.txt_id_rol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_rol_KeyPress);
             // 
             // label2
@@ -166,7 +166,7 @@
             this.clb_procedimientos.Location = new System.Drawing.Point(2, 150);
             this.clb_procedimientos.Name = "clb_procedimientos";
             this.clb_procedimientos.Size = new System.Drawing.Size(86, 64);
-            this.clb_procedimientos.TabIndex = 59;
+            this.clb_procedimientos.TabIndex = 9;
             // 
             // chb_Procedimientos
             // 
@@ -174,7 +174,7 @@
             this.chb_Procedimientos.Location = new System.Drawing.Point(2, 127);
             this.chb_Procedimientos.Name = "chb_Procedimientos";
             this.chb_Procedimientos.Size = new System.Drawing.Size(185, 17);
-            this.chb_Procedimientos.TabIndex = 58;
+            this.chb_Procedimientos.TabIndex = 8;
             this.chb_Procedimientos.Text = "Mantenimiento de Procedimientos";
             this.chb_Procedimientos.UseVisualStyleBackColor = true;
             this.chb_Procedimientos.CheckedChanged += new System.EventHandler(this.chb_Procedimientos_CheckedChanged);
@@ -185,7 +185,7 @@
             this.chb_movimientos.Location = new System.Drawing.Point(352, 128);
             this.chb_movimientos.Name = "chb_movimientos";
             this.chb_movimientos.Size = new System.Drawing.Size(141, 17);
-            this.chb_movimientos.TabIndex = 57;
+            this.chb_movimientos.TabIndex = 11;
             this.chb_movimientos.Text = "Bitacora de movimientos";
             this.chb_movimientos.UseVisualStyleBackColor = true;
             // 
@@ -195,7 +195,7 @@
             this.chb_sesiones.Location = new System.Drawing.Point(193, 127);
             this.chb_sesiones.Name = "chb_sesiones";
             this.chb_sesiones.Size = new System.Drawing.Size(124, 17);
-            this.chb_sesiones.TabIndex = 56;
+            this.chb_sesiones.TabIndex = 10;
             this.chb_sesiones.Text = "Bitacora de sesiones";
             this.chb_sesiones.UseVisualStyleBackColor = true;
             // 
@@ -210,7 +210,7 @@
             this.clb_Casos.Location = new System.Drawing.Point(521, 56);
             this.clb_Casos.Name = "clb_Casos";
             this.clb_Casos.Size = new System.Drawing.Size(86, 64);
-            this.clb_Casos.TabIndex = 55;
+            this.clb_Casos.TabIndex = 7;
             // 
             // chb_Casos
             // 
@@ -218,7 +218,7 @@
             this.chb_Casos.Location = new System.Drawing.Point(521, 33);
             this.chb_Casos.Name = "chb_Casos";
             this.chb_Casos.Size = new System.Drawing.Size(142, 17);
-            this.chb_Casos.TabIndex = 54;
+            this.chb_Casos.TabIndex = 6;
             this.chb_Casos.Text = "Mantenimiento de Casos";
             this.chb_Casos.UseVisualStyleBackColor = true;
             this.chb_Casos.CheckedChanged += new System.EventHandler(this.chb_Casos_CheckedChanged);
@@ -234,7 +234,7 @@
             this.clb_funcionarios.Location = new System.Drawing.Point(334, 56);
             this.clb_funcionarios.Name = "clb_funcionarios";
             this.clb_funcionarios.Size = new System.Drawing.Size(86, 64);
-            this.clb_funcionarios.TabIndex = 53;
+            this.clb_funcionarios.TabIndex = 5;
             // 
             // chb_funcionarios
             // 
@@ -242,7 +242,7 @@
             this.chb_funcionarios.Location = new System.Drawing.Point(334, 33);
             this.chb_funcionarios.Name = "chb_funcionarios";
             this.chb_funcionarios.Size = new System.Drawing.Size(173, 17);
-            this.chb_funcionarios.TabIndex = 52;
+            this.chb_funcionarios.TabIndex = 4;
             this.chb_funcionarios.Text = "Mantenimiento de Funcionarios";
             this.chb_funcionarios.UseVisualStyleBackColor = true;
             this.chb_funcionarios.CheckedChanged += new System.EventHandler(this.chb_funcionarios_CheckedChanged);
@@ -258,7 +258,7 @@
             this.clb_usuarios.Location = new System.Drawing.Point(165, 56);
             this.clb_usuarios.Name = "clb_usuarios";
             this.clb_usuarios.Size = new System.Drawing.Size(86, 64);
-            this.clb_usuarios.TabIndex = 51;
+            this.clb_usuarios.TabIndex = 3;
             // 
             // chb_usuarios
             // 
@@ -266,7 +266,7 @@
             this.chb_usuarios.Location = new System.Drawing.Point(165, 33);
             this.chb_usuarios.Name = "chb_usuarios";
             this.chb_usuarios.Size = new System.Drawing.Size(154, 17);
-            this.chb_usuarios.TabIndex = 50;
+            this.chb_usuarios.TabIndex = 2;
             this.chb_usuarios.Text = "Mantenimiento de Usuarios";
             this.chb_usuarios.UseVisualStyleBackColor = true;
             this.chb_usuarios.CheckedChanged += new System.EventHandler(this.chb_usuarios_CheckedChanged);
@@ -283,7 +283,7 @@
             this.clb_Roles.Location = new System.Drawing.Point(6, 56);
             this.clb_Roles.Name = "clb_Roles";
             this.clb_Roles.Size = new System.Drawing.Size(86, 64);
-            this.clb_Roles.TabIndex = 49;
+            this.clb_Roles.TabIndex = 1;
             // 
             // chb_Roles
             // 
@@ -291,7 +291,7 @@
             this.chb_Roles.Location = new System.Drawing.Point(6, 33);
             this.chb_Roles.Name = "chb_Roles";
             this.chb_Roles.Size = new System.Drawing.Size(135, 17);
-            this.chb_Roles.TabIndex = 48;
+            this.chb_Roles.TabIndex = 0;
             this.chb_Roles.Text = "Mantenimiento de roles";
             this.chb_Roles.UseVisualStyleBackColor = true;
             this.chb_Roles.CheckedChanged += new System.EventHandler(this.chb_Roles_CheckedChanged);

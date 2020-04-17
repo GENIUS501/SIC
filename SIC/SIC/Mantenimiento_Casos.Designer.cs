@@ -34,6 +34,9 @@
             this.btn_acpetar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_organo_director = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbo_estado = new System.Windows.Forms.ComboBox();
             this.cbo_tipo_procedimiento = new System.Windows.Forms.ComboBox();
@@ -54,9 +57,6 @@
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.sICDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tab_ProcedimientoTableAdapter = new SIC.SICDataSet1TableAdapters.Tab_ProcedimientoTableAdapter();
-            this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
-            this.txt_organo_director = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabProcedimientoBindingSource)).BeginInit();
@@ -72,7 +72,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(424, 480);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
-            this.btn_cancelar.TabIndex = 47;
+            this.btn_cancelar.TabIndex = 2;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
@@ -83,7 +83,7 @@
             this.btn_acpetar.Location = new System.Drawing.Point(149, 480);
             this.btn_acpetar.Name = "btn_acpetar";
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
-            this.btn_acpetar.TabIndex = 46;
+            this.btn_acpetar.TabIndex = 1;
             this.btn_acpetar.UseVisualStyleBackColor = true;
             this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
@@ -116,9 +116,33 @@
             this.groupBox1.Location = new System.Drawing.Point(15, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(444, 175);
-            this.groupBox1.TabIndex = 65;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del expediente";
+            // 
+            // txt_organo_director
+            // 
+            this.txt_organo_director.Location = new System.Drawing.Point(9, 141);
+            this.txt_organo_director.Name = "txt_organo_director";
+            this.txt_organo_director.Size = new System.Drawing.Size(100, 20);
+            this.txt_organo_director.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 125);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 73;
+            this.label9.Text = "Organo director";
+            // 
+            // txt_cedula
+            // 
+            this.txt_cedula.Location = new System.Drawing.Point(144, 31);
+            this.txt_cedula.Mask = "0000000000";
+            this.txt_cedula.Name = "txt_cedula";
+            this.txt_cedula.Size = new System.Drawing.Size(100, 20);
+            this.txt_cedula.TabIndex = 4;
             // 
             // label6
             // 
@@ -135,7 +159,7 @@
             this.cbo_estado.Location = new System.Drawing.Point(306, 31);
             this.cbo_estado.Name = "cbo_estado";
             this.cbo_estado.Size = new System.Drawing.Size(121, 21);
-            this.cbo_estado.TabIndex = 70;
+            this.cbo_estado.TabIndex = 5;
             // 
             // cbo_tipo_procedimiento
             // 
@@ -145,7 +169,7 @@
             this.cbo_tipo_procedimiento.Location = new System.Drawing.Point(306, 91);
             this.cbo_tipo_procedimiento.Name = "cbo_tipo_procedimiento";
             this.cbo_tipo_procedimiento.Size = new System.Drawing.Size(121, 21);
-            this.cbo_tipo_procedimiento.TabIndex = 69;
+            this.cbo_tipo_procedimiento.TabIndex = 8;
             this.cbo_tipo_procedimiento.ValueMember = "Id_Procedimiento";
             // 
             // tabProcedimientoBindingSource
@@ -164,7 +188,7 @@
             this.cbo_parte_procesal.Location = new System.Drawing.Point(144, 92);
             this.cbo_parte_procesal.Name = "cbo_parte_procesal";
             this.cbo_parte_procesal.Size = new System.Drawing.Size(121, 21);
-            this.cbo_parte_procesal.TabIndex = 68;
+            this.cbo_parte_procesal.TabIndex = 7;
             // 
             // label5
             // 
@@ -189,7 +213,7 @@
             this.txt_lugar_trabajo.Location = new System.Drawing.Point(9, 92);
             this.txt_lugar_trabajo.Name = "txt_lugar_trabajo";
             this.txt_lugar_trabajo.Size = new System.Drawing.Size(100, 20);
-            this.txt_lugar_trabajo.TabIndex = 65;
+            this.txt_lugar_trabajo.TabIndex = 6;
             // 
             // label3
             // 
@@ -214,7 +238,7 @@
             this.txt_num_expediente.Location = new System.Drawing.Point(9, 32);
             this.txt_num_expediente.Name = "txt_num_expediente";
             this.txt_num_expediente.Size = new System.Drawing.Size(100, 20);
-            this.txt_num_expediente.TabIndex = 61;
+            this.txt_num_expediente.TabIndex = 3;
             // 
             // label1
             // 
@@ -234,7 +258,7 @@
             this.groupBox2.Location = new System.Drawing.Point(4, 189);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(605, 285);
-            this.groupBox2.TabIndex = 66;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Otros datos";
             // 
@@ -244,7 +268,7 @@
             this.label8.Location = new System.Drawing.Point(8, 146);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 13);
-            this.label8.TabIndex = 67;
+            this.label8.TabIndex = 0;
             this.label8.Text = "Medida cautelar";
             // 
             // txt_medida_cautelar
@@ -253,7 +277,7 @@
             this.txt_medida_cautelar.Multiline = true;
             this.txt_medida_cautelar.Name = "txt_medida_cautelar";
             this.txt_medida_cautelar.Size = new System.Drawing.Size(576, 111);
-            this.txt_medida_cautelar.TabIndex = 66;
+            this.txt_medida_cautelar.TabIndex = 3;
             // 
             // label7
             // 
@@ -270,35 +294,11 @@
             this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(576, 100);
-            this.txt_descripcion.TabIndex = 64;
+            this.txt_descripcion.TabIndex = 2;
             // 
             // tab_ProcedimientoTableAdapter
             // 
             this.tab_ProcedimientoTableAdapter.ClearBeforeFill = true;
-            // 
-            // txt_cedula
-            // 
-            this.txt_cedula.Location = new System.Drawing.Point(144, 31);
-            this.txt_cedula.Mask = "0000000000";
-            this.txt_cedula.Name = "txt_cedula";
-            this.txt_cedula.Size = new System.Drawing.Size(100, 20);
-            this.txt_cedula.TabIndex = 72;
-            // 
-            // txt_organo_director
-            // 
-            this.txt_organo_director.Location = new System.Drawing.Point(9, 141);
-            this.txt_organo_director.Name = "txt_organo_director";
-            this.txt_organo_director.Size = new System.Drawing.Size(100, 20);
-            this.txt_organo_director.TabIndex = 74;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 125);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 13);
-            this.label9.TabIndex = 73;
-            this.label9.Text = "Organo director";
             // 
             // Mantenimiento_Casos
             // 

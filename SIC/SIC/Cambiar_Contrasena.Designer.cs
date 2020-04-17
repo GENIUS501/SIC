@@ -47,7 +47,7 @@
             this.txt_usuario.Location = new System.Drawing.Point(15, 25);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(100, 20);
-            this.txt_usuario.TabIndex = 0;
+            this.txt_usuario.TabIndex = 1;
             // 
             // label1
             // 
@@ -55,7 +55,7 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Nombre de usuario";
             // 
             // label2
@@ -82,7 +82,7 @@
             this.txt_contrasena.Name = "txt_contrasena";
             this.txt_contrasena.PasswordChar = '*';
             this.txt_contrasena.Size = new System.Drawing.Size(100, 20);
-            this.txt_contrasena.TabIndex = 6;
+            this.txt_contrasena.TabIndex = 3;
             // 
             // txt_confirmar_contrasena
             // 
@@ -90,7 +90,7 @@
             this.txt_confirmar_contrasena.Name = "txt_confirmar_contrasena";
             this.txt_confirmar_contrasena.PasswordChar = '*';
             this.txt_confirmar_contrasena.Size = new System.Drawing.Size(100, 20);
-            this.txt_confirmar_contrasena.TabIndex = 7;
+            this.txt_confirmar_contrasena.TabIndex = 4;
             // 
             // txt_contrasena_antigua
             // 
@@ -98,7 +98,7 @@
             this.txt_contrasena_antigua.Name = "txt_contrasena_antigua";
             this.txt_contrasena_antigua.PasswordChar = '*';
             this.txt_contrasena_antigua.Size = new System.Drawing.Size(100, 20);
-            this.txt_contrasena_antigua.TabIndex = 9;
+            this.txt_contrasena_antigua.TabIndex = 2;
             // 
             // label6
             // 
@@ -126,7 +126,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(174, 175);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(47, 43);
-            this.btn_cancelar.TabIndex = 49;
+            this.btn_cancelar.TabIndex = 6;
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
@@ -137,7 +137,7 @@
             this.btn_acpetar.Location = new System.Drawing.Point(49, 175);
             this.btn_acpetar.Name = "btn_acpetar";
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
-            this.btn_acpetar.TabIndex = 48;
+            this.btn_acpetar.TabIndex = 5;
             this.btn_acpetar.UseVisualStyleBackColor = true;
             this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 

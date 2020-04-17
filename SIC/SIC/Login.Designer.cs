@@ -63,14 +63,14 @@
             this.Txt_Contrasena.Name = "Txt_Contrasena";
             this.Txt_Contrasena.PasswordChar = '*';
             this.Txt_Contrasena.Size = new System.Drawing.Size(100, 20);
-            this.Txt_Contrasena.TabIndex = 2;
+            this.Txt_Contrasena.TabIndex = 1;
             // 
             // Txt_Usuario
             // 
             this.Txt_Usuario.Location = new System.Drawing.Point(91, 184);
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(100, 20);
-            this.Txt_Usuario.TabIndex = 3;
+            this.Txt_Usuario.TabIndex = 0;
             // 
             // Btn_Aceptar
             // 
@@ -80,7 +80,7 @@
             this.Btn_Aceptar.Location = new System.Drawing.Point(54, 329);
             this.Btn_Aceptar.Name = "Btn_Aceptar";
             this.Btn_Aceptar.Size = new System.Drawing.Size(66, 61);
-            this.Btn_Aceptar.TabIndex = 4;
+            this.Btn_Aceptar.TabIndex = 2;
             this.Btn_Aceptar.UseVisualStyleBackColor = true;
             this.Btn_Aceptar.Click += new System.EventHandler(this.Btn_Aceptar_Click);
             // 
@@ -91,7 +91,7 @@
             this.Btn_Cancelar.Location = new System.Drawing.Point(170, 329);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
             this.Btn_Cancelar.Size = new System.Drawing.Size(66, 61);
-            this.Btn_Cancelar.TabIndex = 5;
+            this.Btn_Cancelar.TabIndex = 3;
             this.Btn_Cancelar.UseVisualStyleBackColor = true;
             this.Btn_Cancelar.Click += new System.EventHandler(this.Btn_Cancelar_Click);
             // 

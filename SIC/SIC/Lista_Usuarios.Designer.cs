@@ -53,7 +53,7 @@
             this.txt_buscar_cedula.Mask = "0000000000";
             this.txt_buscar_cedula.Name = "txt_buscar_cedula";
             this.txt_buscar_cedula.Size = new System.Drawing.Size(100, 20);
-            this.txt_buscar_cedula.TabIndex = 21;
+            this.txt_buscar_cedula.TabIndex = 1;
             // 
             // btn_consultar
             // 
@@ -62,7 +62,7 @@
             this.btn_consultar.Location = new System.Drawing.Point(173, 106);
             this.btn_consultar.Name = "btn_consultar";
             this.btn_consultar.Size = new System.Drawing.Size(50, 41);
-            this.btn_consultar.TabIndex = 26;
+            this.btn_consultar.TabIndex = 9;
             this.btn_consultar.UseVisualStyleBackColor = true;
             this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
@@ -73,7 +73,7 @@
             this.btn_eliminar.Location = new System.Drawing.Point(117, 106);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(50, 41);
-            this.btn_eliminar.TabIndex = 25;
+            this.btn_eliminar.TabIndex = 8;
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
@@ -84,7 +84,7 @@
             this.btn_editar.Location = new System.Drawing.Point(61, 106);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(50, 41);
-            this.btn_editar.TabIndex = 24;
+            this.btn_editar.TabIndex = 7;
             this.btn_editar.UseVisualStyleBackColor = true;
             this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
@@ -94,7 +94,7 @@
             this.label1.Location = new System.Drawing.Point(2, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 28;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Cedula del usuario";
             // 
             // dat_usuarios
@@ -103,7 +103,7 @@
             this.dat_usuarios.Location = new System.Drawing.Point(5, 153);
             this.dat_usuarios.Name = "dat_usuarios";
             this.dat_usuarios.Size = new System.Drawing.Size(739, 185);
-            this.dat_usuarios.TabIndex = 27;
+            this.dat_usuarios.TabIndex = 10;
             this.dat_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_usuarios_CellClick);
             // 
             // pictureBox1
@@ -123,7 +123,7 @@
             this.btn_buscar.Location = new System.Drawing.Point(111, 26);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar.TabIndex = 22;
+            this.btn_buscar.TabIndex = 2;
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -134,7 +134,7 @@
             this.btn_agregar.Location = new System.Drawing.Point(5, 105);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(50, 41);
-            this.btn_agregar.TabIndex = 23;
+            this.btn_agregar.TabIndex = 6;
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
@@ -143,14 +143,14 @@
             this.txt_nombre.Location = new System.Drawing.Point(5, 80);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(100, 20);
-            this.txt_nombre.TabIndex = 30;
+            this.txt_nombre.TabIndex = 3;
             // 
             // txt_apellido1
             // 
             this.txt_apellido1.Location = new System.Drawing.Point(112, 80);
             this.txt_apellido1.Name = "txt_apellido1";
             this.txt_apellido1.Size = new System.Drawing.Size(100, 20);
-            this.txt_apellido1.TabIndex = 31;
+            this.txt_apellido1.TabIndex = 4;
             // 
             // btn_buscar_nombre
             // 
@@ -159,7 +159,7 @@
             this.btn_buscar_nombre.Location = new System.Drawing.Point(218, 80);
             this.btn_buscar_nombre.Name = "btn_buscar_nombre";
             this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_nombre.TabIndex = 32;
+            this.btn_buscar_nombre.TabIndex = 5;
             this.btn_buscar_nombre.UseVisualStyleBackColor = true;
             this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
             // 

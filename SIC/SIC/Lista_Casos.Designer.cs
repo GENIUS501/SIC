@@ -51,7 +51,7 @@
             this.dat_casos.Location = new System.Drawing.Point(14, 153);
             this.dat_casos.Name = "dat_casos";
             this.dat_casos.Size = new System.Drawing.Size(739, 185);
-            this.dat_casos.TabIndex = 48;
+            this.dat_casos.TabIndex = 9;
             this.dat_casos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_usuarios_CellClick);
             // 
             // pictureBox1
@@ -71,7 +71,7 @@
             this.btn_consultar.Location = new System.Drawing.Point(182, 106);
             this.btn_consultar.Name = "btn_consultar";
             this.btn_consultar.Size = new System.Drawing.Size(50, 41);
-            this.btn_consultar.TabIndex = 47;
+            this.btn_consultar.TabIndex = 8;
             this.btn_consultar.UseVisualStyleBackColor = true;
             this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
@@ -82,7 +82,7 @@
             this.btn_eliminar.Location = new System.Drawing.Point(126, 106);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(50, 41);
-            this.btn_eliminar.TabIndex = 46;
+            this.btn_eliminar.TabIndex = 7;
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
@@ -93,7 +93,7 @@
             this.btn_editar.Location = new System.Drawing.Point(70, 106);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(50, 41);
-            this.btn_editar.TabIndex = 45;
+            this.btn_editar.TabIndex = 6;
             this.btn_editar.UseVisualStyleBackColor = true;
             this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
@@ -104,7 +104,7 @@
             this.btn_agregar.Location = new System.Drawing.Point(14, 105);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(50, 41);
-            this.btn_agregar.TabIndex = 44;
+            this.btn_agregar.TabIndex = 5;
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
@@ -114,7 +114,7 @@
             this.txt_buscar.Mask = "0000000000";
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(100, 20);
-            this.txt_buscar.TabIndex = 50;
+            this.txt_buscar.TabIndex = 1;
             // 
             // btn_buscar
             // 
@@ -123,7 +123,7 @@
             this.btn_buscar.Location = new System.Drawing.Point(120, 28);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar.TabIndex = 51;
+            this.btn_buscar.TabIndex = 2;
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -133,7 +133,7 @@
             this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 13);
-            this.label1.TabIndex = 52;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Cedula del funcionario";
             // 
             // txt_num_expediente
@@ -141,7 +141,7 @@
             this.txt_num_expediente.Location = new System.Drawing.Point(14, 79);
             this.txt_num_expediente.Name = "txt_num_expediente";
             this.txt_num_expediente.Size = new System.Drawing.Size(100, 20);
-            this.txt_num_expediente.TabIndex = 53;
+            this.txt_num_expediente.TabIndex = 3;
             // 
             // label2
             // 
@@ -159,7 +159,7 @@
             this.btn_buscar_num_expediente.Location = new System.Drawing.Point(120, 79);
             this.btn_buscar_num_expediente.Name = "btn_buscar_num_expediente";
             this.btn_buscar_num_expediente.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_num_expediente.TabIndex = 55;
+            this.btn_buscar_num_expediente.TabIndex = 4;
             this.btn_buscar_num_expediente.UseVisualStyleBackColor = true;
             this.btn_buscar_num_expediente.Click += new System.EventHandler(this.btn_buscar_num_expediente_Click);
             // 

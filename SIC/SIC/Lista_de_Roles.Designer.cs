@@ -45,7 +45,7 @@
             this.dat_usuarios.Location = new System.Drawing.Point(12, 114);
             this.dat_usuarios.Name = "dat_usuarios";
             this.dat_usuarios.Size = new System.Drawing.Size(739, 185);
-            this.dat_usuarios.TabIndex = 41;
+            this.dat_usuarios.TabIndex = 4;
             this.dat_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_usuarios_CellClick);
             // 
             // pictureBox1
@@ -65,7 +65,7 @@
             this.btn_consultar.Location = new System.Drawing.Point(180, 67);
             this.btn_consultar.Name = "btn_consultar";
             this.btn_consultar.Size = new System.Drawing.Size(50, 41);
-            this.btn_consultar.TabIndex = 40;
+            this.btn_consultar.TabIndex = 3;
             this.btn_consultar.UseVisualStyleBackColor = true;
             this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
@@ -76,7 +76,7 @@
             this.btn_eliminar.Location = new System.Drawing.Point(124, 67);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(50, 41);
-            this.btn_eliminar.TabIndex = 39;
+            this.btn_eliminar.TabIndex = 2;
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
@@ -87,7 +87,7 @@
             this.btn_editar.Location = new System.Drawing.Point(68, 67);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(50, 41);
-            this.btn_editar.TabIndex = 38;
+            this.btn_editar.TabIndex = 1;
             this.btn_editar.UseVisualStyleBackColor = true;
             this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
@@ -98,7 +98,7 @@
             this.btn_agregar.Location = new System.Drawing.Point(12, 66);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(50, 41);
-            this.btn_agregar.TabIndex = 37;
+            this.btn_agregar.TabIndex = 0;
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 

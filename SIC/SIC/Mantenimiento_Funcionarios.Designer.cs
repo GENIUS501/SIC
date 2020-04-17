@@ -54,7 +54,7 @@
             this.button1.Location = new System.Drawing.Point(372, 205);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 43);
-            this.button1.TabIndex = 47;
+            this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -65,7 +65,7 @@
             this.btn_acpetar.Location = new System.Drawing.Point(102, 205);
             this.btn_acpetar.Name = "btn_acpetar";
             this.btn_acpetar.Size = new System.Drawing.Size(47, 43);
-            this.btn_acpetar.TabIndex = 46;
+            this.btn_acpetar.TabIndex = 1;
             this.btn_acpetar.UseVisualStyleBackColor = true;
             this.btn_acpetar.Click += new System.EventHandler(this.btn_acpetar_Click);
             // 
@@ -94,7 +94,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(354, 174);
-            this.groupBox1.TabIndex = 49;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del funcionario";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -105,21 +105,21 @@
             this.cbo_genero.Location = new System.Drawing.Point(9, 132);
             this.cbo_genero.Name = "cbo_genero";
             this.cbo_genero.Size = new System.Drawing.Size(121, 21);
-            this.cbo_genero.TabIndex = 68;
+            this.cbo_genero.TabIndex = 4;
             // 
             // txt_apellido2
             // 
             this.txt_apellido2.Location = new System.Drawing.Point(126, 84);
             this.txt_apellido2.Name = "txt_apellido2";
             this.txt_apellido2.Size = new System.Drawing.Size(100, 20);
-            this.txt_apellido2.TabIndex = 67;
+            this.txt_apellido2.TabIndex = 3;
             // 
             // txt_apellido1
             // 
             this.txt_apellido1.Location = new System.Drawing.Point(9, 84);
             this.txt_apellido1.Name = "txt_apellido1";
             this.txt_apellido1.Size = new System.Drawing.Size(100, 20);
-            this.txt_apellido1.TabIndex = 66;
+            this.txt_apellido1.TabIndex = 2;
             // 
             // label5
             // 
@@ -163,14 +163,14 @@
             this.txt_cedula.Mask = "0000000000";
             this.txt_cedula.Name = "txt_cedula";
             this.txt_cedula.Size = new System.Drawing.Size(100, 20);
-            this.txt_cedula.TabIndex = 61;
+            this.txt_cedula.TabIndex = 0;
             // 
             // txt_nombre
             // 
             this.txt_nombre.Location = new System.Drawing.Point(126, 32);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(100, 20);
-            this.txt_nombre.TabIndex = 60;
+            this.txt_nombre.TabIndex = 1;
             // 
             // label1
             // 

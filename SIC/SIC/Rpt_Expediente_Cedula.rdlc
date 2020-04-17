@@ -955,7 +955,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de expedientes</Value>
+                  <Value>Reporte de expedientes asociados al funcionario</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -970,7 +970,7 @@
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>2.14216cm</Top>
           <Left>11.39062cm</Left>
-          <Height>0.83812cm</Height>
+          <Height>1.12916cm</Height>
           <Width>5.38396cm</Width>
           <Style>
             <Border>
@@ -1034,7 +1034,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>3.12139cm</Top>
+          <Top>3.2625cm</Top>
           <Left>12.66062cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>

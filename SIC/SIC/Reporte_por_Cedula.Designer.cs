@@ -147,7 +147,7 @@
             this.Controls.Add(this.dat_expedientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reporte_por_Cedula";
-            this.Text = "Reporte de casos por numero de expediente";
+            this.Text = "Reporte de casos asociados al funcionario";
             this.Load += new System.EventHandler(this.Reporte_por_Cedula_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

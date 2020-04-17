@@ -1,4 +1,0 @@
-C:\Users\HP 640\Desktop\SIC\SIC\SIC\AccesoDatos\bin\Release\AccesoDatos.dll
-C:\Users\HP 640\Desktop\SIC\SIC\SIC\AccesoDatos\bin\Release\AccesoDatos.pdb
-C:\Users\HP 640\Desktop\SIC\SIC\SIC\AccesoDatos\obj\Release\AccesoDatos.dll
-C:\Users\HP 640\Desktop\SIC\SIC\SIC\AccesoDatos\obj\Release\AccesoDatos.pdb

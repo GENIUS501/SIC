@@ -30,13 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.SICDataSet1 = new SIC.SICDataSet1();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Visor_Bitacora_Movimientos_Usuario));
             this.Tab_Bitacora_MovimientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SICDataSet1 = new SIC.SICDataSet1();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Tab_Bitacora_MovimientosTableAdapter = new SIC.SICDataSet1TableAdapters.Tab_Bitacora_MovimientosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tab_Bitacora_MovimientosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Tab_Bitacora_MovimientosBindingSource
+            // 
+            this.Tab_Bitacora_MovimientosBindingSource.DataMember = "Tab_Bitacora_Movimientos";
+            this.Tab_Bitacora_MovimientosBindingSource.DataSource = this.SICDataSet1;
+            // 
+            // SICDataSet1
+            // 
+            this.SICDataSet1.DataSetName = "SICDataSet1";
+            this.SICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(670, 261);
             this.reportViewer1.TabIndex = 0;
             // 
-            // SICDataSet1
-            // 
-            this.SICDataSet1.DataSetName = "SICDataSet1";
-            this.SICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Tab_Bitacora_MovimientosBindingSource
-            // 
-            this.Tab_Bitacora_MovimientosBindingSource.DataMember = "Tab_Bitacora_Movimientos";
-            this.Tab_Bitacora_MovimientosBindingSource.DataSource = this.SICDataSet1;
-            // 
             // Tab_Bitacora_MovimientosTableAdapter
             // 
             this.Tab_Bitacora_MovimientosTableAdapter.ClearBeforeFill = true;
@@ -70,11 +71,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 261);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Visor_Bitacora_Movimientos_Usuario";
             this.Text = "Visor_Bitacora_Movimientos_Usuario";
             this.Load += new System.EventHandler(this.Visor_Bitacora_Movimientos_Usuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tab_Bitacora_MovimientosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

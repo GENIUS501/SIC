@@ -214,6 +214,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Bitacora_Movimientos";
+            this.Text = "Bitacora de Movimientos en el sistema";
             this.Load += new System.EventHandler(this.Bitacora_Movimientos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

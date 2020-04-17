@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Visor_Reporte_Expediente_Cedula));
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SICDataSet1 = new SIC.SICDataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -70,6 +71,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 261);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Visor_Reporte_Expediente_Cedula";
             this.Text = "Visor_Reporte_Estado_Cedula";
             this.Load += new System.EventHandler(this.Visor_Reporte_Estado_Cedula_Load);

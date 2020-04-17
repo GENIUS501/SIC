@@ -96,7 +96,7 @@ namespace SIC
         {
             try
             {
-
+                this.Close();
             }
             catch (Exception ex)
             {

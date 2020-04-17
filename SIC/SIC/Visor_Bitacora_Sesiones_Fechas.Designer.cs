@@ -30,13 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Visor_Bitacora_Sesiones_Fechas));
             this.Tab_Bitacora_SesionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SICDataSet1 = new SIC.SICDataSet1();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Tab_Bitacora_SesionesTableAdapter = new SIC.SICDataSet1TableAdapters.Tab_Bitacora_SesionesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Tab_Bitacora_SesionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Tab_Bitacora_SesionesBindingSource
+            // 
+            this.Tab_Bitacora_SesionesBindingSource.DataMember = "Tab_Bitacora_Sesiones";
+            this.Tab_Bitacora_SesionesBindingSource.DataSource = this.SICDataSet1;
+            // 
+            // SICDataSet1
+            // 
+            this.SICDataSet1.DataSetName = "SICDataSet1";
+            this.SICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(674, 301);
             this.reportViewer1.TabIndex = 0;
             // 
-            // Tab_Bitacora_SesionesBindingSource
-            // 
-            this.Tab_Bitacora_SesionesBindingSource.DataMember = "Tab_Bitacora_Sesiones";
-            this.Tab_Bitacora_SesionesBindingSource.DataSource = this.SICDataSet1;
-            // 
-            // SICDataSet1
-            // 
-            this.SICDataSet1.DataSetName = "SICDataSet1";
-            this.SICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // Tab_Bitacora_SesionesTableAdapter
             // 
             this.Tab_Bitacora_SesionesTableAdapter.ClearBeforeFill = true;
@@ -70,6 +71,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 301);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Visor_Bitacora_Sesiones_Fechas";
             this.Text = "Visor_Bitacora_Sesiones_Fechas";
             this.Load += new System.EventHandler(this.Visor_Bitacora_Sesiones_Fechas_Load);

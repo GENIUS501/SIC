@@ -30,13 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.SICDataSet1 = new SIC.SICDataSet1();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Visor_Reporte_Expediente_Estado_numero));
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SICDataSet1 = new SIC.SICDataSet1();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataTable1TableAdapter = new SIC.SICDataSet1TableAdapters.DataTable1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.SICDataSet1;
+            // 
+            // SICDataSet1
+            // 
+            this.SICDataSet1.DataSetName = "SICDataSet1";
+            this.SICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(667, 261);
             this.reportViewer1.TabIndex = 0;
             // 
-            // SICDataSet1
-            // 
-            this.SICDataSet1.DataSetName = "SICDataSet1";
-            this.SICDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.SICDataSet1;
-            // 
             // DataTable1TableAdapter
             // 
             this.DataTable1TableAdapter.ClearBeforeFill = true;
@@ -70,11 +71,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 261);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Visor_Reporte_Expediente_Estado_numero";
             this.Text = "Visor_Reporte_Expediente_Estado_numero";
             this.Load += new System.EventHandler(this.Visor_Reporte_Expediente_Estado_numero_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SICDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
